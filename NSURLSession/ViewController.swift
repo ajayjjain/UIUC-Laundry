@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     displayURL()
-  }
+   }
     
   var greenWashersAvailable = "0"
   var greenDryersAvailable = "0"
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
   var nugentRoomDryersAvailable = "0"
   var orchardNorthWashersAvailable = "0"
   var orchardNorthDryersAvailable = "0"
+  
+  
     
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
