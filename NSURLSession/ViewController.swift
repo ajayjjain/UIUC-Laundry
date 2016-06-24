@@ -13,6 +13,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var myWebView: UIWebView!
   override func viewDidLoad() {
     super.viewDidLoad()
+    let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
+    self.view.backgroundColor = grayColor
     displayURL()
    }
     
