@@ -17,6 +17,9 @@ class ViewController: UIViewController {
   }
     
     
+    @IBAction func clickButton(sender: AnyObject) {
+        self.navigationController!.popViewControllerAnimated(true)
+    }
     @IBOutlet weak var allenWasherLabel: UILabel!
     @IBOutlet weak var allenDryerLabel: UILabel!
   

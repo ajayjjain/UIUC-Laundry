@@ -15,6 +15,9 @@ class secondViewController: UIViewController {
         super.viewDidLoad()
         displayURL()
     }
+    @IBAction func clickButton(sender: AnyObject) {
+        self.navigationController!.popViewControllerAnimated(true)
+    }
     
     @IBOutlet weak var greenWasherLabel: UILabel!
     @IBOutlet weak var greenDryerLabel: UILabel!
