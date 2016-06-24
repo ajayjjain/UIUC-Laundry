@@ -9,11 +9,46 @@
 import UIKit
 
 class secondViewController: UIViewController {
-    
+    var greenAvailable = "1"
+    var greenDryersAvailable = "0"
+    var hopkinsWashersAvailable = "0"
+    var hopkinsDryersAvailable = "0"
+    var isrTownsendWashersAvailable = "0"
+    var isrTownsendDryersAvailable = "0"
+    var isrWardallWashersAvailable = "0"
+    var isrWardallDryersAvailable = "0"
+    var larLeonardWashersAvailable = "0"
+    var larLeonardDryersAvailable = "0"
+    var larSheldenWashersAvailable = "0"
+    var larSheldenDryersAvailable = "0"
+    var nugentWashersAvailable = "0"
+    var nugentDryersAvailable = "0"
+    var nugentRoomWashersAvailable = "0"
+    var nugentRoomDryersAvailable = "0"
+    var orchardNorthWashersAvailable = "0"
+    var orchardNorthDryersAvailable = "0"
     //@IBOutlet weak var myWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayURL()
+        self.greenWasherLabel.text = greenAvailable
+        self.greenDryerLabel.text = greenDryersAvailable
+        self.hopkinsWasherLabel.text = hopkinsWashersAvailable
+        self.hopkinsDryerLabel.text = hopkinsDryersAvailable
+        self.isrTownsendWasherLabel.text = isrTownsendWashersAvailable
+        self.isrTownsendDryerLabel.text = isrTownsendDryersAvailable
+        self.isrWardallWasherLabel.text = isrWardallWashersAvailable
+        self.isrWardallDryerLabel.text = isrWardallDryersAvailable
+        self.larLeonardWasherLabel.text = larLeonardWashersAvailable
+        self.larLeonardDryerLabel.text = larLeonardDryersAvailable
+        self.larSheldenWasherLabel.text = larSheldenWashersAvailable
+        self.larSheldenDryerLabel.text = larSheldenDryersAvailable
+        self.nugentWasherLabel.text = nugentWashersAvailable
+        self.nugentDryerLabel.text = nugentDryersAvailable
+        self.nugentRoomWasherLabel.text = nugentRoomWashersAvailable
+        self.nugentRoomDryerLabel.text = nugentRoomDryersAvailable
+        self.orchardNorthWasherLabel.text = orchardNorthWashersAvailable
+        self.orchardNorthDryerLabel.text = orchardNorthDryersAvailable
+        //displayURL()
     }
     @IBAction func clickButton(sender: AnyObject) {
         self.navigationController!.popViewControllerAnimated(true)
@@ -37,6 +72,19 @@ class secondViewController: UIViewController {
     @IBOutlet weak var nugentRoomDryerLabel: UILabel!
     @IBOutlet weak var orchardNorthWasherLabel: UILabel!
     @IBOutlet weak var orchardNorthDryerLabel: UILabel!
+    var greenWashersAvailable = "hey"
+    
+
+
+
+
+
+
+
+
+
+
+
     
     func displayURL() {
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMPage?Login=True"
@@ -50,60 +98,7 @@ class secondViewController: UIViewController {
             let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
             var rangeOfTLD = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
 
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(30126)..<myHTMLString!.startIndex.advancedBy(30129)
-            let greenWashersAvailable = myHTMLString![rangeOfTLD]
-            self.greenWasherLabel.text = greenWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(30323)..<myHTMLString!.startIndex.advancedBy(30326)
-            let greenDryersAvailable = myHTMLString![rangeOfTLD]
-            self.greenDryerLabel.text = greenDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(32097)..<myHTMLString!.startIndex.advancedBy(32100)
-            let hopkinsWashersAvailable = myHTMLString![rangeOfTLD]
-            self.hopkinsWasherLabel.text = hopkinsWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(32294)..<myHTMLString!.startIndex.advancedBy(32297)
-            let hopkinsDryersAvailable = myHTMLString![rangeOfTLD]
-            self.hopkinsDryerLabel.text = hopkinsDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(34074)..<myHTMLString!.startIndex.advancedBy(34078)
-            let isrTownsendWashersAvailable = myHTMLString![rangeOfTLD]
-            self.isrTownsendWasherLabel.text = isrTownsendWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(34272)..<myHTMLString!.startIndex.advancedBy(34275)
-            let isrTownsendDryersAvailable = myHTMLString![rangeOfTLD]
-            self.isrTownsendDryerLabel.text = isrTownsendDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(36051)..<myHTMLString!.startIndex.advancedBy(36055)
-            let isrWardallWashersAvailable = myHTMLString![rangeOfTLD]
-            self.isrWardallWasherLabel.text = isrWardallWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(36249)..<myHTMLString!.startIndex.advancedBy(36252)
-            let isrWardallDryersAvailable = myHTMLString![rangeOfTLD]
-            self.isrWardallDryerLabel.text = isrWardallDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(38028)..<myHTMLString!.startIndex.advancedBy(38031)
-            let larLeonardWashersAvailable = myHTMLString![rangeOfTLD]
-            self.larLeonardWasherLabel.text = larLeonardWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(38225)..<myHTMLString!.startIndex.advancedBy(38228)
-            let larLeonardDryersAvailable = myHTMLString![rangeOfTLD]
-            self.larLeonardDryerLabel.text = larLeonardDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(40004)..<myHTMLString!.startIndex.advancedBy(40007)
-            let larSheldenWashersAvailable = myHTMLString![rangeOfTLD]
-            self.larSheldenWasherLabel.text = larSheldenWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(40201)..<myHTMLString!.startIndex.advancedBy(40204)
-            let larSheldenDryersAvailable = myHTMLString![rangeOfTLD]
-            self.larSheldenDryerLabel.text = larSheldenDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(41974)..<myHTMLString!.startIndex.advancedBy(41976)
-            let nugentWashersAvailable = myHTMLString![rangeOfTLD]
-            self.nugentWasherLabel.text = nugentWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(42171)..<myHTMLString!.startIndex.advancedBy(42175)
-            let nugentDryersAvailable = myHTMLString![rangeOfTLD]
-            self.nugentDryerLabel.text = nugentDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(43952)..<myHTMLString!.startIndex.advancedBy(43955)
-            let nugentRoomWashersAvailable = myHTMLString![rangeOfTLD]
-            self.nugentRoomWasherLabel.text = nugentRoomWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(44149)..<myHTMLString!.startIndex.advancedBy(44154)
-            let nugentRoomDryersAvailable = myHTMLString![rangeOfTLD]
-            self.nugentRoomDryerLabel.text = nugentRoomDryersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(45936)..<myHTMLString!.startIndex.advancedBy(45940)
-            let orchardNorthWashersAvailable = myHTMLString![rangeOfTLD]
-            self.orchardNorthWasherLabel.text = orchardNorthWashersAvailable
-            rangeOfTLD = myHTMLString!.startIndex.advancedBy(46134)..<myHTMLString!.startIndex.advancedBy(46137)
-            let orchardNorthDryersAvailable = myHTMLString![rangeOfTLD]
-            self.orchardNorthWasherLabel.text = orchardNorthWashersAvailable
+            
             rangeOfTLD = myHTMLString!.startIndex.advancedBy(47920)..<myHTMLString!.startIndex.advancedBy(47924)
             let orchardSouthWashersAvailable = myHTMLString![rangeOfTLD]
             rangeOfTLD = myHTMLString!.startIndex.advancedBy(48118)..<myHTMLString!.startIndex.advancedBy(48122)

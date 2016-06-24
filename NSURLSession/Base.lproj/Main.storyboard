@@ -402,7 +402,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Y0-zn-Lyz"/>
-                                    <segue destination="OFh-wu-lUD" kind="push" id="RpV-sf-Otf"/>
+                                    <segue destination="OFh-wu-lUD" kind="push" identifier="nextScreen" id="RpV-sf-Otf"/>
                                 </connections>
                             </button>
                         </barButtonItem>
