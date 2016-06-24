@@ -14,7 +14,15 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
+    let illiniBlue = UIColor(red: 0/255.0, green: 32/255.0, blue: 91/255.0, alpha: 1.0)
+    let illiniOrange = UIColor(red: 232/255.0, green: 119/255.0, blue: 34/255.0, alpha: 1.0)
+    self.navigationController!.navigationBar.barTintColor = illiniBlue
     self.view.backgroundColor = grayColor
+    self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: illiniOrange]
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+    let navBgImage:UIImage = UIImage(named: "logo.jpeg")!
+    UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
     displayURL()
    }
     
