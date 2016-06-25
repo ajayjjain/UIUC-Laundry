@@ -11,6 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var myWebView: UIWebView!
+    @IBOutlet weak var allen: UIImageView!
+    @IBOutlet weak var barton: UIImageView!
+    @IBOutlet weak var bousfield: UIImageView!
+    @IBOutlet weak var busey: UIImageView!
+    @IBOutlet weak var danielsNorth: UIImageView!
+    @IBOutlet weak var danielsSouth: UIImageView!
+    @IBOutlet weak var farOglesby: UIImageView!
+    @IBOutlet weak var farTrelease: UIImageView!
+    @IBOutlet weak var goodwin: UIImageView!
   override func viewDidLoad() {
     super.viewDidLoad()
     let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
@@ -23,6 +32,24 @@ class ViewController: UIViewController {
     self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     let navBgImage:UIImage = UIImage(named: "logo.jpeg")!
     UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
+    allen.layer.cornerRadius = 8.0
+    allen.clipsToBounds = true
+    barton.layer.cornerRadius = 8.0
+    barton.clipsToBounds = true
+    bousfield.layer.cornerRadius = 8.0
+    bousfield.clipsToBounds = true
+    busey.layer.cornerRadius = 8.0
+    busey.clipsToBounds = true
+    danielsNorth.layer.cornerRadius = 8.0
+    danielsNorth.clipsToBounds = true
+    danielsSouth.layer.cornerRadius = 8.0
+    danielsSouth.clipsToBounds = true
+    farOglesby.layer.cornerRadius = 8.0
+    farOglesby.clipsToBounds = true
+    farTrelease.layer.cornerRadius = 8.0
+    farTrelease.clipsToBounds = true
+    goodwin.layer.cornerRadius = 8.0
+    goodwin.clipsToBounds = true
     displayURL()
    }
     

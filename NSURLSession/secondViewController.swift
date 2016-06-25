@@ -28,6 +28,15 @@ class secondViewController: UIViewController {
     var orchardNorthWashersAvailable = "0"
     var orchardNorthDryersAvailable = "0"
     //@IBOutlet weak var myWebView: UIWebView!
+    @IBOutlet weak var green: UIImageView!
+    @IBOutlet weak var hopkins: UIImageView!
+    @IBOutlet weak var townsend: UIImageView!
+    @IBOutlet weak var wardall: UIImageView!
+    @IBOutlet weak var leonard: UIImageView!
+    @IBOutlet weak var shelden: UIImageView!
+    @IBOutlet weak var nugent: UIImageView!
+    @IBOutlet weak var nugentRoom: UIImageView!
+    @IBOutlet weak var orchardNorth: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
@@ -59,6 +68,25 @@ class secondViewController: UIViewController {
         self.nugentRoomDryerLabel.text = nugentRoomDryersAvailable
         self.orchardNorthWasherLabel.text = orchardNorthWashersAvailable
         self.orchardNorthDryerLabel.text = orchardNorthDryersAvailable
+        
+        green.layer.cornerRadius = 8.0
+        green.clipsToBounds = true
+        hopkins.layer.cornerRadius = 8.0
+        hopkins.clipsToBounds = true
+        townsend.layer.cornerRadius = 8.0
+        townsend.clipsToBounds = true
+        wardall.layer.cornerRadius = 8.0
+        wardall.clipsToBounds = true
+        leonard.layer.cornerRadius = 8.0
+        leonard.clipsToBounds = true
+        shelden.layer.cornerRadius = 8.0
+        shelden.clipsToBounds = true
+        nugent.layer.cornerRadius = 8.0
+        nugent.clipsToBounds = true
+        nugentRoom.layer.cornerRadius = 8.0
+        nugentRoom.clipsToBounds = true
+        orchardNorth.layer.cornerRadius = 8.0
+        orchardNorth.clipsToBounds = true
         //displayURL()
     }
     @IBAction func clickButton(sender: AnyObject) {
