@@ -50,6 +50,18 @@ class green: UIViewController {
     var greenMachineTwoStatus = ""
     var greenMachineThreeStatus = ""
     var greenMachineFourStatus = ""
+    var greenMachineFiveStatus = ""
+    var greenMachineSixStatus = ""
+    var greenMachineSevenStatus = ""
+    var greenMachineEightStatus = ""
+    var greenMachineNineStatus = ""
+    var greenMachineTenStatus = ""
+    var greenMachineElevenStatus = ""
+
+
+
+
+
 
 
 
@@ -85,40 +97,93 @@ class green: UIViewController {
             self.greenMachineOne = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(16448)..<myHTMLString!.startIndex.advancedBy(16454)
             self.greenMachineOneStatus = myHTMLString![range]
+            if (self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] == " "){
+                self.greenMachineOneStatus = ""
+            }
+            else if (self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] == "<"){
+                self.greenMachineOneStatus = self.greenMachineOneStatus.substringToIndex(self.greenMachineOneStatus.endIndex.predecessor())
+            }
+            
             range = myHTMLString!.startIndex.advancedBy(17585)..<myHTMLString!.startIndex.advancedBy(17594)
             self.greenMachineTwo = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(17790)..<myHTMLString!.startIndex.advancedBy(17796)
             self.greenMachineTwoStatus = myHTMLString![range]
+            if (self.greenMachineTwoStatus[self.greenMachineTwoStatus.endIndex.predecessor()] == " "){
+                self.greenMachineTwoStatus = ""
+            }
+            else if (self.greenMachineTwoStatus[self.greenMachineTwoStatus.endIndex.predecessor()] == "<"){
+                self.greenMachineTwoStatus = self.greenMachineTwoStatus.substringToIndex(self.greenMachineTwoStatus.endIndex.predecessor())
+            }
+            
             range = myHTMLString!.startIndex.advancedBy(18927)..<myHTMLString!.startIndex.advancedBy(18936)
             self.greenMachineThree = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(19132)..<myHTMLString!.startIndex.advancedBy(19138)
             self.greenMachineThreeStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(20269)..<myHTMLString!.startIndex.advancedBy(20278)
             self.greenMachineFour = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(20472)..<myHTMLString!.startIndex.advancedBy(20480)
+            range = myHTMLString!.startIndex.advancedBy(20474)..<myHTMLString!.startIndex.advancedBy(20480)
             self.greenMachineFourStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(21611)..<myHTMLString!.startIndex.advancedBy(21620)
+            range = myHTMLString!.startIndex.advancedBy(21613)..<myHTMLString!.startIndex.advancedBy(21620)
             self.greenMachineFive = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(21816)..<myHTMLString!.startIndex.advancedBy(21822)
+            self.greenMachineFiveStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(22953)..<myHTMLString!.startIndex.advancedBy(22962)
             self.greenMachineSix = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(23158)..<myHTMLString!.startIndex.advancedBy(23164)
+            self.greenMachineSixStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(24355)..<myHTMLString!.startIndex.advancedBy(24361)
             self.greenMachineSeven = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(24558)..<myHTMLString!.startIndex.advancedBy(24576)
-            //self.greenMachineSevenStatus = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(24558)..<myHTMLString!.startIndex.advancedBy(24564)
+            self.greenMachineSevenStatus = myHTMLString![range]
+            if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == " "){
+                self.greenMachineSevenStatus = ""
+            }
+            else if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == "<"){
+                self.greenMachineSevenStatus = self.greenMachineSevenStatus.substringToIndex(self.greenMachineSevenStatus.endIndex.predecessor())
+            }
+            else if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == "p"){
+                self.greenMachineSevenStatus = "not updating status"
+            }
             range = myHTMLString!.startIndex.advancedBy(25713)..<myHTMLString!.startIndex.advancedBy(25722)
             self.greenMachineEight = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(25918)..<myHTMLString!.startIndex.advancedBy(25924)
+            self.greenMachineEightStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(27058)..<myHTMLString!.startIndex.advancedBy(27067)
             self.greenMachineNine = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(27263)..<myHTMLString!.startIndex.advancedBy(27269)
+            self.greenMachineNineStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(28402)..<myHTMLString!.startIndex.advancedBy(28411)
             self.greenMachineTen = myHTMLString![range]
+            range = myHTMLString!.startIndex.advancedBy(28607)..<myHTMLString!.startIndex.advancedBy(28613)
+            self.greenMachineTenStatus = myHTMLString![range]
             range = myHTMLString!.startIndex.advancedBy(29749)..<myHTMLString!.startIndex.advancedBy(29758)
             self.greenMachineEleven = myHTMLString![range]
-            print(self.greenMachineTwo)
+            range = myHTMLString!.startIndex.advancedBy(29954)..<myHTMLString!.startIndex.advancedBy(29960)
+            self.greenMachineEleven = myHTMLString![range]
+            print(self.greenMachineOneStatus)
+            print(self.greenMachineTwoStatus)
             print(self.greenMachineThreeStatus)
+            print(self.greenMachineFourStatus)
+            print(self.greenMachineFiveStatus)
+            print(self.greenMachineSixStatus)
+            print(self.greenMachineSevenStatus)
+            print(self.greenMachineEightStatus)
+            print(self.greenMachineNineStatus)
+            print(self.greenMachineTenStatus)
+            print(self.greenMachineElevenStatus)
+            var str = self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] // gets last character
+            //print(str)
+            print(self.greenMachineOneStatus.substringToIndex(self.greenMachineOneStatus.endIndex.predecessor()))
+
+            
+
+
+
+
             //<td width=\"15\" align=\"center\" valign=\"middle\" bgcolor=\"#fffff\">&nbsp;<td>
-            var result = myHTMLString!.rangeOfString("<font size=1 face=\"Arial, Helvetica, sans-serif\">&nbsp;",
+            let result = myHTMLString!.rangeOfString("<font size=1 face=\"Arial, Helvetica, sans-serif\">&nbsp;",
                                             options: NSStringCompareOptions.LiteralSearch,
-                                            range: myHTMLString!.startIndex.advancedBy(20481)..<myHTMLString!.endIndex,
+                                            range: myHTMLString!.startIndex.advancedBy(28613)..<myHTMLString!.endIndex,
                                             locale: nil)
             if let range = result {
                 print(range)
