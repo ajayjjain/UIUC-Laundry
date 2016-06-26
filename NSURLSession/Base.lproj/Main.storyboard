@@ -5,7 +5,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--illiniLaundry-->
+        <!--Green View Controller Scene-->
+        <scene sceneID="loq-bC-fGc">
+            <objects>
+                <viewController title="Green View Controller Scene" id="iNw-Cf-0ck" customClass="green" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gtx-dY-jSd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <navigationItem key="navigationItem" id="9mB-Gc-bsq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncr-yJ-REn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="-1423"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,12 +33,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Lri-oj-AXS">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Lri-oj-AXS">
                                 <rect key="frame" x="20" y="78" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ghB-zP-JPf" appends="YES" id="AQJ-Yo-W9u"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bousfield" id="7uU-If-EAz">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bousfield" id="7uU-If-EAz">
                                 <rect key="frame" x="223" y="81" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -236,11 +255,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dryer" id="uYI-0q-QlE">
                                 <rect key="frame" x="179" y="475" width="9" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="Y8d-ju-FOs">
-                                <rect key="frame" x="223" y="218" width="80" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniels South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="XCn-UW-IfH">
@@ -456,10 +470,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="Y8d-ju-FOs">
+                                <rect key="frame" x="223" y="218" width="80" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="illiniLaundry" id="5hT-dp-NPk">
+                    <navigationItem key="navigationItem" id="5hT-dp-NPk">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JJa-BW-Xf8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fiy-z4-Vbo">
                                 <rect key="frame" x="258" y="7" width="46" height="30"/>
@@ -504,6 +523,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ghB-zP-JPf"/>
             </objects>
             <point key="canvasLocation" x="285" y="-784"/>
         </scene>
@@ -519,9 +539,13 @@
                                 <rect key="frame" x="223" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Joh-WR-gE9">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Joh-WR-gE9">
                                 <rect key="frame" x="20" y="81" width="80" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="a4B-6P-fsZ" appends="YES" id="LBX-LZ-23a"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isrtownsend" id="gdF-r9-X4H">
                                 <rect key="frame" x="223" y="81" width="80" height="104"/>
@@ -951,6 +975,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN0-Ea-KEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="a4B-6P-fsZ" userLabel="Green Tap">
+                    <connections>
+                        <segue destination="iNw-Cf-0ck" kind="push" id="ndM-03-sdS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="713" y="-784"/>
         </scene>

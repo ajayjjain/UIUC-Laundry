@@ -138,6 +138,7 @@ class thirdViewController: UIViewController {
     @IBOutlet weak var snyderDryerLabel: UILabel!
     
     
+    
 }
 
 

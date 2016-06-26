@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var farOglesby: UIImageView!
     @IBOutlet weak var farTrelease: UIImageView!
     @IBOutlet weak var goodwin: UIImageView!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
@@ -56,8 +57,6 @@ class ViewController: UIViewController {
     imageView.contentMode = .ScaleAspectFit
     imageView.image = image
     self.navigationItem.titleView = imageView
-    
-    
     displayURL()
    }
     
@@ -329,7 +328,26 @@ class ViewController: UIViewController {
 
     }
     
+    
     URLTask.resume()
   }
+    func parse() {
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURL = NSURL(string: myURLAdress)
+        
+        let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
+            myData, response, error in
+            
+            guard error == nil else { return }
+            
+            let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
+            //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
+            //let allenWashersAvailable = myHTMLString![rangeOfTLD]
+            print("Hello world")
+            print(myHTMLString)
+            
+        }
+        URLTask.resume()
+    }
 }
 
