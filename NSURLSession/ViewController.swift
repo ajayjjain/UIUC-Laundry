@@ -71,8 +71,30 @@ class ViewController: UIViewController {
   var nugentRoomDryersAvailable = "0"
   var orchardNorthWashersAvailable = "0"
   var orchardNorthDryersAvailable = "0"
-  
-  
+  var orchardSouthWashersAvailable = "0"
+  var orchardSouthDryersAvailable = "0"
+  var parBabcockWashersAvailable = "0"
+  var parBabcockDryersAvailable = "0"
+  var parBlaisdellWashersAvailable = "0"
+  var parBlaisdellDryersAvailable = "0"
+  var parCarrWashersAvailable = "0"
+  var parCarrDryersAvailable = "0"
+  var parSaundersWashersAvailable = "0"
+  var parSaundersDryersAvailable = "0"
+  var scottWashersAvailable = "0"
+  var scottDryersAvailable = "0"
+  var shermanShortWashersAvailable = "0"
+  var shermanShortDryersAvailable = "0"
+  var shermanTallWashersAvailable = "0"
+  var shermanTallDryersAvailable = "0"
+  var snyderWashersAvailable = "0"
+  var snyderDryersAvailable = "0"
+  var tvdTaftWashersAvailable = "0"
+  var tvdTaftDryersAvailable = "0"
+  var tvdVanDorenWashersAvailable = "0"
+  var tvdVanDorenDryersAvailable = "0"
+  var westonWashersAvailable = "0"
+  var westonDryersAvailable = "0"
     
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -96,6 +118,30 @@ class ViewController: UIViewController {
           vc.nugentRoomDryersAvailable = self.nugentRoomDryersAvailable
           vc.orchardNorthWashersAvailable = self.orchardNorthWashersAvailable
           vc.orchardNorthDryersAvailable = self.orchardNorthDryersAvailable
+          vc.orchardSouthWashersAvailable = self.orchardSouthWashersAvailable
+          vc.orchardSouthDryersAvailable = self.orchardSouthDryersAvailable
+          vc.parBabcockWashersAvailable = self.parBabcockWashersAvailable
+          vc.parBabcockDryersAvailable = self.parBabcockDryersAvailable
+          vc.parBlaisdellWashersAvailable = self.parBlaisdellWashersAvailable
+          vc.parBlaisdellDryersAvailable = self.parBlaisdellDryersAvailable
+          vc.parCarrWashersAvailable = self.parCarrWashersAvailable
+          vc.parCarrDryersAvailable = self.parCarrDryersAvailable
+          vc.parSaundersWashersAvailable = self.parSaundersWashersAvailable
+          vc.parSaundersDryersAvailable = self.parSaundersDryersAvailable
+          vc.scottWashersAvailable = self.scottWashersAvailable
+          vc.scottDryersAvailable = self.scottDryersAvailable
+          vc.shermanShortWashersAvailable = self.shermanShortWashersAvailable
+          vc.shermanShortDryersAvailable = self.shermanShortDryersAvailable
+          vc.shermanTallWashersAvailable = self.shermanTallWashersAvailable
+          vc.shermanTallDryersAvailable = self.shermanTallDryersAvailable
+          vc.snyderWashersAvailable = self.snyderWashersAvailable
+          vc.snyderDryersAvailable = self.snyderDryersAvailable
+          vc.tvdTaftWashersAvailable = self.tvdTaftWashersAvailable
+          vc.tvdTaftDryersAvailable = self.tvdTaftDryersAvailable
+          vc.tvdVanDorenWashersAvailable = self.tvdVanDorenWashersAvailable
+          vc.tvdVanDorenDryersAvailable = self.tvdVanDorenDryersAvailable
+          vc.westonWashersAvailable = self.westonWashersAvailable
+          vc.westonDryersAvailable = self.westonDryersAvailable
       }
   }
     
@@ -223,6 +269,56 @@ class ViewController: UIViewController {
       self.orchardNorthWashersAvailable = myHTMLString![rangeOfTLD]
       rangeOfTLD = myHTMLString!.startIndex.advancedBy(46134)..<myHTMLString!.startIndex.advancedBy(46137)
       self.orchardNorthDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(47920)..<myHTMLString!.startIndex.advancedBy(47924)
+      self.orchardSouthWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(48118)..<myHTMLString!.startIndex.advancedBy(48122)
+      self.orchardSouthDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(49899)..<myHTMLString!.startIndex.advancedBy(49902)
+      self.parBabcockWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(50096)..<myHTMLString!.startIndex.advancedBy(50099)
+      self.parBabcockDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(51877)..<myHTMLString!.startIndex.advancedBy(51880)
+      self.parBlaisdellWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(52074)..<myHTMLString!.startIndex.advancedBy(52077)
+      self.parBlaisdellDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(53850)..<myHTMLString!.startIndex.advancedBy(53853)
+      self.parCarrWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(54047)..<myHTMLString!.startIndex.advancedBy(54050)
+      self.parCarrDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(55826)..<myHTMLString!.startIndex.advancedBy(55829)
+      self.parSaundersWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(56023)..<myHTMLString!.startIndex.advancedBy(56026)
+      self.parSaundersDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(57795)..<myHTMLString!.startIndex.advancedBy(57798)
+      self.scottWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(57992)..<myHTMLString!.startIndex.advancedBy(57995)
+      self.scottDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(59772)..<myHTMLString!.startIndex.advancedBy(59775)
+      self.shermanShortWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(59969)..<myHTMLString!.startIndex.advancedBy(59972)
+      self.shermanShortDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(61748)..<myHTMLString!.startIndex.advancedBy(61751)
+      self.shermanTallWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(61945)..<myHTMLString!.startIndex.advancedBy(61948)
+      self.shermanTallDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(63718)..<myHTMLString!.startIndex.advancedBy(63721)
+      self.snyderWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(63915)..<myHTMLString!.startIndex.advancedBy(63919)
+      self.snyderDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(65692)..<myHTMLString!.startIndex.advancedBy(65695)
+      self.tvdTaftWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(65889)..<myHTMLString!.startIndex.advancedBy(65892)
+      self.tvdTaftDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(67670)..<myHTMLString!.startIndex.advancedBy(67673)
+      self.tvdVanDorenWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(67867)..<myHTMLString!.startIndex.advancedBy(67870)
+      self.tvdVanDorenDryersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(69639)..<myHTMLString!.startIndex.advancedBy(69642)
+      self.westonWashersAvailable = myHTMLString![rangeOfTLD]
+      rangeOfTLD = myHTMLString!.startIndex.advancedBy(69836)..<myHTMLString!.startIndex.advancedBy(69841)
+      self.westonDryersAvailable = myHTMLString![rangeOfTLD]
+        
+
     }
     
     URLTask.resume()
