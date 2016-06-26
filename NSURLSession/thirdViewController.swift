@@ -106,7 +106,12 @@ class thirdViewController: UIViewController {
         shermanTall.clipsToBounds = true
         snyder.layer.cornerRadius = 8.0
         snyder.clipsToBounds = true
-        //displayURL()
+        
+        let image : UIImage = UIImage(named: "logo1.jpg")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
     @IBAction func clickButton(sender: AnyObject) {
         self.navigationController!.popViewControllerAnimated(true)

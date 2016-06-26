@@ -111,7 +111,13 @@ class secondViewController: UIViewController {
         nugentRoom.clipsToBounds = true
         orchardNorth.layer.cornerRadius = 8.0
         orchardNorth.clipsToBounds = true
-        //displayURL()
+        
+        let image : UIImage = UIImage(named: "logo1.jpg")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
+        
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "nextScreen"{
