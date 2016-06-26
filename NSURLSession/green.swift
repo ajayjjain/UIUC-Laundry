@@ -89,7 +89,21 @@ class green: UIViewController {
             guard error == nil else { return }
             
             let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
-            //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
+            
+            let html = myHTMLString
+            
+            if let doc = HTML(html: html!, encoding: NSWindowsCP1250StringEncoding/*NSUTF8StringEncoding*/) {
+                print(doc.title)
+                
+                // Search for nodes by CSS
+                for link in doc.css("font") {
+                    print(link.text)
+                    print(link["face"])
+                    //print(doc.css("min").text)
+                }
+                //print(doc.text)
+            }
+            /*//var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
             //let allenWashersAvailable = myHTMLString![rangeOfTLD]
             print("Hello world")
             //print(myHTMLString)
@@ -187,8 +201,8 @@ class green: UIViewController {
                                             locale: nil)
             if let range = result {
                 print(range)
+            }*/
             }
-        }
         URLTask.resume()
     }
 }
