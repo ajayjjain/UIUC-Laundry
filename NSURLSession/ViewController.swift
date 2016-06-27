@@ -332,7 +332,7 @@ class ViewController: UIViewController {
     URLTask.resume()
   }
     func parse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMPage?Login=True"
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {

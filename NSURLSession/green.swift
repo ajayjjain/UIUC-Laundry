@@ -58,6 +58,8 @@ class green: UIViewController {
     var greenMachineTenStatus = ""
     var greenMachineElevenStatus = ""
 
+    //var array: [String]
+    
 
 
 
@@ -75,12 +77,42 @@ class green: UIViewController {
     
     
 
-    
     
     
     
     func greenParse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURL = NSURL(string: myURLAdress)
+        
+        let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
+            myData, response, error in
+            
+            guard error == nil else { return }
+            
+            let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
+            //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
+            //let allenWashersAvailable = myHTMLString![rangeOfTLD]
+            print("Hello world")
+            print(myHTMLString)
+            let html = myHTMLString
+            
+            if let doc = HTML(html: html!, encoding: NSUTF8StringEncoding) {
+                print("h")
+                print(doc.title)
+                for link in doc.css("font") {  // font, face
+                    print(link.text)
+                    print(link["tbody"])
+                    //self.array.append(link["tbody"]!)
+                    //print(doc.css("min").text)
+                }
+            }
+            
+        }
+        URLTask.resume()
+    }
+}
+    /*func greenParse() {
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMPage?Login=True"
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -92,17 +124,36 @@ class green: UIViewController {
             
             let html = myHTMLString
             
-            if let doc = HTML(html: html!, encoding: NSWindowsCP1250StringEncoding/*NSUTF8StringEncoding*/) {
-                print(doc.title)
+            let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
+                myData, response, error in
                 
+                guard error == nil else { return }
+                
+                let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
+                //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
+                //let allenWashersAvailable = myHTMLString![rangeOfTLD]
+                print("Hello world")
+                print(myHTMLString)
+                
+            }
+            URLTask.resume()
+            
+            /*if let doc = HTML(html: html!, encoding: NSUTF8StringEncoding) {
+                print("h")
+                print(doc.title)
                 // Search for nodes by CSS
-                for link in doc.css("font") {
+                for link in doc.css("font") {  // font, face
                     print(link.text)
-                    print(link["face"])
+                    print(link["tbody"])
+                    //self.array.append(link["tbody"]!)
                     //print(doc.css("min").text)
                 }
-                //print(doc.text)
-            }
+                for link in doc.xpath("tbody") {
+                    print(link.innerHTML)
+                }
+                //print(doc.text)*/
+            
+}*/
             /*//var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
             //let allenWashersAvailable = myHTMLString![rangeOfTLD]
             print("Hello world")
@@ -202,8 +253,4 @@ class green: UIViewController {
             if let range = result {
                 print(range)
             }*/
-            }
-        URLTask.resume()
-    }
-}
-
+        //}
