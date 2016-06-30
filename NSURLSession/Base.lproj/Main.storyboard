@@ -1246,7 +1246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snyder" id="AET-V4-Ovf">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snyder" id="AET-V4-Ovf">
                                 <rect key="frame" x="223" y="362" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1442,9 +1442,13 @@
                                 <rect key="frame" x="179" y="474" width="9" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scott" id="Yid-ku-OsO">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scott" id="Yid-ku-OsO">
                                 <rect key="frame" x="223" y="217" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="g7t-jI-YmA" appends="YES" id="Ukc-dL-jAE"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scott" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="afh-Tp-a0e">
                                 <rect key="frame" x="223" y="316" width="80" height="14"/>
@@ -1601,7 +1605,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherman" id="wtU-Ut-Tov">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherman" id="wtU-Ut-Tov">
                                 <rect key="frame" x="122" y="362" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1713,6 +1717,11 @@
                         <segue destination="aco-x4-Sql" kind="push" id="4KA-IG-n3g"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="g7t-jI-YmA" userLabel="Scott">
+                    <connections>
+                        <segue destination="hYc-Mn-iOb" kind="push" id="mub-TC-eCK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
         </scene>
@@ -1820,6 +1829,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG8-IK-TjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="695" y="-5065"/>
+        </scene>
+        <!--Scott-->
+        <scene sceneID="oLZ-OE-QTR">
+            <objects>
+                <viewController id="hYc-Mn-iOb" customClass="scott" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vTi-QA-rMh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vnu-GJ-8rp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXd-B8-8CO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="-5060"/>
         </scene>
         <!--LAR Shelden-->
         <scene sceneID="H6M-0B-t7d">
