@@ -26,6 +26,7 @@
 		2DD492B41D25AED90019DCC5 /* taft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B31D25AED90019DCC5 /* taft.swift */; };
 		2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B51D25AF300019DCC5 /* vanDoren.swift */; };
 		2DD492B81D25B2340019DCC5 /* orchardDownsSouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */; };
+		2DD492BA1D25BCDC0019DCC5 /* allen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B91D25BCDC0019DCC5 /* allen.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		2DD492B31D25AED90019DCC5 /* taft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taft.swift; sourceTree = "<group>"; };
 		2DD492B51D25AF300019DCC5 /* vanDoren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vanDoren.swift; sourceTree = "<group>"; };
 		2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchardDownsSouth.swift; sourceTree = "<group>"; };
+		2DD492B91D25BCDC0019DCC5 /* allen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allen.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				35538A241C7AB9D100EA6D0F /* AppDelegate.swift */,
+				2DD492B91D25BCDC0019DCC5 /* allen.swift */,
 				2D32706F1D24D80600B75E56 /* danielsSouth.swift */,
 				2D32706D1D24D52300B75E56 /* goodwin.swift */,
 				2D9DFF671D2035B900835794 /* green.swift */,
@@ -215,6 +218,7 @@
 				2D32706A1D20B46C00B75E56 /* libxmlHTMLDocument.swift in Sources */,
 				2DD492B41D25AED90019DCC5 /* taft.swift in Sources */,
 				2D32706E1D24D52300B75E56 /* goodwin.swift in Sources */,
+				2DD492BA1D25BCDC0019DCC5 /* allen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

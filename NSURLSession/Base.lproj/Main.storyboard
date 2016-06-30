@@ -135,6 +135,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="09i-U6-i93" appends="YES" id="YKl-JT-aF1"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bousfield" id="7uU-If-EAz">
                                 <rect key="frame" x="223" y="81" width="80" height="104"/>
@@ -629,6 +632,11 @@
                 <tapGestureRecognizer id="rPJ-Hz-Ngc" userLabel="Daniels South">
                     <connections>
                         <segue destination="qpj-ZZ-i0T" kind="push" id="2Cy-gR-cfB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="09i-U6-i93" userLabel="Allen">
+                    <connections>
+                        <segue destination="mGz-1R-5IL" kind="push" id="3yY-nA-K8w"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1568,6 +1576,21 @@
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
         </scene>
+        <!--Allen View Controller-->
+        <scene sceneID="YvW-01-j8R">
+            <objects>
+                <viewController title="Allen View Controller" id="mGz-1R-5IL" customClass="allen" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSm-lA-OEo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tZI-ZW-4E9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VC-9I-pvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-2632"/>
+        </scene>
         <!--Daniels South View Controller-->
         <scene sceneID="3U5-GA-pLG">
             <objects>
@@ -1581,7 +1604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54x-8e-i3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-2228"/>
+            <point key="canvasLocation" x="285" y="-2020"/>
         </scene>
         <!--Goodwin View Controller-->
         <scene sceneID="W1Y-B4-xXU">
