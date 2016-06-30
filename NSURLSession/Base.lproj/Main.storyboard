@@ -721,6 +721,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orcharddownsnorth" id="B0T-v3-xLO">
                                 <rect key="frame" x="223" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xog-gl-Ls0" appends="YES" id="mJX-IU-HGN"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Joh-WR-gE9">
                                 <rect key="frame" x="20" y="81" width="80" height="101"/>
@@ -1221,9 +1225,14 @@
                         <segue destination="ely-Yk-Yx7" kind="push" id="raw-sr-rVU"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="rRu-ql-9ah" userLabel="Nugent ROom">
+                <tapGestureRecognizer id="rRu-ql-9ah" userLabel="Nugent Room">
                     <connections>
                         <segue destination="7wn-qm-9Rc" kind="push" id="cxn-Ao-RMl"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xog-gl-Ls0" userLabel="Orchard North">
+                    <connections>
+                        <segue destination="V5v-VW-ESg" kind="push" id="OCi-ZJ-LLX"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1721,6 +1730,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQm-09-ZxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288" y="-6302"/>
+        </scene>
+        <!--Orchard Downs North-->
+        <scene sceneID="Rz8-ai-laW">
+            <objects>
+                <viewController id="V5v-VW-ESg" customClass="orchardDownsNorth" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZXL-uP-UmC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qfs-xI-yeG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCN-o7-VOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-6302"/>
         </scene>
         <!--Far Oglesby-->
         <scene sceneID="vZh-nX-oSN">
