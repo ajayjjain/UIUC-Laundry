@@ -36,6 +36,7 @@
 		2DD492C81D25C5B40019DCC5 /* hopkins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492C71D25C5B40019DCC5 /* hopkins.swift */; };
 		2DD492CC1D25C6C00019DCC5 /* isrTownsend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492CB1D25C6C00019DCC5 /* isrTownsend.swift */; };
 		2DD492CE1D25C7AE0019DCC5 /* isrWardall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492CD1D25C7AE0019DCC5 /* isrWardall.swift */; };
+		2DD492D01D25C8840019DCC5 /* larLeonard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492CF1D25C8840019DCC5 /* larLeonard.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		2DD492C71D25C5B40019DCC5 /* hopkins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hopkins.swift; sourceTree = "<group>"; };
 		2DD492CB1D25C6C00019DCC5 /* isrTownsend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isrTownsend.swift; sourceTree = "<group>"; };
 		2DD492CD1D25C7AE0019DCC5 /* isrWardall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = isrWardall.swift; path = ../isrWardall.swift; sourceTree = "<group>"; };
+		2DD492CF1D25C8840019DCC5 /* larLeonard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = larLeonard.swift; path = ../larLeonard.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				2DD492C71D25C5B40019DCC5 /* hopkins.swift */,
 				2DD492CB1D25C6C00019DCC5 /* isrTownsend.swift */,
 				2DD492CD1D25C7AE0019DCC5 /* isrWardall.swift */,
+				2DD492CF1D25C8840019DCC5 /* larLeonard.swift */,
 				2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */,
 				2D3270711D24DA4800B75E56 /* parBabcock.swift */,
 				2D3270731D24DBD800B75E56 /* parBlaisdell.swift */,
@@ -245,6 +248,7 @@
 				2DD492C61D25C4FE0019DCC5 /* farTrelease.swift in Sources */,
 				2DD492CE1D25C7AE0019DCC5 /* isrWardall.swift in Sources */,
 				2D32706C1D20B46C00B75E56 /* libxmlParserOption.swift in Sources */,
+				2DD492D01D25C8840019DCC5 /* larLeonard.swift in Sources */,
 				2D3270721D24DA4800B75E56 /* parBabcock.swift in Sources */,
 				35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */,
 				2DD492C21D25C2C10019DCC5 /* danielsNorth.swift in Sources */,
