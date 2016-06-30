@@ -144,6 +144,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vgl-Rl-tnX" appends="YES" id="3bL-79-H2X"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bartonlundgren" id="Brc-s5-eIN">
                                 <rect key="frame" x="122" y="81" width="80" height="104"/>
@@ -646,6 +649,11 @@
                 <tapGestureRecognizer id="Vkr-ZK-lEY" userLabel="Barton">
                     <connections>
                         <segue destination="zUw-7R-3f1" kind="push" id="6h4-vO-Lhw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vgl-Rl-tnX" userLabel="Bousfield">
+                    <connections>
+                        <segue destination="pL2-dR-sgv" kind="push" id="scG-xT-YMw"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1584,6 +1592,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Bousfield-->
+        <scene sceneID="hHw-Tj-amA">
+            <objects>
+                <viewController id="pL2-dR-sgv" customClass="bousfield" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRV-1L-XVx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T7A-J5-RL8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqC-IB-K3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-3849"/>
         </scene>
         <!--Barton-->
         <scene sceneID="2TN-RY-RNh">
