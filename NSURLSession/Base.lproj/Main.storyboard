@@ -925,6 +925,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lar" id="Fr3-lP-iMa">
                                 <rect key="frame" x="223" y="218" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xCF-er-hVz" appends="YES" id="H0U-EI-zFw"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAR: Shelden" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="NXO-UH-Q30">
                                 <rect key="frame" x="223" y="317" width="80" height="14"/>
@@ -1197,6 +1201,11 @@
                 <tapGestureRecognizer id="oXw-cq-NIj" userLabel="LAR Leonard">
                     <connections>
                         <segue destination="ebI-ca-wSo" kind="push" id="sGz-9p-nI5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xCF-er-hVz" userLabel="LAR Shelden">
+                    <connections>
+                        <segue destination="w1b-HA-hgD" kind="push" id="ctK-Mi-BWF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1739,6 +1748,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRe-u9-Qtn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="289" y="-4457"/>
+        </scene>
+        <!--LAR Shelden-->
+        <scene sceneID="H6M-0B-t7d">
+            <objects>
+                <viewController title="LAR Shelden" id="w1b-HA-hgD" customClass="larShelden" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQi-fK-qa5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ajS-sZ-d1J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4w-NV-rPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-4466"/>
         </scene>
         <!--Bousfield-->
         <scene sceneID="hHw-Tj-amA">
