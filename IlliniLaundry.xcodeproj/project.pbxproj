@@ -43,6 +43,9 @@
 		2DD492D81D25CC5D0019DCC5 /* orchardDownsNorth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492D71D25CC5D0019DCC5 /* orchardDownsNorth.swift */; };
 		2DD492DA1D25D90A0019DCC5 /* scott.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492D91D25D90A0019DCC5 /* scott.swift */; };
 		2DD492DC1D25DA810019DCC5 /* shermanTall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492DB1D25DA810019DCC5 /* shermanTall.swift */; };
+		2DD492DE1D25DB780019DCC5 /* snyder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492DD1D25DB780019DCC5 /* snyder.swift */; };
+		2DD492E01D25DCEC0019DCC5 /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492DF1D25DCEC0019DCC5 /* fourthViewController.swift */; };
+		2DD492E21D25E48B0019DCC5 /* weston.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492E11D25E48B0019DCC5 /* weston.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		2DD492D71D25CC5D0019DCC5 /* orchardDownsNorth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchardDownsNorth.swift; sourceTree = "<group>"; };
 		2DD492D91D25D90A0019DCC5 /* scott.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scott.swift; sourceTree = "<group>"; };
 		2DD492DB1D25DA810019DCC5 /* shermanTall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shermanTall.swift; sourceTree = "<group>"; };
+		2DD492DD1D25DB780019DCC5 /* snyder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = snyder.swift; path = ../snyder.swift; sourceTree = "<group>"; };
+		2DD492DF1D25DCEC0019DCC5 /* fourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
+		2DD492E11D25E48B0019DCC5 /* weston.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weston.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,11 +159,14 @@
 				2DD492D91D25D90A0019DCC5 /* scott.swift */,
 				2D3270791D24DF1700B75E56 /* shermanShort.swift */,
 				2DD492DB1D25DA810019DCC5 /* shermanTall.swift */,
+				2DD492DD1D25DB780019DCC5 /* snyder.swift */,
 				2DD492B31D25AED90019DCC5 /* taft.swift */,
 				2DD492B51D25AF300019DCC5 /* vanDoren.swift */,
+				2DD492E11D25E48B0019DCC5 /* weston.swift */,
 				35538A261C7AB9D100EA6D0F /* ViewController.swift */,
 				2D821FC51D1A4DAB00779EE8 /* secondViewController.swift */,
 				2D9DFF651D1F8E7500835794 /* thirdViewController.swift */,
+				2DD492DF1D25DCEC0019DCC5 /* fourthViewController.swift */,
 				35538A281C7AB9D100EA6D0F /* Main.storyboard */,
 				35538A2B1C7AB9D100EA6D0F /* Assets.xcassets */,
 				35538A2D1C7AB9D100EA6D0F /* LaunchScreen.storyboard */,
@@ -261,6 +270,7 @@
 				2D32707A1D24DF1700B75E56 /* shermanShort.swift in Sources */,
 				2D821FC61D1A4DAB00779EE8 /* secondViewController.swift in Sources */,
 				2DD492D21D25C9480019DCC5 /* larShelden.swift in Sources */,
+				2DD492E21D25E48B0019DCC5 /* weston.swift in Sources */,
 				2DD492C41D25C3A00019DCC5 /* farOglesby.swift in Sources */,
 				2D32706B1D20B46C00B75E56 /* libxmlHTMLNode.swift in Sources */,
 				2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */,
@@ -280,9 +290,11 @@
 				2D3270691D20B46C00B75E56 /* Kanna.swift in Sources */,
 				2D32706A1D20B46C00B75E56 /* libxmlHTMLDocument.swift in Sources */,
 				2DD492B41D25AED90019DCC5 /* taft.swift in Sources */,
+				2DD492DE1D25DB780019DCC5 /* snyder.swift in Sources */,
 				2DD492D61D25CB1F0019DCC5 /* nugentRoom.swift in Sources */,
 				2D32706E1D24D52300B75E56 /* goodwin.swift in Sources */,
 				2DD492BA1D25BCDC0019DCC5 /* allen.swift in Sources */,
+				2DD492E01D25DCEC0019DCC5 /* fourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

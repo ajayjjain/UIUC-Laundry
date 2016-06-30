@@ -113,9 +113,19 @@ class thirdViewController: UIViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
     }
-    @IBAction func clickButton(sender: AnyObject) {
-        self.navigationController!.popViewControllerAnimated(true)
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "nextScreen"{
+            let vc = segue.destinationViewController as! fourthViewController
+            vc.tvdTaftWashersAvailable = self.tvdTaftWashersAvailable
+            vc.tvdTaftDryersAvailable = self.tvdTaftDryersAvailable
+            vc.tvdVanDorenWashersAvailable = self.tvdVanDorenWashersAvailable
+            vc.tvdVanDorenDryersAvailable = self.tvdVanDorenDryersAvailable
+            vc.westonWashersAvailable = self.westonWashersAvailable
+            vc.westonDryersAvailable = self.westonDryersAvailable
+        }
     }
+
     
     
     @IBOutlet weak var orchardSouthWasherLabel: UILabel!

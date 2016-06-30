@@ -8,7 +8,7 @@
 
 import UIKit
 
-class orchardDownsSouth: UIViewController {
+class snyder: UIViewController {
     
     
     @IBOutlet weak var goodwin: UIImageView!
@@ -57,35 +57,8 @@ class orchardDownsSouth: UIViewController {
     var machineNineteen = "n/a"
     var machineTwenty = "n/a"
     var machineTwentyOne = "n/a"
-    var machineTwentyTwo = "n/a"
-    var machineTwentyThree = "n/a"
-    var machineTwentyFour = "n/a"
-    var machineTwentyFive = "n/a"
-    var machineTwentySix = "n/a"
-    var machineTwentySeven = "n/a"
-    var machineTwentyEight = "n/a"
-    var machineTwentyNine = "n/a"
-    var machineThirty = "n/a"
-    var machineThirtyOne = "n/a"
-    var machineThirtyTwo = "n/a"
-    var machineThirtyThree = "n/a"
-    var machineThirtyFour = "n/a"
-    var machineThirtyFive = "n/a"
-    var machineThirtySix = "n/a"
-    var machineThirtySeven = "n/a"
-    var machineThirtyEight = "n/a"
-    var machineThirtyNine = "n/a"
-    var machineForty = "n/a"
-    var machineFortyOne = "n/a"
-    var machineFortyTwo = "n/a"
-    var machineFortyThree = "n/a"
-    var machineFortyFour = "n/a"
-    var machineFortyFive = "n/a"
-    var machineFortySix = "n/a"
-    var machineFortySeven = "n/a"
-    var machineFortyEight = "n/a"
-    var machineFortyNine = "n/a"
-
+    
+    
     
     var machineOneStatus = ""
     var machineTwoStatus = ""
@@ -108,34 +81,7 @@ class orchardDownsSouth: UIViewController {
     var machineNineteenStatus = ""
     var machineTwentyStatus = ""
     var machineTwentyOneStatus = ""
-    var machineTwentyTwoStatus = ""
-    var machineTwentyThreeStatus = ""
-    var machineTwentyFourStatus = ""
-    var machineTwentyFiveStatus = ""
-    var machineTwentySixStatus = ""
-    var machineTwentySevenStatus = ""
-    var machineTwentyEightStatus = ""
-    var machineTwentyNineStatus = ""
-    var machineThirtyStatus = ""
-    var machineThirtyOneStatus = ""
-    var machineThirtyTwoStatus = ""
-    var machineThirtyThreeStatus = ""
-    var machineThirtyFourStatus = ""
-    var machineThirtyFiveStatus = ""
-    var machineThirtySixStatus = ""
-    var machineThirtySevenStatus = ""
-    var machineThirtyEightStatus = ""
-    var machineThirtyNineStatus = ""
-    var machineFortyStatus = ""
-    var machineFortyOneStatus = ""
-    var machineFortyTwoStatus = ""
-    var machineFortyThreeStatus = ""
-    var machineFortyFourStatus = ""
-    var machineFortyFiveStatus = ""
-    var machineFortySixStatus = ""
-    var machineFortySevenStatus = ""
-    var machineFortyEightStatus = ""
-    var machineFortyNineStatus = ""
+    
     
     var washersAvailable = ""
     var dryersAvailable = ""
@@ -149,7 +95,7 @@ class orchardDownsSouth: UIViewController {
     
     
     func parse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=18&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=26&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //bousfield let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=2&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
@@ -237,62 +183,7 @@ class orchardDownsSouth: UIViewController {
                 self.machineTwentyStatus = self.elements[82]
                 self.machineTwentyOne = self.elements[85]
                 self.machineTwentyOneStatus = self.elements[86]
-                self.machineTwentyTwo = self.elements[89]
-                self.machineTwentyTwoStatus = self.elements[90]
-                self.machineTwentyThree = self.elements[93]
-                self.machineTwentyThreeStatus = self.elements[94]
-                self.machineTwentyFour = self.elements[97]
-                self.machineTwentyFourStatus = self.elements[98]
-                self.machineTwentyFive = self.elements[101]
-                self.machineTwentyFiveStatus = self.elements[102]
-                self.machineTwentySix = self.elements[105]
-                self.machineTwentySixStatus = self.elements[106]
-                self.machineTwentySeven = self.elements[109]
-                self.machineTwentySevenStatus = self.elements[110]
-                self.machineTwentyEight = self.elements[113]
-                self.machineTwentyEightStatus = self.elements[114]
-                self.machineTwentyNine = self.elements[117]
-                self.machineTwentyNineStatus = self.elements[118]
-                self.machineThirty = self.elements[121]
-                self.machineThirtyStatus = self.elements[122]
-                self.machineThirtyOne = self.elements[125]
-                self.machineThirtyOneStatus = self.elements[126]
-                self.machineThirtyTwo = self.elements[129]
-                self.machineThirtyTwoStatus = self.elements[130]
-                self.machineThirtyThree = self.elements[133]
-                self.machineThirtyThreeStatus = self.elements[134]
-                self.machineThirtyFour = self.elements[137]
-                self.machineThirtyFourStatus = self.elements[138]
-                self.machineThirtyFive = self.elements[141]
-                self.machineThirtyFiveStatus = self.elements[142]
-                self.machineThirtySix = self.elements[145]
-                self.machineThirtySixStatus = self.elements[146]
-                self.machineThirtySeven = self.elements[149]
-                self.machineThirtySevenStatus = self.elements[150]
-                self.machineThirtyEight = self.elements[153]
-                self.machineThirtyEightStatus = self.elements[154]
-                self.machineThirtyNine = self.elements[157]
-                self.machineThirtyNineStatus = self.elements[158]
-                self.machineForty = self.elements[161]
-                self.machineFortyStatus = self.elements[162]
-                self.machineFortyOne = self.elements[165]
-                self.machineFortyOneStatus = self.elements[166]
-                self.machineFortyTwo = self.elements[169]
-                self.machineFortyTwoStatus = self.elements[170]
-                self.machineFortyThree = self.elements[173]
-                self.machineFortyThreeStatus = self.elements[174]
-                self.machineFortyFour = self.elements[177]
-                self.machineFortyFourStatus = self.elements[178]
-                self.machineFortyFive = self.elements[181]
-                self.machineFortyFiveStatus = self.elements[182]
-                self.machineFortySix = self.elements[185]
-                self.machineFortySixStatus = self.elements[186]
-                self.machineFortySeven = self.elements[189]
-                self.machineFortySevenStatus = self.elements[190]
-                self.machineFortyEight = self.elements[193]
-                self.machineFortyEightStatus = self.elements[194]
-                self.machineFortyNine = self.elements[197]
-                self.machineFortyNineStatus = self.elements[198]
+                
                 print(self.machineOne)
                 print(self.machineOneStatus)
                 print(self.machineTwo)
@@ -335,60 +226,7 @@ class orchardDownsSouth: UIViewController {
                 print(self.machineTwentyStatus)
                 print(self.machineTwentyOne)
                 print(self.machineTwentyOneStatus)
-                print(self.machineTwentyTwo)
-                print(self.machineTwentyTwoStatus)
-                print(self.machineTwentyThree)
-                print(self.machineTwentyThreeStatus)
-                print(self.machineTwentyFour)
-                print(self.machineTwentyFourStatus)
-                print(self.machineTwentyFive)
-                print(self.machineTwentyFiveStatus)
-                print(self.machineTwentySix)
-                print(self.machineTwentySixStatus)
-                print(self.machineTwentySeven)
-                print(self.machineTwentySevenStatus)
-                print(self.machineTwentyEight)
-                print(self.machineTwentyEightStatus)
-                print(self.machineTwentyNine)
-                print(self.machineTwentyNineStatus)
-                print(self.machineThirty)
-                print(self.machineThirtyStatus)
-                print(self.machineThirtyOne)
-                print(self.machineThirtyOneStatus)
-                print(self.machineThirtyTwo)
-                print(self.machineThirtyTwoStatus)
-                print(self.machineThirtyThree)
-                print(self.machineThirtyThreeStatus)
-                print(self.machineThirtyFour)
-                print(self.machineThirtyFourStatus)
-                print(self.machineThirtyFive)
-                print(self.machineThirtyFiveStatus)
-                print(self.machineThirtySix)
-                print(self.machineThirtySixStatus)
-                print(self.machineThirtySeven)
-                print(self.machineThirtySevenStatus)
-                print(self.machineThirtyEight)
-                print(self.machineThirtyEightStatus)
-                print(self.machineThirtyNine)
-                print(self.machineThirtyNineStatus)
-                print(self.machineFortyOne)
-                print(self.machineFortyOneStatus)
-                print(self.machineFortyTwo)
-                print(self.machineFortyTwoStatus)
-                print(self.machineFortyThree)
-                print(self.machineFortyThreeStatus)
-                print(self.machineFortyFour)
-                print(self.machineFortyFourStatus)
-                print(self.machineFortyFive)
-                print(self.machineFortyFiveStatus)
-                print(self.machineFortySix)
-                print(self.machineFortySixStatus)
-                print(self.machineFortySeven)
-                print(self.machineFortySevenStatus)
-                print(self.machineFortyEight)
-                print(self.machineFortyEightStatus)
-                print(self.machineFortyNine)
-                print(self.machineFortyNineStatus)
+                
                 
                 //print(str)
                 //self.button.setTitle(str, forState: .Normal)
