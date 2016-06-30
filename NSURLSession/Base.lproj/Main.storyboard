@@ -1608,6 +1608,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherman" id="wtU-Ut-Tov">
                                 <rect key="frame" x="122" y="362" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AbL-0P-91m" appends="YES" id="m2F-pL-7Du"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="EKK-nr-4nq">
                                 <rect key="frame" x="38" y="185" width="21" height="12"/>
@@ -1722,6 +1726,11 @@
                         <segue destination="hYc-Mn-iOb" kind="push" id="mub-TC-eCK"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="AbL-0P-91m" userLabel="Sherman Tall">
+                    <connections>
+                        <segue destination="Aap-BW-0KV" kind="push" id="3k9-hJ-BeC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
         </scene>
@@ -1784,6 +1793,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNm-St-ybS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="698" y="-5686"/>
+        </scene>
+        <!--Sherman Tall-->
+        <scene sceneID="5ln-SS-QfF">
+            <objects>
+                <viewController id="Aap-BW-0KV" customClass="shermanTall" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNY-en-3yR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c76-KI-tG8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAs-fA-9bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="-5671"/>
         </scene>
         <!--Daniels North-->
         <scene sceneID="R9C-F7-4Fm">

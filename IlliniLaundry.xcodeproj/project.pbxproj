@@ -42,6 +42,7 @@
 		2DD492D61D25CB1F0019DCC5 /* nugentRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492D51D25CB1F0019DCC5 /* nugentRoom.swift */; };
 		2DD492D81D25CC5D0019DCC5 /* orchardDownsNorth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492D71D25CC5D0019DCC5 /* orchardDownsNorth.swift */; };
 		2DD492DA1D25D90A0019DCC5 /* scott.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492D91D25D90A0019DCC5 /* scott.swift */; };
+		2DD492DC1D25DA810019DCC5 /* shermanTall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492DB1D25DA810019DCC5 /* shermanTall.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		2DD492D51D25CB1F0019DCC5 /* nugentRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nugentRoom.swift; sourceTree = "<group>"; };
 		2DD492D71D25CC5D0019DCC5 /* orchardDownsNorth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchardDownsNorth.swift; sourceTree = "<group>"; };
 		2DD492D91D25D90A0019DCC5 /* scott.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scott.swift; sourceTree = "<group>"; };
+		2DD492DB1D25DA810019DCC5 /* shermanTall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shermanTall.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				2D3270771D24DE0C00B75E56 /* parSaunders.swift */,
 				2DD492D91D25D90A0019DCC5 /* scott.swift */,
 				2D3270791D24DF1700B75E56 /* shermanShort.swift */,
+				2DD492DB1D25DA810019DCC5 /* shermanTall.swift */,
 				2DD492B31D25AED90019DCC5 /* taft.swift */,
 				2DD492B51D25AF300019DCC5 /* vanDoren.swift */,
 				35538A261C7AB9D100EA6D0F /* ViewController.swift */,
@@ -266,6 +269,7 @@
 				2DD492CE1D25C7AE0019DCC5 /* isrWardall.swift in Sources */,
 				2DD492D81D25CC5D0019DCC5 /* orchardDownsNorth.swift in Sources */,
 				2D32706C1D20B46C00B75E56 /* libxmlParserOption.swift in Sources */,
+				2DD492DC1D25DA810019DCC5 /* shermanTall.swift in Sources */,
 				2DD492D01D25C8840019DCC5 /* larLeonard.swift in Sources */,
 				2D3270721D24DA4800B75E56 /* parBabcock.swift in Sources */,
 				35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */,
