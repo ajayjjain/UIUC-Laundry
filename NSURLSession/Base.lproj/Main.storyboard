@@ -23,6 +23,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="-1427"/>
         </scene>
+        <!--Sherman Short View Controller-->
+        <scene sceneID="sMY-fh-l4p">
+            <objects>
+                <viewController title="Sherman Short View Controller" id="swY-Kc-qdc" customClass="shermanShort" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWr-ur-UmN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xok-P7-Lnv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08i-8J-Pks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="-3835"/>
+        </scene>
         <!--PAR Saunders View Controller-->
         <scene sceneID="ztT-wy-3ph">
             <objects>
@@ -1369,9 +1384,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherman" id="nCn-TH-yec">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sherman" id="nCn-TH-yec">
                                 <rect key="frame" x="20" y="362" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2Jq-Pt-ewR" appends="YES" id="Edf-Ow-8kg"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sherman Short" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="Ije-nS-jib">
                                 <rect key="frame" x="20" y="461" width="80" height="14"/>
@@ -1515,6 +1534,11 @@
                 <tapGestureRecognizer id="Fqr-vG-V6J" userLabel="PAR Saunders">
                     <connections>
                         <segue destination="hYS-7y-eHP" kind="push" id="NBD-EQ-R9m"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2Jq-Pt-ewR" userLabel="Sherman Short">
+                    <connections>
+                        <segue destination="swY-Kc-qdc" kind="push" id="Lz3-L7-VyU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
