@@ -281,10 +281,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="JP6-Tm-2he">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="JP6-Tm-2he">
                                 <rect key="frame" x="122" y="218" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="roX-97-10J" appends="YES" id="vfx-jC-azt"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniels North" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="etc-78-Dq0">
                                 <rect key="frame" x="122" y="317" width="80" height="14"/>
@@ -663,6 +667,11 @@
                 <tapGestureRecognizer id="8lp-B4-XoV" userLabel="Busey Evans">
                     <connections>
                         <segue destination="wdJ-ik-i1a" kind="push" id="69D-Fn-ulP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="roX-97-10J" userLabel="Daniels North">
+                    <connections>
+                        <segue destination="b2K-38-q1f" kind="push" id="DTC-bx-G8b"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1601,6 +1610,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Daniels North-->
+        <scene sceneID="R9C-F7-4Fm">
+            <objects>
+                <viewController id="b2K-38-q1f" customClass="danielsNorth" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dao-gy-RXG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TgH-Kc-zxe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhE-mu-hPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="-5065"/>
         </scene>
         <!--Busey Evans-->
         <scene sceneID="ueG-7r-PAg">
