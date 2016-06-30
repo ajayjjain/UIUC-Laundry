@@ -23,6 +23,8 @@
 		2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF651D1F8E7500835794 /* thirdViewController.swift */; };
 		2D9DFF681D2035B900835794 /* green.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF671D2035B900835794 /* green.swift */; };
 		2D9DFF741D208F7B00835794 /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = 2D9DFF6E1D208F7A00835794 /* Modules */; };
+		2DD492B41D25AED90019DCC5 /* taft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B31D25AED90019DCC5 /* taft.swift */; };
+		2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B51D25AF300019DCC5 /* vanDoren.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		2D9DFF651D1F8E7500835794 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		2D9DFF671D2035B900835794 /* green.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = green.swift; sourceTree = "<group>"; };
 		2D9DFF6E1D208F7A00835794 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Modules; path = ../../../../Documents/Modules; sourceTree = "<group>"; };
+		2DD492B31D25AED90019DCC5 /* taft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taft.swift; sourceTree = "<group>"; };
+		2DD492B51D25AF300019DCC5 /* vanDoren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vanDoren.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				2D9DFF651D1F8E7500835794 /* thirdViewController.swift */,
 				2D3270711D24DA4800B75E56 /* parBabcock.swift */,
 				2D3270771D24DE0C00B75E56 /* parSaunders.swift */,
+				2DD492B31D25AED90019DCC5 /* taft.swift */,
+				2DD492B51D25AF300019DCC5 /* vanDoren.swift */,
 				2D3270731D24DBD800B75E56 /* parBlaisdell.swift */,
 				2D3270751D24DD0500B75E56 /* parCarr.swift */,
 				2D3270791D24DF1700B75E56 /* shermanShort.swift */,
@@ -189,6 +195,7 @@
 				2D3270701D24D80600B75E56 /* danielsSouth.swift in Sources */,
 				2D9DFF681D2035B900835794 /* green.swift in Sources */,
 				2D3270741D24DBD800B75E56 /* parBlaisdell.swift in Sources */,
+				2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */,
 				2D3270761D24DD0500B75E56 /* parCarr.swift in Sources */,
 				2D3270781D24DE0C00B75E56 /* parSaunders.swift in Sources */,
 				35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */,
@@ -202,6 +209,7 @@
 				2D3270681D20B46C00B75E56 /* CSS.swift in Sources */,
 				2D3270691D20B46C00B75E56 /* Kanna.swift in Sources */,
 				2D32706A1D20B46C00B75E56 /* libxmlHTMLDocument.swift in Sources */,
+				2DD492B41D25AED90019DCC5 /* taft.swift in Sources */,
 				2D32706E1D24D52300B75E56 /* goodwin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
