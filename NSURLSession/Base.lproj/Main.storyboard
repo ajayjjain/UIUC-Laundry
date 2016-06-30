@@ -1046,6 +1046,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nugent" id="goS-gD-1uf">
                                 <rect key="frame" x="20" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="F8a-1O-Kcw" appends="YES" id="PSZ-bz-Sxi"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nugent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="2YM-Qo-nya">
                                 <rect key="frame" x="20" y="462" width="80" height="14"/>
@@ -1206,6 +1210,11 @@
                 <tapGestureRecognizer id="xCF-er-hVz" userLabel="LAR Shelden">
                     <connections>
                         <segue destination="w1b-HA-hgD" kind="push" id="ctK-Mi-BWF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="F8a-1O-Kcw" userLabel="Nugent">
+                    <connections>
+                        <segue destination="ely-Yk-Yx7" kind="push" id="raw-sr-rVU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1748,6 +1757,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRe-u9-Qtn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="289" y="-4457"/>
+        </scene>
+        <!--Nugent-->
+        <scene sceneID="WZJ-MW-fgG">
+            <objects>
+                <viewController id="ely-Yk-Yx7" customClass="nugent" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEP-93-qcF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rfF-Ab-pFm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bG8-IK-TjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="-5065"/>
         </scene>
         <!--LAR Shelden-->
         <scene sceneID="H6M-0B-t7d">
