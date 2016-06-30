@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  goodwin.swift
+//  IlliniLaundry
 //
-//
-//  Created by Ajay Jain on 6/20/2016
+//  Created by Ajay Jain on 6/29/16.
 //  Copyright © 2016 Ajay Jain. All rights reserved.
 //
 
 import UIKit
 
-class green: UIViewController {
+class goodwin: UIViewController {
     
     
     @IBOutlet weak var goodwin: UIImageView!
@@ -34,7 +34,7 @@ class green: UIViewController {
     
     
     
-
+    
     
     var machineOne = "n/a"
     var machineTwo = "n/a"
@@ -63,18 +63,16 @@ class green: UIViewController {
     var washersAvailable = ""
     var dryersAvailable = ""
     var peopleWaiting = ""
-
+    
     var array = [String]()
     var elements = [String]()
     
     @IBOutlet var button: UIButton!
-
-
-
+    
+    
+    
     func parse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        //bousfield let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=2&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=8&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -90,7 +88,7 @@ class green: UIViewController {
                     if (link.text != nil){
                         var tempString = link.text!
                         var newString = tempString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()
-                            )
+                        )
                         self.array.append(newString)
                     }
                 }
@@ -161,11 +159,11 @@ class green: UIViewController {
                 print(self.machineTenStatus)
                 print(self.machineEleven)
                 print(self.machineElevenStatus)
-
-
+                
+                
                 //print(str)
                 //self.button.setTitle(str, forState: .Normal)
-
+                
             }
             
         }

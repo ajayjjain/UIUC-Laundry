@@ -31,19 +31,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lar" id="sgY-GI-VrA">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lar" id="sgY-GI-VrA">
                                 <rect key="frame" x="223" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WK7-ix-mm4" appends="YES" id="S3v-Dw-PSr"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allen" id="Lri-oj-AXS">
                                 <rect key="frame" x="20" y="78" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ghB-zP-JPf" appends="YES" id="AQJ-Yo-W9u"/>
-                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bousfield" id="7uU-If-EAz">
                                 <rect key="frame" x="223" y="81" width="80" height="104"/>
@@ -526,7 +527,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ghB-zP-JPf"/>
+                <tapGestureRecognizer id="WK7-ix-mm4" userLabel="Goodwin">
+                    <connections>
+                        <segue destination="zIg-0f-fHR" kind="push" id="dVi-mM-edy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="285" y="-784"/>
         </scene>
@@ -1409,6 +1414,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ea-oi-3ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Goodwin View Controller-->
+        <scene sceneID="W1Y-B4-xXU">
+            <objects>
+                <viewController title="Goodwin View Controller" id="zIg-0f-fHR" customClass="goodwin" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ty-Yo-gzX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ukS-W6-CZQ">
+                                <rect key="frame" x="137" y="217" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uyn-i5-uL5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nH-I3-NXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="-1414"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QVS-ou-dGH">
