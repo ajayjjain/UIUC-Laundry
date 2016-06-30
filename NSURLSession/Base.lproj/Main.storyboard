@@ -261,15 +261,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniels South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="XCn-UW-IfH">
-                                <rect key="frame" x="223" y="317" width="80" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90980392160000001" green="0.46666666670000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K4a-C2-lSH">
                                 <rect key="frame" x="223" y="330" width="80" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -474,11 +465,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="Y8d-ju-FOs">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daniels" id="Y8d-ju-FOs">
                                 <rect key="frame" x="223" y="218" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rPJ-Hz-Ngc" appends="YES" id="Hsl-7j-SMk"/>
+                                </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniels South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="eJS-7e-VDX">
+                                <rect key="frame" x="223" y="317" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.46666666670000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -530,6 +534,11 @@
                 <tapGestureRecognizer id="WK7-ix-mm4" userLabel="Goodwin">
                     <connections>
                         <segue destination="zIg-0f-fHR" kind="push" id="dVi-mM-edy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rPJ-Hz-Ngc" userLabel="Daniels South">
+                    <connections>
+                        <segue destination="qpj-ZZ-i0T" kind="push" id="2Cy-gR-cfB"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1414,6 +1423,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ea-oi-3ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Daniels South View Controller-->
+        <scene sceneID="3U5-GA-pLG">
+            <objects>
+                <viewController title="Daniels South View Controller" id="qpj-ZZ-i0T" customClass="danielsSouth" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lB0-LU-KcI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ghF-Tb-PLC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54x-8e-i3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="-1419"/>
         </scene>
         <!--Goodwin View Controller-->
         <scene sceneID="W1Y-B4-xXU">
