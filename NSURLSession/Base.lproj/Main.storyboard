@@ -23,6 +23,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="-1427"/>
         </scene>
+        <!--Par Blaisdell-->
+        <scene sceneID="1WQ-sJ-Hjc">
+            <objects>
+                <viewController id="yci-KI-YKA" customClass="parBlaisdell" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egQ-5x-5At">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nqq-K1-Cn8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K44-ic-rfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-2002"/>
+        </scene>
         <!--PAR Babcock View Controller-->
         <scene sceneID="Fuo-XP-deJ">
             <objects>
@@ -1393,9 +1408,13 @@
                                 <rect key="frame" x="20" y="473" width="9" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="rgC-tg-fR4">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="rgC-tg-fR4">
                                 <rect key="frame" x="223" y="80" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eWn-wX-REg" appends="YES" id="t0C-S6-GqK"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAR: Blaisdell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="ZyN-rb-pji">
                                 <rect key="frame" x="223" y="172" width="80" height="14"/>
@@ -1443,6 +1462,11 @@
                 <tapGestureRecognizer id="go0-CE-YM9" userLabel="PAR Babcock">
                     <connections>
                         <segue destination="5Nn-Pi-QNy" kind="push" id="4ve-BL-fnI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eWn-wX-REg" userLabel="PAR Blaisdell">
+                    <connections>
+                        <segue destination="yci-KI-YKA" kind="push" id="haX-A8-xIA"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

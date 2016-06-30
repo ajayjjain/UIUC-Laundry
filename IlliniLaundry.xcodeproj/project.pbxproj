@@ -15,6 +15,7 @@
 		2D32706E1D24D52300B75E56 /* goodwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32706D1D24D52300B75E56 /* goodwin.swift */; };
 		2D3270701D24D80600B75E56 /* danielsSouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32706F1D24D80600B75E56 /* danielsSouth.swift */; };
 		2D3270721D24DA4800B75E56 /* parBabcock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3270711D24DA4800B75E56 /* parBabcock.swift */; };
+		2D3270741D24DBD800B75E56 /* parBlaisdell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3270731D24DBD800B75E56 /* parBlaisdell.swift */; };
 		2D821FC61D1A4DAB00779EE8 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D821FC51D1A4DAB00779EE8 /* secondViewController.swift */; };
 		2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF651D1F8E7500835794 /* thirdViewController.swift */; };
 		2D9DFF681D2035B900835794 /* green.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF671D2035B900835794 /* green.swift */; };
@@ -35,6 +36,7 @@
 		2D32706D1D24D52300B75E56 /* goodwin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goodwin.swift; sourceTree = "<group>"; };
 		2D32706F1D24D80600B75E56 /* danielsSouth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = danielsSouth.swift; sourceTree = "<group>"; };
 		2D3270711D24DA4800B75E56 /* parBabcock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parBabcock.swift; sourceTree = "<group>"; };
+		2D3270731D24DBD800B75E56 /* parBlaisdell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parBlaisdell.swift; sourceTree = "<group>"; };
 		2D821FC51D1A4DAB00779EE8 /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		2D9DFF651D1F8E7500835794 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		2D9DFF671D2035B900835794 /* green.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = green.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				2D821FC51D1A4DAB00779EE8 /* secondViewController.swift */,
 				2D9DFF651D1F8E7500835794 /* thirdViewController.swift */,
 				2D3270711D24DA4800B75E56 /* parBabcock.swift */,
+				2D3270731D24DBD800B75E56 /* parBlaisdell.swift */,
 				35538A281C7AB9D100EA6D0F /* Main.storyboard */,
 				35538A2B1C7AB9D100EA6D0F /* Assets.xcassets */,
 				35538A2D1C7AB9D100EA6D0F /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 			files = (
 				2D3270701D24D80600B75E56 /* danielsSouth.swift in Sources */,
 				2D9DFF681D2035B900835794 /* green.swift in Sources */,
+				2D3270741D24DBD800B75E56 /* parBlaisdell.swift in Sources */,
 				35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */,
 				2D821FC61D1A4DAB00779EE8 /* secondViewController.swift in Sources */,
 				2D32706B1D20B46C00B75E56 /* libxmlHTMLNode.swift in Sources */,
