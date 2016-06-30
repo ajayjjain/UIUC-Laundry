@@ -21,7 +21,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncr-yJ-REn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="-1423"/>
+            <point key="canvasLocation" x="696" y="-1427"/>
+        </scene>
+        <!--PAR Babcock View Controller-->
+        <scene sceneID="Fuo-XP-deJ">
+            <objects>
+                <viewController title="PAR Babcock View Controller" id="5Nn-Pi-QNy" customClass="parBabcock" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H0l-ka-ZeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4TN-fr-eu4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIr-mB-22P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-1395"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1016,9 +1031,13 @@
                                 <rect key="frame" x="20" y="80" width="80" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="5c5-Gv-Qg8">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="5c5-Gv-Qg8">
                                 <rect key="frame" x="122" y="80" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="go0-CE-YM9" appends="YES" id="RkS-XR-9pf"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orchard South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="cso-m8-EzT">
                                 <rect key="frame" x="20" y="172" width="80" height="14"/>
@@ -1421,6 +1440,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ea-oi-3ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="go0-CE-YM9" userLabel="PAR Babcock">
+                    <connections>
+                        <segue destination="5Nn-Pi-QNy" kind="push" id="4ve-BL-fnI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
         </scene>
@@ -1437,7 +1461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54x-8e-i3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="-1419"/>
+            <point key="canvasLocation" x="249" y="-2228"/>
         </scene>
         <!--Goodwin View Controller-->
         <scene sceneID="W1Y-B4-xXU">
@@ -1459,7 +1483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nH-I3-NXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="-1414"/>
+            <point key="canvasLocation" x="285" y="-1419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QVS-ou-dGH">
