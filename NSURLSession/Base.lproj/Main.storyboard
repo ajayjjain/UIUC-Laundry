@@ -1096,6 +1096,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nugent" id="MIM-C0-0Le">
                                 <rect key="frame" x="122" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rRu-ql-9ah" appends="YES" id="S7T-VA-7g0"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="washer" id="0hd-vh-bPI">
                                 <rect key="frame" x="230" y="536" width="9" height="10"/>
@@ -1215,6 +1219,11 @@
                 <tapGestureRecognizer id="F8a-1O-Kcw" userLabel="Nugent">
                     <connections>
                         <segue destination="ely-Yk-Yx7" kind="push" id="raw-sr-rVU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rRu-ql-9ah" userLabel="Nugent ROom">
+                    <connections>
+                        <segue destination="7wn-qm-9Rc" kind="push" id="cxn-Ao-RMl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1727,6 +1736,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvY-9K-QuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="291" y="-5697"/>
+        </scene>
+        <!--Nugent Room-->
+        <scene sceneID="OoS-K0-vL8">
+            <objects>
+                <viewController id="7wn-qm-9Rc" customClass="nugentRoom" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NWx-pa-ZNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Op-kk-HMj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNm-St-ybS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-5686"/>
         </scene>
         <!--Daniels North-->
         <scene sceneID="R9C-F7-4Fm">
