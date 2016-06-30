@@ -23,6 +23,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="-1427"/>
         </scene>
+        <!--Par Carr-->
+        <scene sceneID="Ku8-GS-fSS">
+            <objects>
+                <viewController id="xEZ-19-Xex" customClass="parCarr" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ozJ-eF-W2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BWE-Hv-H5c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNQ-vh-ld5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="-2611"/>
+        </scene>
         <!--Par Blaisdell-->
         <scene sceneID="1WQ-sJ-Hjc">
             <objects>
@@ -1081,9 +1096,13 @@
                                 <rect key="frame" x="70" y="185" width="9" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="de0-EU-xKw">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="de0-EU-xKw">
                                 <rect key="frame" x="20" y="217" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ofK-8w-P5o" appends="YES" id="6Wq-oY-tec"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAR: Carr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="Jlp-YA-9zA">
                                 <rect key="frame" x="20" y="316" width="80" height="14"/>
@@ -1467,6 +1486,11 @@
                 <tapGestureRecognizer id="eWn-wX-REg" userLabel="PAR Blaisdell">
                     <connections>
                         <segue destination="yci-KI-YKA" kind="push" id="haX-A8-xIA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ofK-8w-P5o" userLabel="PAR Carr">
+                    <connections>
+                        <segue destination="xEZ-19-Xex" kind="push" id="vtr-7K-Cfe"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
