@@ -31,6 +31,7 @@
 		2DD492BE1D25C05C0019DCC5 /* bousfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492BD1D25C05C0019DCC5 /* bousfield.swift */; };
 		2DD492C01D25C1750019DCC5 /* buseyEvans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492BF1D25C1750019DCC5 /* buseyEvans.swift */; };
 		2DD492C21D25C2C10019DCC5 /* danielsNorth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492C11D25C2C10019DCC5 /* danielsNorth.swift */; };
+		2DD492C41D25C3A00019DCC5 /* farOglesby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492C31D25C3A00019DCC5 /* farOglesby.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		2DD492BD1D25C05C0019DCC5 /* bousfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bousfield.swift; sourceTree = "<group>"; };
 		2DD492BF1D25C1750019DCC5 /* buseyEvans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buseyEvans.swift; sourceTree = "<group>"; };
 		2DD492C11D25C2C10019DCC5 /* danielsNorth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = danielsNorth.swift; sourceTree = "<group>"; };
+		2DD492C31D25C3A00019DCC5 /* farOglesby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = farOglesby.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				2DD492BF1D25C1750019DCC5 /* buseyEvans.swift */,
 				2DD492C11D25C2C10019DCC5 /* danielsNorth.swift */,
 				2D32706F1D24D80600B75E56 /* danielsSouth.swift */,
+				2DD492C31D25C3A00019DCC5 /* farOglesby.swift */,
 				2D32706D1D24D52300B75E56 /* goodwin.swift */,
 				2D9DFF671D2035B900835794 /* green.swift */,
 				2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */,
@@ -223,6 +226,7 @@
 				35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */,
 				2D32707A1D24DF1700B75E56 /* shermanShort.swift in Sources */,
 				2D821FC61D1A4DAB00779EE8 /* secondViewController.swift in Sources */,
+				2DD492C41D25C3A00019DCC5 /* farOglesby.swift in Sources */,
 				2D32706B1D20B46C00B75E56 /* libxmlHTMLNode.swift in Sources */,
 				2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */,
 				2D32706C1D20B46C00B75E56 /* libxmlParserOption.swift in Sources */,

@@ -541,10 +541,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="far" id="FVW-3E-I52">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="far" id="FVW-3E-I52">
                                 <rect key="frame" x="20" y="363" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Dz-y3-G5F" appends="YES" id="GzX-5g-x97"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busey-Evans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="PiL-Dd-e0I">
                                 <rect key="frame" x="20" y="317" width="80" height="14"/>
@@ -672,6 +676,11 @@
                 <tapGestureRecognizer id="roX-97-10J" userLabel="Daniels North">
                     <connections>
                         <segue destination="b2K-38-q1f" kind="push" id="DTC-bx-G8b"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="8Dz-y3-G5F" userLabel="FAR Oglesby">
+                    <connections>
+                        <segue destination="Xnt-Nn-yUL" kind="push" id="MgV-lC-1G5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1610,6 +1619,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Far Oglesby-->
+        <scene sceneID="vZh-nX-oSN">
+            <objects>
+                <viewController id="Xnt-Nn-yUL" customClass="farOglesby" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dXy-eF-hL7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lKn-Mv-SZH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvY-9K-QuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="-5697"/>
         </scene>
         <!--Daniels North-->
         <scene sceneID="R9C-F7-4Fm">
