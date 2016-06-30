@@ -68,6 +68,21 @@
             </objects>
             <point key="canvasLocation" x="1155" y="-3223"/>
         </scene>
+        <!--ISR Townsend-->
+        <scene sceneID="Bsg-sb-FQF">
+            <objects>
+                <viewController title="ISR Townsend" id="HnK-Hb-toV" customClass="isrTownsend" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M5e-be-edu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rVf-H6-CVb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHv-WO-vsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-2636"/>
+        </scene>
         <!--Par Carr-->
         <scene sceneID="Ku8-GS-fSS">
             <objects>
@@ -718,6 +733,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isrtownsend" id="gdF-r9-X4H">
                                 <rect key="frame" x="223" y="81" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4RB-61-sqi" appends="YES" id="VLS-2T-THr"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hopkins" id="au8-Dy-GeG">
                                 <rect key="frame" x="122" y="81" width="80" height="104"/>
@@ -1155,6 +1174,11 @@
                 <tapGestureRecognizer id="tgo-os-kda" userLabel="Hopkins">
                     <connections>
                         <segue destination="Nt4-lr-ZHw" kind="push" id="nQx-01-YKu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4RB-61-sqi" userLabel="ISR Townsend">
+                    <connections>
+                        <segue destination="HnK-Hb-toV" kind="push" id="APk-Tu-2qf"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
