@@ -15,6 +15,9 @@
                         <state key="normal" title="Button"/>
                     </button>
                     <navigationItem key="navigationItem" id="9mB-Gc-bsq"/>
+                    <connections>
+                        <outlet property="button" destination="Gtx-dY-jSd" id="yrA-Ri-eQi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncr-yJ-REn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

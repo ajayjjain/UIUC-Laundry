@@ -58,8 +58,9 @@ class green: UIViewController {
     var greenMachineTenStatus = ""
     var greenMachineElevenStatus = ""
 
-    //var array: [String]
+    var array = [String]()
     
+    @IBOutlet var button: UIButton!
 
 
 
@@ -81,7 +82,8 @@ class green: UIViewController {
     
     
     func greenParse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -93,7 +95,7 @@ class green: UIViewController {
             //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
             //let allenWashersAvailable = myHTMLString![rangeOfTLD]
             print("Hello world")
-            print(myHTMLString)
+            //print(myHTMLString)
             let html = myHTMLString
             
             if let doc = HTML(html: html!, encoding: NSUTF8StringEncoding) {
@@ -101,10 +103,35 @@ class green: UIViewController {
                 print(doc.title)
                 for link in doc.css("font") {  // font, face
                     print(link.text)
-                    print(link["tbody"])
+                    //print(link["face"])
+                    if (link.text != nil){
+                        var tempString = link.text!
+                        var newString = tempString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()
+                            )
+                        self.array.append(newString)
+                    }
+                    /*if (link["face"] != nil){
+                        var str = link["face"]!
+                        self.array.append(str)
+                        print(link["face"]!)
+                    //}*/
                     //self.array.append(link["tbody"]!)
                     //print(doc.css("min").text)
                 }
+                //print(self.array)
+                //var elements = Array(Set(self.array))
+                //print(elements)
+                var n = self.array.count - 1
+                for var i = self.array.count - 1; i >= 0; --i{
+                    if self.array[n] == self.array[n+1]{
+                        self.array.removeAtIndex(n)
+                    }
+                }
+                print(self.array)
+                var str = self.array[1]
+                print(str)
+                self.button.setTitle(str, forState: .Normal)
+
             }
             
         }
