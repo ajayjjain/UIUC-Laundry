@@ -201,10 +201,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buseyevans" id="5ZN-aW-e3r">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buseyevans" id="5ZN-aW-e3r">
                                 <rect key="frame" x="20" y="218" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <inset key="insetFor6xAndEarlier" minX="2" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8lp-B4-XoV" appends="YES" id="Pbq-zU-zDd"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u7t-I8-aLg">
                                 <rect key="frame" x="20" y="330" width="80" height="15"/>
@@ -654,6 +658,11 @@
                 <tapGestureRecognizer id="Vgl-Rl-tnX" userLabel="Bousfield">
                     <connections>
                         <segue destination="pL2-dR-sgv" kind="push" id="scG-xT-YMw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="8lp-B4-XoV" userLabel="Busey Evans">
+                    <connections>
+                        <segue destination="wdJ-ik-i1a" kind="push" id="69D-Fn-ulP"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1592,6 +1601,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1153" y="-784"/>
+        </scene>
+        <!--Busey Evans-->
+        <scene sceneID="ueG-7r-PAg">
+            <objects>
+                <viewController id="wdJ-ik-i1a" customClass="buseyEvans" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nm5-Mo-VFS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KEC-kC-bVY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRe-u9-Qtn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="-4457"/>
         </scene>
         <!--Bousfield-->
         <scene sceneID="hHw-Tj-amA">
