@@ -8,7 +8,7 @@
 
 import UIKit
 
-class allen: UIViewController {
+class barton: UIViewController {
     
     
     @IBOutlet weak var goodwin: UIImageView!
@@ -51,13 +51,8 @@ class allen: UIViewController {
     var machineThirteen = "n/a"
     var machineFourteen = "n/a"
     var machineFifteen = "n/a"
-    var machineSixteen = "n/a"
-    var machineSeventeen = "n/a"
-    var machineEighteen = "n/a"
-    var machineNineteen = "n/a"
-    var machineTwenty = "n/a"
-    var machineTwentyOne = "n/a"
 
+    
     
     
     var machineOneStatus = ""
@@ -75,13 +70,8 @@ class allen: UIViewController {
     var machineThirteenStatus = ""
     var machineFourteenStatus = ""
     var machineFifteenStatus = ""
-    var machineSixteenStatus = ""
-    var machineSeventeenStatus = ""
-    var machineEighteenStatus = ""
-    var machineNineteenStatus = ""
-    var machineTwentyStatus = ""
-    var machineTwentyOneStatus = ""
 
+    
     
     var washersAvailable = ""
     var dryersAvailable = ""
@@ -171,19 +161,8 @@ class allen: UIViewController {
                 self.machineFourteenStatus = self.elements[58]
                 self.machineFifteen = self.elements[61]
                 self.machineFifteenStatus = self.elements[62]
-                self.machineSixteen = self.elements[65]
-                self.machineSixteenStatus = self.elements[66]
-                self.machineSeventeen = self.elements[69]
-                self.machineSeventeenStatus = self.elements[70]
-                self.machineEighteen = self.elements[73]
-                self.machineEighteenStatus = self.elements[74]
-                self.machineNineteen = self.elements[77]
-                self.machineNineteenStatus = self.elements[78]
-                self.machineTwenty = self.elements[81]
-                self.machineTwentyStatus = self.elements[82]
-                self.machineTwentyOne = self.elements[85]
-                self.machineTwentyOneStatus = self.elements[86]
 
+                
                 print(self.machineOne)
                 print(self.machineOneStatus)
                 print(self.machineTwo)
@@ -214,19 +193,7 @@ class allen: UIViewController {
                 print(self.machineFourteenStatus)
                 print(self.machineFifteen)
                 print(self.machineFifteenStatus)
-                print(self.machineSixteen)
-                print(self.machineSixteenStatus)
-                print(self.machineSeventeen)
-                print(self.machineSeventeenStatus)
-                print(self.machineEighteen)
-                print(self.machineEighteenStatus)
-                print(self.machineNineteen)
-                print(self.machineNineteenStatus)
-                print(self.machineTwenty)
-                print(self.machineTwentyStatus)
-                print(self.machineTwentyOne)
-                print(self.machineTwentyOneStatus)
-
+                
                 
                 //print(str)
                 //self.button.setTitle(str, forState: .Normal)

@@ -226,7 +226,7 @@ class orchardSouth: UIViewController {
                 self.machineFifteen = self.elements[61]
                 self.machineFifteenStatus = self.elements[62]
                 self.machineSixteen = self.elements[65]
-                self.machineSixStatus = self.elements[66]
+                self.machineSixteenStatus = self.elements[66]
                 self.machineSeventeen = self.elements[69]
                 self.machineSeventeenStatus = self.elements[70]
                 self.machineEighteen = self.elements[73]
