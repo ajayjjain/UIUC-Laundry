@@ -60,6 +60,10 @@ class green: UIViewController {
     var greenMachineNineStatus = ""
     var greenMachineTenStatus = ""
     var greenMachineElevenStatus = ""
+    
+    var washersAvailable = ""
+    var dryersAvailable = ""
+    var peopleWaiting = ""
 
     var array = [String]()
     var elements = [String]()
@@ -86,9 +90,9 @@ class green: UIViewController {
     
     
     func greenParse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //bousfield let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=2&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        // larLenlet myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        //larLen let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -148,10 +152,36 @@ class green: UIViewController {
                     
                     n = n + 1
                 }
-                print(self.elements)
-                var str = self.elements[1]
+                //print(self.elements)
+                self.washersAvailable = self.elements[0]
+                self.dryersAvailable = self.elements[1]
+                self.peopleWaiting = self.elements[2]
+                self.greenMachineOne = self.elements[5]
+                self.greenMachineOneStatus = self.elements[6]
+                self.greenMachineTwo = self.elements[9]
+                self.greenMachineTwoStatus = self.elements[10]
+                self.greenMachineThree = self.elements[13]
+                self.greenMachineThreeStatus = self.elements[14]
+                self.greenMachineFour = self.elements[17]
+                self.greenMachineFourStatus = self.elements[18]
+                self.greenMachineFive = self.elements[21]
+                self.greenMachineFiveStatus = self.elements[22]
+                self.greenMachineSix = self.elements[25]
+                self.greenMachineSixStatus = self.elements[26]
+                self.greenMachineSeven = self.elements[29]
+                self.greenMachineSevenStatus = self.elements[30]
+                self.greenMachineEight = self.elements[33]
+                self.greenMachineEightStatus = self.elements[34]
+                self.greenMachineNine = self.elements[37]
+                self.greenMachineNineStatus = self.elements[38]
+                self.greenMachineTen = self.elements[41]
+                self.greenMachineTenStatus = self.elements[42]
+                self.greenMachineEleven = self.elements[45]
+                self.greenMachineElevenStatus = self.elements[46]
+               
+
                 //print(str)
-                self.button.setTitle(str, forState: .Normal)
+                //self.button.setTitle(str, forState: .Normal)
 
             }
             
@@ -159,146 +189,3 @@ class green: UIViewController {
         URLTask.resume()
     }
 }
-    /*func greenParse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMPage?Login=True"
-        let myURL = NSURL(string: myURLAdress)
-        
-        let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
-            myData, response, error in
-            
-            guard error == nil else { return }
-            
-            let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
-            
-            let html = myHTMLString
-            
-            let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
-                myData, response, error in
-                
-                guard error == nil else { return }
-                
-                let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
-                //var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
-                //let allenWashersAvailable = myHTMLString![rangeOfTLD]
-                print("Hello world")
-                print(myHTMLString)
-                
-            }
-            URLTask.resume()
-            
-            /*if let doc = HTML(html: html!, encoding: NSUTF8StringEncoding) {
-                print("h")
-                print(doc.title)
-                // Search for nodes by CSS
-                for link in doc.css("font") {  // font, face
-                    print(link.text)
-                    print(link["tbody"])
-                    //self.array.append(link["tbody"]!)
-                    //print(doc.css("min").text)
-                }
-                for link in doc.xpath("tbody") {
-                    print(link.innerHTML)
-                }
-                //print(doc.text)*/
-            
-}*/
-            /*//var range = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
-            //let allenWashersAvailable = myHTMLString![rangeOfTLD]
-            print("Hello world")
-            //print(myHTMLString)
-            var range = myHTMLString!.startIndex.advancedBy(16243)..<myHTMLString!.startIndex.advancedBy(16252)
-            self.greenMachineOne = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(16448)..<myHTMLString!.startIndex.advancedBy(16454)
-            self.greenMachineOneStatus = myHTMLString![range]
-            if (self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] == " "){
-                self.greenMachineOneStatus = ""
-            }
-            else if (self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] == "<"){
-                self.greenMachineOneStatus = self.greenMachineOneStatus.substringToIndex(self.greenMachineOneStatus.endIndex.predecessor())
-            }
-            
-            range = myHTMLString!.startIndex.advancedBy(17585)..<myHTMLString!.startIndex.advancedBy(17594)
-            self.greenMachineTwo = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(17790)..<myHTMLString!.startIndex.advancedBy(17796)
-            self.greenMachineTwoStatus = myHTMLString![range]
-            if (self.greenMachineTwoStatus[self.greenMachineTwoStatus.endIndex.predecessor()] == " "){
-                self.greenMachineTwoStatus = ""
-            }
-            else if (self.greenMachineTwoStatus[self.greenMachineTwoStatus.endIndex.predecessor()] == "<"){
-                self.greenMachineTwoStatus = self.greenMachineTwoStatus.substringToIndex(self.greenMachineTwoStatus.endIndex.predecessor())
-            }
-            
-            range = myHTMLString!.startIndex.advancedBy(18927)..<myHTMLString!.startIndex.advancedBy(18936)
-            self.greenMachineThree = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(19132)..<myHTMLString!.startIndex.advancedBy(19138)
-            self.greenMachineThreeStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(20269)..<myHTMLString!.startIndex.advancedBy(20278)
-            self.greenMachineFour = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(20474)..<myHTMLString!.startIndex.advancedBy(20480)
-            self.greenMachineFourStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(21613)..<myHTMLString!.startIndex.advancedBy(21620)
-            self.greenMachineFive = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(21816)..<myHTMLString!.startIndex.advancedBy(21822)
-            self.greenMachineFiveStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(22953)..<myHTMLString!.startIndex.advancedBy(22962)
-            self.greenMachineSix = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(23158)..<myHTMLString!.startIndex.advancedBy(23164)
-            self.greenMachineSixStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(24355)..<myHTMLString!.startIndex.advancedBy(24361)
-            self.greenMachineSeven = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(24558)..<myHTMLString!.startIndex.advancedBy(24564)
-            self.greenMachineSevenStatus = myHTMLString![range]
-            if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == " "){
-                self.greenMachineSevenStatus = ""
-            }
-            else if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == "<"){
-                self.greenMachineSevenStatus = self.greenMachineSevenStatus.substringToIndex(self.greenMachineSevenStatus.endIndex.predecessor())
-            }
-            else if (self.greenMachineSevenStatus[self.greenMachineSevenStatus.endIndex.predecessor()] == "p"){
-                self.greenMachineSevenStatus = "not updating status"
-            }
-            range = myHTMLString!.startIndex.advancedBy(25713)..<myHTMLString!.startIndex.advancedBy(25722)
-            self.greenMachineEight = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(25918)..<myHTMLString!.startIndex.advancedBy(25924)
-            self.greenMachineEightStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(27058)..<myHTMLString!.startIndex.advancedBy(27067)
-            self.greenMachineNine = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(27263)..<myHTMLString!.startIndex.advancedBy(27269)
-            self.greenMachineNineStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(28402)..<myHTMLString!.startIndex.advancedBy(28411)
-            self.greenMachineTen = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(28607)..<myHTMLString!.startIndex.advancedBy(28613)
-            self.greenMachineTenStatus = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(29749)..<myHTMLString!.startIndex.advancedBy(29758)
-            self.greenMachineEleven = myHTMLString![range]
-            range = myHTMLString!.startIndex.advancedBy(29954)..<myHTMLString!.startIndex.advancedBy(29960)
-            self.greenMachineEleven = myHTMLString![range]
-            print(self.greenMachineOneStatus)
-            print(self.greenMachineTwoStatus)
-            print(self.greenMachineThreeStatus)
-            print(self.greenMachineFourStatus)
-            print(self.greenMachineFiveStatus)
-            print(self.greenMachineSixStatus)
-            print(self.greenMachineSevenStatus)
-            print(self.greenMachineEightStatus)
-            print(self.greenMachineNineStatus)
-            print(self.greenMachineTenStatus)
-            print(self.greenMachineElevenStatus)
-            var str = self.greenMachineOneStatus[self.greenMachineOneStatus.endIndex.predecessor()] // gets last character
-            //print(str)
-            print(self.greenMachineOneStatus.substringToIndex(self.greenMachineOneStatus.endIndex.predecessor()))
-
-            
-
-
-
-
-            //<td width=\"15\" align=\"center\" valign=\"middle\" bgcolor=\"#fffff\">&nbsp;<td>
-            let result = myHTMLString!.rangeOfString("<font size=1 face=\"Arial, Helvetica, sans-serif\">&nbsp;",
-                                            options: NSStringCompareOptions.LiteralSearch,
-                                            range: myHTMLString!.startIndex.advancedBy(28613)..<myHTMLString!.endIndex,
-                                            locale: nil)
-            if let range = result {
-                print(range)
-            }*/
-        //}
