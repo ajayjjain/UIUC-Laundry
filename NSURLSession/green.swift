@@ -10,6 +10,7 @@ import UIKit
 
 class green: UIViewController {
     
+    
     @IBOutlet weak var goodwin: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class green: UIViewController {
         print("test")
         greenParse()
     }
+    
+    
     
 
     
@@ -59,6 +62,7 @@ class green: UIViewController {
     var greenMachineElevenStatus = ""
 
     var array = [String]()
+    var elements = [String]()
     
     @IBOutlet var button: UIButton!
 
@@ -82,8 +86,9 @@ class green: UIViewController {
     
     
     func greenParse() {
-        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        //bousfield let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=2&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        // larLenlet myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -121,15 +126,31 @@ class green: UIViewController {
                 //print(self.array)
                 //var elements = Array(Set(self.array))
                 //print(elements)
-                var n = self.array.count - 1
-                for var i = self.array.count - 1; i >= 0; --i{
-                    if self.array[n] == self.array[n+1]{
-                        self.array.removeAtIndex(n)
+                var n = 0
+                while n < self.array.count - 1{
+                    if n != 0 && n != 8 && n != 10 && n != 12 && n != 14{
+                        if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
+                            self.elements.append(self.array[n])
+                            self.elements.append(self.array[n+2])
+                        }
+                        else if self.array[n] == "Available" && self.array[n-1] != "Available"{
+                            self.elements.append(self.array[n])
+                            self.elements.append("")
+                        }
+                        else if n == 7{
+                            self.elements.append(self.array[n])
+                        }
+                        else if self.array[n] == self.array[n+1]{
+                            self.elements.append(self.array[n])
+                        }
                     }
+                    
+                    
+                    n = n + 1
                 }
-                print(self.array)
-                var str = self.array[1]
-                print(str)
+                print(self.elements)
+                var str = self.elements[1]
+                //print(str)
                 self.button.setTitle(str, forState: .Normal)
 
             }
