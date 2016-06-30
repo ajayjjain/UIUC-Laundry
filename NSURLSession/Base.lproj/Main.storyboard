@@ -23,6 +23,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="-1427"/>
         </scene>
+        <!--Orchard South View Controller-->
+        <scene sceneID="ubY-rF-4ls">
+            <objects>
+                <viewController title="Orchard South View Controller" id="aco-x4-Sql" customClass="orchardSouth" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gP-fI-jRA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RgB-xF-1vz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2H-Bq-oAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-4441"/>
+        </scene>
         <!--Sherman Short View Controller-->
         <scene sceneID="sMY-fh-l4p">
             <objects>
@@ -1087,9 +1102,13 @@
                                 <rect key="frame" x="223" y="362" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orcharddownsnorth" id="mPn-JP-x7N">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orcharddownsnorth" id="mPn-JP-x7N">
                                 <rect key="frame" x="20" y="80" width="80" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="o5g-Rw-0dT" appends="YES" id="bW9-EY-hur"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="par" id="5c5-Gv-Qg8">
                                 <rect key="frame" x="122" y="80" width="80" height="104"/>
@@ -1539,6 +1558,11 @@
                 <tapGestureRecognizer id="2Jq-Pt-ewR" userLabel="Sherman Short">
                     <connections>
                         <segue destination="swY-Kc-qdc" kind="push" id="Lz3-L7-VyU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="o5g-Rw-0dT" userLabel="Orchard Downs South">
+                    <connections>
+                        <segue destination="aco-x4-Sql" kind="push" id="4KA-IG-n3g"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
