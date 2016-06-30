@@ -776,6 +776,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isr" id="gZH-Er-bRN">
                                 <rect key="frame" x="20" y="218" width="80" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L31-Va-zcm" appends="YES" id="biV-bX-44g"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISR: Wardall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="iMa-am-Z85">
                                 <rect key="frame" x="20" y="317" width="80" height="14"/>
@@ -1179,6 +1183,11 @@
                 <tapGestureRecognizer id="4RB-61-sqi" userLabel="ISR Townsend">
                     <connections>
                         <segue destination="HnK-Hb-toV" kind="push" id="APk-Tu-2qf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="L31-Va-zcm" userLabel="ISR Wardall">
+                    <connections>
+                        <segue destination="fr4-bo-35T" kind="push" id="KPj-bq-JDl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1751,6 +1760,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAD-cC-4Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="287" y="-3238"/>
+        </scene>
+        <!--ISR Wardall-->
+        <scene sceneID="4Yi-Qc-uy4">
+            <objects>
+                <viewController title="ISR Wardall" id="fr4-bo-35T" customClass="isrWardall" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cn-yQ-Jo7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iOT-QG-t2U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OzK-zp-h8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-3243"/>
         </scene>
         <!--Allen View Controller-->
         <scene sceneID="YvW-01-j8R">
