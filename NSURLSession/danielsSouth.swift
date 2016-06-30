@@ -156,10 +156,6 @@ class danielsSouth: UIViewController {
                 print(self.machineTenStatus)
 
                 
-                
-                //print(str)
-                //self.button.setTitle(str, forState: .Normal)
-                
             }
             
         }
