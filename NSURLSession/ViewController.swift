@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var farOglesby: UIImageView!
     @IBOutlet weak var farTrelease: UIImageView!
     @IBOutlet weak var goodwin: UIImageView!
+    var array = [String]()
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -184,9 +185,126 @@ class ViewController: UIViewController {
       myData, response, error in
       
       guard error == nil else { return }
-      
       let myHTMLString = String(data: myData!, encoding: NSUTF8StringEncoding)
-      var rangeOfTLD = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
+       
+        let html = myHTMLString
+        
+        if let doc = HTML(html: html!, encoding: NSUTF8StringEncoding) {
+            for link in doc.css("font") {  // font, face
+                if (link.text != nil){
+                    var tempString = link.text!
+                    var newString = tempString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()
+                    )
+                    self.array.append(newString)
+                }
+            }
+            self.array.removeRange(0...13)
+        }
+        
+        let allenWashersAvailable = self.array[1]
+        self.allenWasherLabel.text = allenWashersAvailable
+        let allenDryersAvailable = self.array[2]
+        self.allenDryerLabel.text = allenDryersAvailable
+        let bartonWashersAvailable = self.array[6]
+        self.bartonWasherLabel.text = bartonWashersAvailable
+        let bartonDryersAvailable = self.array[7]
+        self.bartonDryerLabel.text = bartonDryersAvailable
+        let bousfieldWashersAvailable = self.array[11]
+        self.bousfieldWasherLabel.text = bousfieldWashersAvailable
+        let bousfieldDryersAvailable = self.array[12]
+        self.bousfieldDryerLabel.text = bousfieldDryersAvailable
+        let buseyWashersAvailable = self.array[16]
+        self.buseyWasherLabel.text = buseyWashersAvailable
+        let buseyDryersAvailable = self.array[17]
+        self.buseyDryerLabel.text = buseyDryersAvailable
+        let danielsNorthWashersAvailable = self.array[21]
+        self.danielsNorthWasherLabel.text = danielsNorthWashersAvailable
+        let danielsNorthDryersAvailable = self.array[22]
+        self.danielsNorthDryerLabel.text = danielsNorthDryersAvailable
+        let danielsSouthWashersAvailable = self.array[26]
+        self.danielsSouthWasherLabel.text = danielsSouthWashersAvailable
+        let danielsSouthDryersAvailable = self.array[27]
+        self.danielsSouthDryerLabel.text = danielsSouthDryersAvailable
+        let farOglesbyWashersAvailable = self.array[31]
+        self.farOglesbyWasherLabel.text = farOglesbyWashersAvailable
+        let farOglesbyDryersAvailable = self.array[32]
+        self.farOglesbyDryerLabel.text = farOglesbyDryersAvailable
+        let farTreleaseWashersAvailable = self.array[36]
+        self.farTreleaseWasherLabel.text = farTreleaseWashersAvailable
+        let farTreleaseDryersAvailable = self.array[37]
+        self.farTreleaseDryerLabel.text = farTreleaseDryersAvailable
+        let goodwinWashersAvailable = self.array[41]
+        self.goodwinWasherLabel.text = goodwinWashersAvailable
+        let goodwinDryersAvailable = self.array[42]
+        self.goodwinDryerLabel.text = goodwinDryersAvailable
+        self.greenWashersAvailable = self.array[46]
+        self.greenDryersAvailable = self.array[47]
+        self.hopkinsWashersAvailable = self.array[51]
+        self.hopkinsDryersAvailable = self.array[52]
+        self.isrTownsendWashersAvailable = self.array[56]
+        self.isrTownsendDryersAvailable = self.array[57]
+        self.isrWardallWashersAvailable = self.array[61]
+        self.isrWardallDryersAvailable = self.array[62]
+        self.larLeonardWashersAvailable = self.array[66]
+        self.larLeonardDryersAvailable = self.array[67]
+        self.larSheldenWashersAvailable = self.array[71]
+        self.larSheldenDryersAvailable = self.array[72]
+        self.nugentWashersAvailable = self.array[76]
+        self.nugentDryersAvailable = self.array[77]
+        self.nugentRoomWashersAvailable = self.array[81]
+        self.nugentRoomDryersAvailable = self.array[82]
+        self.orchardNorthWashersAvailable = self.array[86]
+        self.orchardNorthDryersAvailable = self.array[87]
+        self.orchardSouthWashersAvailable = self.array[91]
+        self.orchardSouthDryersAvailable = self.array[92]
+        self.parBabcockWashersAvailable = self.array[96]
+        self.parBabcockDryersAvailable = self.array[97]
+        self.parBlaisdellWashersAvailable = self.array[101]
+        self.parBlaisdellDryersAvailable = self.array[102]
+        self.parCarrWashersAvailable = self.array[106]
+        self.parCarrDryersAvailable = self.array[107]
+        self.parSaundersWashersAvailable = self.array[111]
+        self.parSaundersDryersAvailable = self.array[112]
+        self.scottWashersAvailable = self.array[116]
+        self.scottDryersAvailable = self.array[117]
+        self.shermanShortWashersAvailable = self.array[121]
+        self.shermanShortDryersAvailable = self.array[122]
+        self.shermanTallWashersAvailable = self.array[126]
+        self.shermanTallDryersAvailable = self.array[127]
+        self.snyderWashersAvailable = self.array[131]
+        self.snyderDryersAvailable = self.array[132]
+        self.tvdTaftWashersAvailable = self.array[136]
+        self.tvdTaftDryersAvailable = self.array[137]
+        self.tvdVanDorenWashersAvailable = self.array[141]
+        self.tvdVanDorenDryersAvailable = self.array[142]
+        self.westonWashersAvailable = self.array[146]
+        self.westonDryersAvailable = self.array[147]
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      /*var rangeOfTLD = myHTMLString!.startIndex.advancedBy(12346)..<myHTMLString!.startIndex.advancedBy(12348)
       let allenWashersAvailable = myHTMLString![rangeOfTLD]
       self.allenWasherLabel.text = allenWashersAvailable
       rangeOfTLD = myHTMLString!.startIndex.advancedBy(12543)..<myHTMLString!.startIndex.advancedBy(12545)
@@ -323,7 +441,7 @@ class ViewController: UIViewController {
       rangeOfTLD = myHTMLString!.startIndex.advancedBy(69639)..<myHTMLString!.startIndex.advancedBy(69642)
       self.westonWashersAvailable = myHTMLString![rangeOfTLD]
       rangeOfTLD = myHTMLString!.startIndex.advancedBy(69836)..<myHTMLString!.startIndex.advancedBy(69841)
-      self.westonDryersAvailable = myHTMLString![rangeOfTLD]
+      self.westonDryersAvailable = myHTMLString![rangeOfTLD]*/
         
 
     }
