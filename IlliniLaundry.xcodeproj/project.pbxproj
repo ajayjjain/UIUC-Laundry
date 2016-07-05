@@ -413,7 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IlliniLaundry;
 				PRODUCT_NAME = IlliniLaundry;
-				PROVISIONING_PROFILE = "ef03a910-adc1-4ff0-8108-b6e4e1d565c3";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_INCLUDE_PATHS[arch=*]" = /Users/Ajay/Desktop/Apps/IlliniLaundry/NSURLSession/Modules;
 			};
 			name = Debug;
@@ -430,7 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IlliniLaundry;
 				PRODUCT_NAME = IlliniLaundry;
-				PROVISIONING_PROFILE = "ef03a910-adc1-4ff0-8108-b6e4e1d565c3";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_INCLUDE_PATHS[arch=*]" = /Users/Ajay/Desktop/Apps/IlliniLaundry/NSURLSession/Modules;
 			};
 			name = Release;

@@ -74,24 +74,29 @@ class secondViewController: UIViewController {
         self.navigationController!.navigationBar.barTintColor = illiniBlue
         self.view.backgroundColor = grayColor
         
-        self.greenWasherLabel.text = greenAvailable
-        self.greenDryerLabel.text = greenDryersAvailable
-        self.hopkinsWasherLabel.text = hopkinsWashersAvailable
-        self.hopkinsDryerLabel.text = hopkinsDryersAvailable
-        self.isrTownsendWasherLabel.text = isrTownsendWashersAvailable
-        self.isrTownsendDryerLabel.text = isrTownsendDryersAvailable
-        self.isrWardallWasherLabel.text = isrWardallWashersAvailable
-        self.isrWardallDryerLabel.text = isrWardallDryersAvailable
-        self.larLeonardWasherLabel.text = larLeonardWashersAvailable
-        self.larLeonardDryerLabel.text = larLeonardDryersAvailable
-        self.larSheldenWasherLabel.text = larSheldenWashersAvailable
-        self.larSheldenDryerLabel.text = larSheldenDryersAvailable
-        self.nugentWasherLabel.text = nugentWashersAvailable
-        self.nugentDryerLabel.text = nugentDryersAvailable
-        self.nugentRoomWasherLabel.text = nugentRoomWashersAvailable
-        self.nugentRoomDryerLabel.text = nugentRoomDryersAvailable
-        self.orchardNorthWasherLabel.text = orchardNorthWashersAvailable
-        self.orchardNorthDryerLabel.text = orchardNorthDryersAvailable
+        dispatch_async(dispatch_get_main_queue()) {
+            self.greenWasherLabel.text = self.greenAvailable
+            self.greenDryerLabel.text = self.greenDryersAvailable
+            self.hopkinsWasherLabel.text = self.hopkinsWashersAvailable
+            self.hopkinsDryerLabel.text = self.hopkinsDryersAvailable
+            self.isrTownsendWasherLabel.text = self.isrTownsendWashersAvailable
+            self.isrTownsendDryerLabel.text = self.isrTownsendDryersAvailable
+            self.isrWardallWasherLabel.text = self.isrWardallWashersAvailable
+            self.isrWardallDryerLabel.text = self.isrWardallDryersAvailable
+            self.larLeonardWasherLabel.text = self.larLeonardWashersAvailable
+            self.larLeonardDryerLabel.text = self.larLeonardDryersAvailable
+            self.larSheldenWasherLabel.text = self.larSheldenWashersAvailable
+            self.larSheldenDryerLabel.text = self.larSheldenDryersAvailable
+            self.nugentWasherLabel.text = self.nugentWashersAvailable
+            self.nugentDryerLabel.text = self.nugentDryersAvailable
+            self.nugentRoomWasherLabel.text = self.nugentRoomWashersAvailable
+            self.nugentRoomDryerLabel.text = self.nugentRoomDryersAvailable
+            self.orchardNorthWasherLabel.text = self.orchardNorthWashersAvailable
+            self.orchardNorthDryerLabel.text = self.orchardNorthDryersAvailable
+        }
+
+        
+        
         
         green.layer.cornerRadius = 8.0
         green.clipsToBounds = true

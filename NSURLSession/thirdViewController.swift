@@ -68,24 +68,28 @@ class thirdViewController: UIViewController {
         self.navigationController!.navigationBar.barTintColor = illiniBlue
         self.view.backgroundColor = grayColor
         
-        self.orchardSouthWasherLabel.text = orchardSouthWashersAvailable
-        self.orchardSouthDryerLabel.text = orchardSouthDryersAvailable
-        self.parBabcockWasherLabel.text = parBabcockWashersAvailable
-        self.parBabcockDryerLabel.text = parBabcockDryersAvailable
-        self.parBlaisdellWasherLabel.text = parBlaisdellWashersAvailable
-        self.parBlaisdellDryerLabel.text = parBlaisdellDryersAvailable
-        self.parCarrWasherLabel.text = parCarrWashersAvailable
-        self.parCarrDryerLabel.text = parCarrDryersAvailable
-        self.parSaundersWasherLabel.text = parSaundersWashersAvailable
-        self.parSaundersDryerLabel.text = parSaundersDryersAvailable
-        self.scottWasherLabel.text = scottWashersAvailable
-        self.scottDryerLabel.text = scottDryersAvailable
-        self.shermanShortWasherLabel.text = shermanShortWashersAvailable
-        self.shermanShortDryerLabel.text = shermanShortDryersAvailable
-        self.shermanTallWasherLabel.text = shermanTallWashersAvailable
-        self.shermanTallDryerLabel.text = shermanTallDryersAvailable
-        self.snyderWasherLabel.text = snyderWashersAvailable
-        self.snyderDryerLabel.text = snyderDryersAvailable
+        dispatch_async(dispatch_get_main_queue()) {
+            self.orchardSouthWasherLabel.text = self.orchardSouthWashersAvailable
+            self.orchardSouthDryerLabel.text = self.orchardSouthDryersAvailable
+            self.parBabcockWasherLabel.text = self.parBabcockWashersAvailable
+            self.parBabcockDryerLabel.text = self.parBabcockDryersAvailable
+            self.parBlaisdellWasherLabel.text = self.parBlaisdellWashersAvailable
+            self.parBlaisdellDryerLabel.text = self.parBlaisdellDryersAvailable
+            self.parCarrWasherLabel.text = self.parCarrWashersAvailable
+            self.parCarrDryerLabel.text = self.parCarrDryersAvailable
+            self.parSaundersWasherLabel.text = self.parSaundersWashersAvailable
+            self.parSaundersDryerLabel.text = self.parSaundersDryersAvailable
+            self.scottWasherLabel.text = self.scottWashersAvailable
+            self.scottDryerLabel.text = self.scottDryersAvailable
+            self.shermanShortWasherLabel.text = self.shermanShortWashersAvailable
+            self.shermanShortDryerLabel.text = self.shermanShortDryersAvailable
+            self.shermanTallWasherLabel.text = self.shermanTallWashersAvailable
+            self.shermanTallDryerLabel.text = self.shermanTallDryersAvailable
+            self.snyderWasherLabel.text = self.snyderWashersAvailable
+            self.snyderDryerLabel.text = self.snyderDryersAvailable        }
+
+        
+        
         //print(parBlaisdellDryersAvailable)
         
         orchardSouth.layer.cornerRadius = 8.0

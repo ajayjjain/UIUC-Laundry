@@ -30,6 +30,7 @@ class parBlaisdell: UIViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
         parse()
+        
     }
     
     
@@ -67,6 +68,8 @@ class parBlaisdell: UIViewController {
     
     @IBOutlet var button: UIButton!
     
+    @IBOutlet weak var washersAvailableLabel: UILabel!
+    @IBOutlet weak var dryersAvailableLabel: UILabel!
     
     
     func parse() {
@@ -131,25 +134,13 @@ class parBlaisdell: UIViewController {
                 self.machineEightStatus = self.elements[34]
                 self.machineNine = self.elements[37]
                 self.machineNineStatus = self.elements[38]
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.washersAvailableLabel.text = self.washersAvailable
+                    self.dryersAvailableLabel.text = self.dryersAvailable
 
-                print(self.machineOne)
-                print(self.machineOneStatus)
-                print(self.machineTwo)
-                print(self.machineTwoStatus)
-                print(self.machineThree)
-                print(self.machineThreeStatus)
-                print(self.machineFour)
-                print(self.machineFourStatus)
-                print(self.machineFive)
-                print(self.machineFiveStatus)
-                print(self.machineSix)
-                print(self.machineSixStatus)
-                print(self.machineSeven)
-                print(self.machineSevenStatus)
-                print(self.machineEight)
-                print(self.machineEightStatus)
-                print(self.machineNine)
-                print(self.machineNineStatus)
+                }
+                
+                
 
                 
                 

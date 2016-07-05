@@ -51,12 +51,17 @@ class fourthViewController: UIViewController {
         self.navigationController!.navigationBar.barTintColor = illiniBlue
         self.view.backgroundColor = grayColor
         
-        self.taftWasherLabel.text = tvdTaftWashersAvailable
-        self.taftDryerLabel.text = tvdTaftDryersAvailable
-        self.vanDorenWasherLabel.text = tvdVanDorenWashersAvailable
-        self.vanDorenDryerLabel.text = tvdVanDorenDryersAvailable
-        self.westonWasherLabel.text = westonWashersAvailable
-        self.westonDryerLabel.text = westonDryersAvailable
+        dispatch_async(dispatch_get_main_queue()) {
+            self.taftWasherLabel.text = self.tvdTaftWashersAvailable
+            self.taftDryerLabel.text = self.tvdTaftDryersAvailable
+            self.vanDorenWasherLabel.text = self.tvdVanDorenWashersAvailable
+            self.vanDorenDryerLabel.text = self.tvdVanDorenDryersAvailable
+            self.westonWasherLabel.text = self.westonWashersAvailable
+            self.westonDryerLabel.text = self.westonDryersAvailable
+        }
+
+        
+        
         //print(parBlaisdellDryersAvailable)
         
         taft.layer.cornerRadius = 8.0
