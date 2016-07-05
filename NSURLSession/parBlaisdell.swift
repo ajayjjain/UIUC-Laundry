@@ -30,10 +30,26 @@ class parBlaisdell: UIViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
         parse()
+        borderLabel.layer.borderColor = UIColor.orangeColor().CGColor
+        borderLabel.layer.borderWidth = 2.0;
+
+
         
     }
     
-    
+    @IBOutlet weak var machineOneStatusLabel: UILabel!
+    @IBOutlet weak var machineTwoStatusLabel: UILabel!
+    @IBOutlet weak var machineThreeStatusLabel: UILabel!
+    @IBOutlet weak var machineFourStatusLabel: UILabel!
+    @IBOutlet weak var machineFiveStatusLabel: UILabel!
+    @IBOutlet weak var machineSixStatusLabel: UILabel!
+    @IBOutlet weak var borderLabel: UILabel!
+    @IBOutlet weak var oneTimeRemaining: UILabel!
+    @IBOutlet weak var twoTimeRemaining: UILabel!
+    @IBOutlet weak var threeTimeRemaining: UILabel!
+    @IBOutlet weak var fourTimeRemaining: UILabel!
+    @IBOutlet weak var fiveTimeRemaining: UILabel!
+    @IBOutlet weak var sixTimeRemaining: UILabel!
     
     
     
@@ -134,9 +150,65 @@ class parBlaisdell: UIViewController {
                 self.machineEightStatus = self.elements[34]
                 self.machineNine = self.elements[37]
                 self.machineNineStatus = self.elements[38]
+                /*print(self.elements)
+                print(self.machineOneStatus)
+                print(self.elements[6])
+                print(self.machineTwo)
+                print(self.machineTwoStatus)*/
                 dispatch_async(dispatch_get_main_queue()) {
                     self.washersAvailableLabel.text = self.washersAvailable
                     self.dryersAvailableLabel.text = self.dryersAvailable
+                    self.machineOneStatusLabel.text = self.machineOne
+                    self.machineTwoStatusLabel.text = self.machineTwo
+                    self.machineThreeStatusLabel.text = self.machineThree
+                    self.machineFourStatusLabel.text = self.machineFour
+                    self.machineFiveStatusLabel.text = self.machineFive
+                    self.machineSixStatusLabel.text = self.machineSix
+                    self.oneTimeRemaining.text = self.machineOneStatus
+                    self.twoTimeRemaining.text = self.machineTwoStatus
+                    self.threeTimeRemaining.text = self.machineThreeStatus
+                    self.fourTimeRemaining.text = self.machineFourStatus
+                    self.fiveTimeRemaining.text = self.machineFiveStatus
+                    self.sixTimeRemaining.text = self.machineSixStatus
+                    if self.machineOne == "Available"{
+                        self.machineOneStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineOneStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineTwo == "Available"{
+                        self.machineTwoStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineTwoStatusLabel.textColor = UIColor.redColor()
+                    }
+                    
+                    if self.machineThree == "Available"{
+                        self.machineThreeStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineThreeStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineFour == "Available"{
+                        self.machineFourStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineFourStatusLabel.textColor = UIColor.redColor()
+                    }
+                    
+                    if self.machineFive == "Available"{
+                        self.machineFiveStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineFiveStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineSix == "Available"{
+                        self.machineSixStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineSixStatusLabel.textColor = UIColor.redColor()
+                    }
+
 
                 }
                 
