@@ -216,13 +216,11 @@ class parBlaisdell: UIViewController {
                     self.machineThreeStatusLabel.text = self.machineThree
                     self.machineFourStatusLabel.text = self.machineFour
                     self.machineFiveStatusLabel.text = self.machineFive
-                    self.machineSixStatusLabel.text = self.machineSix
                     self.oneTimeRemaining.text = self.machineOneStatus
                     self.twoTimeRemaining.text = self.machineTwoStatus
                     self.threeTimeRemaining.text = self.machineThreeStatus
                     self.fourTimeRemaining.text = self.machineFourStatus
                     self.fiveTimeRemaining.text = self.machineFiveStatus
-                    self.sixTimeRemaining.text = self.machineSixStatus
                     if self.machineOne == "Available"{
                         self.machineOneStatusLabel.textColor = UIColor.greenColor()
                     }
@@ -255,12 +253,7 @@ class parBlaisdell: UIViewController {
                     else{
                         self.machineFiveStatusLabel.textColor = UIColor.redColor()
                     }
-                    if self.machineSix == "Available"{
-                        self.machineSixStatusLabel.textColor = UIColor.greenColor()
-                    }
-                    else{
-                        self.machineSixStatusLabel.textColor = UIColor.redColor()
-                    }
+                   
 
 
                 }
