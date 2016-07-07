@@ -36,14 +36,27 @@ class parBlaisdell: UIViewController {
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
         var bookmark = stringKey.stringForKey("bookmark")*/
+
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey("dorm") {
+            if name == "Blaisdell"{
+                self.myDormButton.setTitle("My Dorm", forState: .Normal)
+            }
+            else{
+                self.myDormButton.setTitle("Set As My Dorm", forState: .Normal)
+                
+            }
+        }
+    }
 
-    @IBAction func setDorm(sender: AnyObject) {
+   /* @IBAction func setDorm(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject("parBlaisdell", forKey: "dorm")
-        defaults.synchronize()
-    }
+    }*/
     @IBOutlet weak var machineOneStatusLabel: UILabel!
     @IBOutlet weak var machineTwoStatusLabel: UILabel!
     @IBOutlet weak var machineThreeStatusLabel: UILabel!
@@ -116,9 +129,12 @@ class parBlaisdell: UIViewController {
         }
     }
     }*/
+    @IBOutlet weak var myDormButton: UIButton!
     @IBAction func writeButton(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject("Blaisdell", forKey: "dorm")
+        self.myDormButton.setTitle("My Dorm", forState: .Normal)
+
     }
     
     @IBAction func labelOnePress(sender: AnyObject) {
@@ -142,6 +158,7 @@ class parBlaisdell: UIViewController {
         }
     }
     func parse() {
+        
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=20&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
@@ -253,6 +270,7 @@ class parBlaisdell: UIViewController {
                     else{
                         self.machineFiveStatusLabel.textColor = UIColor.redColor()
                     }
+                    
                    
 
 

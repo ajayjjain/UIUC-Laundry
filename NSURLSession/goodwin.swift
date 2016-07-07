@@ -36,8 +36,7 @@ class goodwin: UIViewController {
     @IBAction func writeButton(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject("goodwin", forKey: "dorm")
-        defaults.synchronize()
-    }
+}
     
     
     
