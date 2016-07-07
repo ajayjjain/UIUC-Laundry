@@ -48,6 +48,7 @@
 		2DD492E21D25E48B0019DCC5 /* weston.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492E11D25E48B0019DCC5 /* weston.swift */; };
 		2DDCDB221D2EF3AE00CF2867 /* parBlaisdellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB211D2EF3AE00CF2867 /* parBlaisdellTwo.swift */; };
 		2DDCDB241D2EFEE300CF2867 /* parCarrTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB231D2EFEE300CF2867 /* parCarrTwo.swift */; };
+		2DDCDB261D2F079200CF2867 /* parSaundersTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB251D2F079200CF2867 /* parSaundersTwo.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		2DD492E11D25E48B0019DCC5 /* weston.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weston.swift; sourceTree = "<group>"; };
 		2DDCDB211D2EF3AE00CF2867 /* parBlaisdellTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parBlaisdellTwo.swift; sourceTree = "<group>"; };
 		2DDCDB231D2EFEE300CF2867 /* parCarrTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parCarrTwo.swift; sourceTree = "<group>"; };
+		2DDCDB251D2F079200CF2867 /* parSaundersTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parSaundersTwo.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				2D3270751D24DD0500B75E56 /* parCarr.swift */,
 				2DDCDB231D2EFEE300CF2867 /* parCarrTwo.swift */,
 				2D3270771D24DE0C00B75E56 /* parSaunders.swift */,
+				2DDCDB251D2F079200CF2867 /* parSaundersTwo.swift */,
 				2DD492D91D25D90A0019DCC5 /* scott.swift */,
 				2D3270791D24DF1700B75E56 /* shermanShort.swift */,
 				2DD492DB1D25DA810019DCC5 /* shermanTall.swift */,
@@ -296,6 +299,7 @@
 				2D3270681D20B46C00B75E56 /* CSS.swift in Sources */,
 				2D3270691D20B46C00B75E56 /* Kanna.swift in Sources */,
 				2DDCDB221D2EF3AE00CF2867 /* parBlaisdellTwo.swift in Sources */,
+				2DDCDB261D2F079200CF2867 /* parSaundersTwo.swift in Sources */,
 				2D32706A1D20B46C00B75E56 /* libxmlHTMLDocument.swift in Sources */,
 				2DD492B41D25AED90019DCC5 /* taft.swift in Sources */,
 				2DD492DE1D25DB780019DCC5 /* snyder.swift in Sources */,
