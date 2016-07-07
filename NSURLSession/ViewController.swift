@@ -63,6 +63,8 @@ class ViewController: UIViewController {
     //parBlaisdellParse()
    }
     
+    
+    
   var greenWashersAvailable = "0"
   var greenDryersAvailable = "0"
   var hopkinsWashersAvailable = "0"
@@ -184,9 +186,14 @@ class ViewController: UIViewController {
     @IBAction func myDorm(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name = defaults.stringForKey("dorm") {
-            if name == "parBlaisdell"{
+            print(defaults.stringForKey("dorm"))
+            if name == "Blaisdell"{
                 performSegueWithIdentifier("parBlaisdell", sender: nil)
 
+            }
+            else if name == "goodwin"{
+                performSegueWithIdentifier("goodwin", sender: nil)
+                
             }
         }
 

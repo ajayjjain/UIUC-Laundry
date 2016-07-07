@@ -998,7 +998,6 @@
                                     <barButtonItem title="My Dorm" width="88" id="iqY-3j-x5p">
                                         <connections>
                                             <action selector="myDorm:" destination="BYZ-38-t0r" id="3OA-HP-SCI"/>
-                                            <segue destination="yci-KI-YKA" kind="push" identifier="parBlaisdell" id="ams-AE-if7"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bSn-VP-eWj"/>
@@ -1049,12 +1048,13 @@
                         <outlet property="goodwin" destination="sgY-GI-VrA" id="NNc-29-Chm"/>
                         <outlet property="goodwinDryerLabel" destination="PNw-Iq-xKf" id="OgN-XP-r6i"/>
                         <outlet property="goodwinWasherLabel" destination="ahR-ve-I8D" id="RdS-BB-4pg"/>
+                        <segue destination="yci-KI-YKA" kind="push" identifier="parBlaisdell" id="sUX-1p-eFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="WK7-ix-mm4" userLabel="Goodwin">
                     <connections>
-                        <segue destination="zIg-0f-fHR" kind="push" id="dVi-mM-edy"/>
+                        <segue destination="zIg-0f-fHR" kind="push" identifier="goodwin" id="dVi-mM-edy"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="rPJ-Hz-Ngc" userLabel="Daniels South">
@@ -2617,6 +2617,9 @@
                                 <rect key="frame" x="137" y="217" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="writeButton:" destination="zIg-0f-fHR" eventType="touchUpInside" id="H3c-zK-TRk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3147,6 +3150,6 @@
         <image name="weston" width="480" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ams-AE-if7"/>
+        <segue reference="sUX-1p-eFH"/>
     </inferredMetricsTieBreakers>
 </document>

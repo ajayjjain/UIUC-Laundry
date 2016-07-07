@@ -33,6 +33,11 @@ class goodwin: UIViewController {
     }
     
     
+    @IBAction func writeButton(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("goodwin", forKey: "dorm")
+        defaults.synchronize()
+    }
     
     
     
@@ -137,29 +142,7 @@ class goodwin: UIViewController {
                 self.machineTenStatus = self.elements[42]
                 self.machineEleven = self.elements[45]
                 self.machineElevenStatus = self.elements[46]
-                print(self.machineOne)
-                print(self.machineOneStatus)
-                print(self.machineTwo)
-                print(self.machineTwoStatus)
-                print(self.machineThree)
-                print(self.machineThreeStatus)
-                print(self.machineFour)
-                print(self.machineFourStatus)
-                print(self.machineFive)
-                print(self.machineFiveStatus)
-                print(self.machineSix)
-                print(self.machineSixStatus)
-                print(self.machineSeven)
-                print(self.machineSevenStatus)
-                print(self.machineEight)
-                print(self.machineEightStatus)
-                print(self.machineNine)
-                print(self.machineNineStatus)
-                print(self.machineTen)
-                print(self.machineTenStatus)
-                print(self.machineEleven)
-                print(self.machineElevenStatus)
-                
+                                
                 
                 //print(str)
                 //self.button.setTitle(str, forState: .Normal)
