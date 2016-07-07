@@ -100,18 +100,11 @@ class parBlaisdell: UIViewController {
     var array = [String]()
     var elements = [String]()
     
-    @IBOutlet var button: UIButton!
-    @IBOutlet weak var star: UIImageView!
     
     @IBOutlet weak var washersAvailableLabel: UILabel!
     @IBOutlet weak var dryersAvailableLabel: UILabel!
     
-    @IBAction func bookmark(sender: AnyObject) {
-        print(star.image)
-        if star.image == UIImage(named: "whiteStar"){
-            star.image = UIImage(named: "yellowStar")
-        }
-    }
+    
     
     /*@IBAction func bookmark(sender: AnyObject) {
         print(star.currentImage)
