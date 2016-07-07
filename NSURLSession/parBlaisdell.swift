@@ -13,7 +13,6 @@ class parBlaisdell: UIViewController {
     
     
     
-    @IBOutlet weak var goodwin: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
@@ -62,14 +61,12 @@ class parBlaisdell: UIViewController {
     @IBOutlet weak var machineThreeStatusLabel: UILabel!
     @IBOutlet weak var machineFourStatusLabel: UILabel!
     @IBOutlet weak var machineFiveStatusLabel: UILabel!
-    @IBOutlet weak var machineSixStatusLabel: UILabel!
     @IBOutlet weak var borderLabel: UILabel!
     @IBOutlet weak var oneTimeRemaining: UILabel!
     @IBOutlet weak var twoTimeRemaining: UILabel!
     @IBOutlet weak var threeTimeRemaining: UILabel!
     @IBOutlet weak var fourTimeRemaining: UILabel!
     @IBOutlet weak var fiveTimeRemaining: UILabel!
-    @IBOutlet weak var sixTimeRemaining: UILabel!
     
     
     
@@ -146,20 +143,109 @@ class parBlaisdell: UIViewController {
                 .joinWithSeparator("")
             var time = Double(intString)
             time = time! * 60
+            // time = 5
             let notification = UILocalNotification()
-            notification.alertBody = "Your Daily Motivation is Awaits"
+            notification.alertBody = "Machine One at PAR Blaisdell is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
             notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
             // set the notification property before scheduleLocalNotification
-            notification.repeatInterval = .Day
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
     }
+    
+    @IBAction func labelTwoPress(sender: AnyObject) {
+        if self.machineTwo != "Available"{
+            let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Two at PAR Blaisdell is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
+    @IBAction func labelThreePress(sender: AnyObject) {
+        if self.machineThree != "Available"{
+            let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Three at PAR Blaisdell is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    @IBAction func labelFourPress(sender: AnyObject) {
+        if self.machineFour != "Available"{
+            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Three at PAR Blaisdell is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
+    @IBAction func labelFivePress(sender: AnyObject) {
+        if self.machineFive != "Available"{
+            let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Three at PAR Blaisdell is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
     func parse() {
         
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=20&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
