@@ -61,8 +61,6 @@ class ViewController: UIViewController {
     displayURL()
     //parBlaisdell().parse()
     //parBlaisdellParse()
-    let defaults = NSUserDefaults.standardUserDefaults()
-    print(defaults.stringForKey("dorm")!)
    }
     
   var greenWashersAvailable = "0"

@@ -191,6 +191,7 @@ class orchardDownsSouth: UIViewController {
                     }
                     n = n + 1
                 }
+                print(self.array.count)
                 
                 self.washersAvailable = self.elements[0]
                 self.dryersAvailable = self.elements[1]
