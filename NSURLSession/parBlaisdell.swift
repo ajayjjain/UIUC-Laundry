@@ -11,6 +11,8 @@ import UIKit
 class parBlaisdell: UIViewController {
     
     
+    
+    
     @IBOutlet weak var goodwin: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,16 @@ class parBlaisdell: UIViewController {
         parse()
         borderLabel.layer.borderColor = UIColor.orangeColor().CGColor
         borderLabel.layer.borderWidth = 2.0;
-
-
+        /*let stringKey = NSUserDefaults.standardUserDefaults()
+        var bookmark = stringKey.stringForKey("bookmark")*/
         
     }
-    
+
+    @IBAction func setDorm(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("parBlaisdell", forKey: "dorm")
+        defaults.synchronize()
+    }
     @IBOutlet weak var machineOneStatusLabel: UILabel!
     @IBOutlet weak var machineTwoStatusLabel: UILabel!
     @IBOutlet weak var machineThreeStatusLabel: UILabel!
@@ -50,6 +57,7 @@ class parBlaisdell: UIViewController {
     @IBOutlet weak var fourTimeRemaining: UILabel!
     @IBOutlet weak var fiveTimeRemaining: UILabel!
     @IBOutlet weak var sixTimeRemaining: UILabel!
+    
     
     
     
@@ -83,11 +91,56 @@ class parBlaisdell: UIViewController {
     var elements = [String]()
     
     @IBOutlet var button: UIButton!
+    @IBOutlet weak var star: UIImageView!
     
     @IBOutlet weak var washersAvailableLabel: UILabel!
     @IBOutlet weak var dryersAvailableLabel: UILabel!
     
+    @IBAction func bookmark(sender: AnyObject) {
+        print(star.image)
+        if star.image == UIImage(named: "whiteStar"){
+            star.image = UIImage(named: "yellowStar")
+        }
+    }
     
+    /*@IBAction func bookmark(sender: AnyObject) {
+        print(star.currentImage)
+        if star.currentImage == "whiteStar.png"{
+            if let image = UIImage(named: "yellowStar.png") {
+            star.setImage(image, forState: .Normal)
+            }
+        }
+        else{
+            if let image = UIImage(named: "whiteStar.png") {
+                star.setImage(image, forState: .Normal)
+        }
+    }
+    }*/
+    @IBAction func writeButton(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("Blaisdell", forKey: "dorm")
+    }
+    
+    @IBAction func labelOnePress(sender: AnyObject) {
+        if self.machineOne != "Available"{
+            let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            let notification = UILocalNotification()
+            notification.alertBody = "Your Daily Motivation is Awaits"
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            notification.repeatInterval = .Day
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
     func parse() {
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=20&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)

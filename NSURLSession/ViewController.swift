@@ -61,6 +61,8 @@ class ViewController: UIViewController {
     displayURL()
     //parBlaisdell().parse()
     //parBlaisdellParse()
+    let defaults = NSUserDefaults.standardUserDefaults()
+    print(defaults.stringForKey("dorm")!)
    }
     
   var greenWashersAvailable = "0"
@@ -155,6 +157,8 @@ class ViewController: UIViewController {
       }
   }
     
+    @IBAction func readPress(sender: AnyObject) {
+    }
     
     @IBAction func clickButton(sender: AnyObject) {
         self.navigationController!.popViewControllerAnimated(true)
@@ -179,6 +183,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var goodwinWasherLabel: UILabel!
     @IBOutlet weak var goodwinDryerLabel: UILabel!
     
+    @IBAction func myDorm(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey("dorm") {
+            if name == "parBlaisdell"{
+                performSegueWithIdentifier("parBlaisdell", sender: nil)
+
+            }
+        }
+
+    }
   func displayURL() {
     let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMPage?Login=True"
     let myURL = NSURL(string: myURLAdress)

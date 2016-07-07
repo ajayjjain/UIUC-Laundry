@@ -195,13 +195,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gWg-nm-533">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gWg-nm-533">
                                 <rect key="frame" x="0.0" y="277" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.12549019610000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1gy-E2-Xgj" appends="YES" id="KOV-5O-EIh"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jMx-U7-Egk">
                                 <rect key="frame" x="140" y="290" width="52" height="21"/>
@@ -411,6 +415,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lnB-b1-lXI">
+                                <rect key="frame" x="265" y="169" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dorm"/>
+                                <connections>
+                                    <action selector="setDorm:" destination="yci-KI-YKA" eventType="touchUpInside" id="pyy-Zz-bKl"/>
+                                    <action selector="writeButton:" destination="yci-KI-YKA" eventType="touchUpInside" id="P66-l0-F5A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -434,6 +447,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K44-ic-rfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9vB-5b-Q9f">
+                    <connections>
+                        <action selector="bookmark:" destination="yci-KI-YKA" id="9jd-7U-iHy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1gy-E2-Xgj" userLabel="Label One">
+                    <connections>
+                        <action selector="labelOnePress:" destination="yci-KI-YKA" id="4ms-P4-hoJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1155" y="-2002"/>
         </scene>
@@ -480,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqF-Hm-fIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576" y="-2002"/>
+            <point key="canvasLocation" x="1729" y="-2002"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -968,6 +991,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="IKE-3n-VpS">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="My Dorm" id="iqY-3j-x5p">
+                                        <connections>
+                                            <action selector="myDorm:" destination="BYZ-38-t0r" id="3OA-HP-SCI"/>
+                                            <segue destination="yci-KI-YKA" kind="push" identifier="parBlaisdell" id="ams-AE-if7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -3104,4 +3139,7 @@
         <image name="washer" width="96" height="96"/>
         <image name="weston" width="480" height="480"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ams-AE-if7"/>
+    </inferredMetricsTieBreakers>
 </document>

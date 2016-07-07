@@ -73,7 +73,7 @@ class secondViewController: UIViewController {
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController!.navigationBar.barTintColor = illiniBlue
         self.view.backgroundColor = grayColor
-        
+
         dispatch_async(dispatch_get_main_queue()) {
             self.greenWasherLabel.text = self.greenAvailable
             self.greenDryerLabel.text = self.greenDryersAvailable
