@@ -133,7 +133,7 @@ class danielsSouthTwo: UIViewController {
     }
     
     @IBAction func labelSixPress(sender: AnyObject) {
-        if self.machineSix != "Available"{
+        if self.machineSix != "Available" && machineSixStatus != "not updating status"{
             let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -154,7 +154,7 @@ class danielsSouthTwo: UIViewController {
     }
     
     @IBAction func labelSevenPress(sender: AnyObject) {
-        if self.machineSeven != "Available"{
+        if self.machineSeven != "Available" && machineSevenStatus != "not updating status"{
             let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -176,7 +176,7 @@ class danielsSouthTwo: UIViewController {
     
     
     @IBAction func labelEightPress(sender: AnyObject) {
-        if self.machineEight != "Available"{
+        if self.machineEight != "Available" && machineEightStatus != "not updating status"{
             let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -197,7 +197,7 @@ class danielsSouthTwo: UIViewController {
     }
     
     @IBAction func labelNinePress(sender: AnyObject) {
-        if self.machineNine != "Available"{
+        if self.machineNine != "Available" && machineNineStatus != "not updating status"{
             let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -218,7 +218,7 @@ class danielsSouthTwo: UIViewController {
     }
     
     @IBAction func labelTenPress(sender: AnyObject) {
-        if self.machineTen != "Available"{
+        if self.machineTen != "Available" && machineTenStatus != "not updating status"{
             let intString = machineTenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()

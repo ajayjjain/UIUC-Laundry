@@ -118,7 +118,7 @@ class parCarr: UIViewController {
     
     @IBAction func labelOnePress(sender: AnyObject) {
 
-        if self.machineOne != "Available"{
+        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
@@ -142,7 +142,7 @@ class parCarr: UIViewController {
     
     @IBAction func labelTwoPress(sender: AnyObject) {
         
-        if self.machineTwo != "Available"{
+        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
@@ -166,7 +166,7 @@ class parCarr: UIViewController {
     
     
     @IBAction func labelThreePress(sender: AnyObject) {
-        if self.machineThree != "Available"{
+        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
@@ -189,7 +189,7 @@ class parCarr: UIViewController {
     }
     
     @IBAction func labelFourPress(sender: AnyObject) {
-        if self.machineFour != "Available"{
+        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
@@ -213,7 +213,7 @@ class parCarr: UIViewController {
     
     
     @IBAction func labelFivePress(sender: AnyObject) {
-        if self.machineFive != "Available"{
+        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(

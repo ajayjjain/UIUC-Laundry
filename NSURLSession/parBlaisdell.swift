@@ -128,7 +128,7 @@ class parBlaisdell: UIViewController {
     }
     
     @IBAction func labelOnePress(sender: AnyObject) {
-        if self.machineOne != "Available"{
+        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
             let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -149,7 +149,7 @@ class parBlaisdell: UIViewController {
     }
     
     @IBAction func labelTwoPress(sender: AnyObject) {
-        if self.machineTwo != "Available"{
+        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
             let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -171,7 +171,7 @@ class parBlaisdell: UIViewController {
     
     
     @IBAction func labelThreePress(sender: AnyObject) {
-        if self.machineThree != "Available"{
+        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
             let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -192,7 +192,7 @@ class parBlaisdell: UIViewController {
     }
     
     @IBAction func labelFourPress(sender: AnyObject) {
-        if self.machineFour != "Available"{
+        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
             let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -214,7 +214,7 @@ class parBlaisdell: UIViewController {
     
     
     @IBAction func labelFivePress(sender: AnyObject) {
-        if self.machineFive != "Available"{
+        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
             let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()

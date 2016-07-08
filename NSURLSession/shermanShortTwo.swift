@@ -131,7 +131,7 @@ class shermanShortTwo: UIViewController {
     
     @IBAction func labelSixPress(sender: AnyObject) {
         
-        if self.machineSix != "Available"{
+        if self.machineSix != "Available" && machineSixStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
@@ -154,7 +154,7 @@ class shermanShortTwo: UIViewController {
     }
     
     @IBAction func labelSevenPress(sender: AnyObject) {
-        if self.machineSeven != "Available"{
+        if self.machineSeven != "Available" && machineSevenStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
@@ -178,7 +178,7 @@ class shermanShortTwo: UIViewController {
     
     
     @IBAction func labelEightPress(sender: AnyObject) {
-        if self.machineEight != "Available"{
+        if self.machineEight != "Available" && machineEightStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
@@ -201,7 +201,7 @@ class shermanShortTwo: UIViewController {
     }
     
     @IBAction func labelNinePress(sender: AnyObject) {
-        if self.machineNine != "Available"{
+        if self.machineNine != "Available" && machineNineStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
