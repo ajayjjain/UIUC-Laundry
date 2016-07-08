@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class shermanShort: UIViewController {
     
@@ -117,6 +118,8 @@ class shermanShort: UIViewController {
     
     @IBAction func labelOnePress(sender: AnyObject) {
         if self.machineOne != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -138,6 +141,8 @@ class shermanShort: UIViewController {
     
     @IBAction func labelTwoPress(sender: AnyObject) {
         if self.machineTwo != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -160,6 +165,8 @@ class shermanShort: UIViewController {
     
     @IBAction func labelThreePress(sender: AnyObject) {
         if self.machineThree != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -181,6 +188,8 @@ class shermanShort: UIViewController {
     
     @IBAction func labelFourPress(sender: AnyObject) {
         if self.machineFour != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -203,6 +212,8 @@ class shermanShort: UIViewController {
     
     @IBAction func labelFivePress(sender: AnyObject) {
         if self.machineFive != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()

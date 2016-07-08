@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class parCarrTwo: UIViewController {
     
@@ -129,6 +130,8 @@ class parCarrTwo: UIViewController {
     
     @IBAction func labelSixPress(sender: AnyObject) {
         if self.machineSix != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -150,6 +153,8 @@ class parCarrTwo: UIViewController {
     
     @IBAction func labelSevenPress(sender: AnyObject) {
         if self.machineSeven != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -172,6 +177,8 @@ class parCarrTwo: UIViewController {
     
     @IBAction func labelEightPress(sender: AnyObject) {
         if self.machineEight != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -193,6 +200,8 @@ class parCarrTwo: UIViewController {
     
     @IBAction func labelNinePress(sender: AnyObject) {
         if self.machineNine != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()

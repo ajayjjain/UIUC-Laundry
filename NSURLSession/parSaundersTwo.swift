@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class parSaundersTwo: UIViewController {
     
@@ -133,7 +134,10 @@ class parSaundersTwo: UIViewController {
     }
     
     @IBAction func labelSixPress(sender: AnyObject) {
+        
         if self.machineSix != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -155,6 +159,8 @@ class parSaundersTwo: UIViewController {
     
     @IBAction func labelSevenPress(sender: AnyObject) {
         if self.machineSeven != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -177,6 +183,8 @@ class parSaundersTwo: UIViewController {
     
     @IBAction func labelEightPress(sender: AnyObject) {
         if self.machineEight != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -198,6 +206,8 @@ class parSaundersTwo: UIViewController {
     
     @IBAction func labelNinePress(sender: AnyObject) {
         if self.machineNine != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -219,6 +229,8 @@ class parSaundersTwo: UIViewController {
     
     @IBAction func labelTenPress(sender: AnyObject) {
         if self.machineTen != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineTenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()

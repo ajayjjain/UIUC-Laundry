@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class parCarr: UIViewController {
     
@@ -116,7 +117,10 @@ class parCarr: UIViewController {
     }
     
     @IBAction func labelOnePress(sender: AnyObject) {
+
         if self.machineOne != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -137,7 +141,10 @@ class parCarr: UIViewController {
     }
     
     @IBAction func labelTwoPress(sender: AnyObject) {
+        
         if self.machineTwo != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -160,6 +167,8 @@ class parCarr: UIViewController {
     
     @IBAction func labelThreePress(sender: AnyObject) {
         if self.machineThree != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -181,6 +190,8 @@ class parCarr: UIViewController {
     
     @IBAction func labelFourPress(sender: AnyObject) {
         if self.machineFour != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -203,6 +214,8 @@ class parCarr: UIViewController {
     
     @IBAction func labelFivePress(sender: AnyObject) {
         if self.machineFive != "Available"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+
             let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
