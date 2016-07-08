@@ -3720,7 +3720,7 @@
                                     <outletCollection property="gestureRecognizers" destination="rRu-ql-9ah" appends="YES" id="S7T-VA-7g0"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="washer" id="0hd-vh-bPI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0hd-vh-bPI">
                                 <rect key="frame" x="230" y="536" width="9" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -8221,7 +8221,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2249" y="-2002"/>
+            <point key="canvasLocation" x="1900" y="-2002"/>
         </scene>
     </scenes>
     <resources>
