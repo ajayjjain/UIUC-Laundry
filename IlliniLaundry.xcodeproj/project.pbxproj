@@ -57,6 +57,7 @@
 		2DDCDB341D3182F300CF2867 /* bartonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB331D3182F300CF2867 /* bartonThree.swift */; };
 		2DDCDB361D31893700CF2867 /* danielsNorthTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB351D31893700CF2867 /* danielsNorthTwo.swift */; };
 		2DDCDB381D318E7B00CF2867 /* danielsNorthThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB371D318E7B00CF2867 /* danielsNorthThree.swift */; };
+		2DDCDB3A1D319AAF00CF2867 /* larLeonardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCDB391D319AAF00CF2867 /* larLeonardTwo.swift */; };
 		35538A251C7AB9D100EA6D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A241C7AB9D100EA6D0F /* AppDelegate.swift */; };
 		35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35538A261C7AB9D100EA6D0F /* ViewController.swift */; };
 		35538A2A1C7AB9D100EA6D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35538A281C7AB9D100EA6D0F /* Main.storyboard */; };
@@ -115,6 +116,7 @@
 		2DDCDB331D3182F300CF2867 /* bartonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bartonThree.swift; sourceTree = "<group>"; };
 		2DDCDB351D31893700CF2867 /* danielsNorthTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = danielsNorthTwo.swift; sourceTree = "<group>"; };
 		2DDCDB371D318E7B00CF2867 /* danielsNorthThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = danielsNorthThree.swift; sourceTree = "<group>"; };
+		2DDCDB391D319AAF00CF2867 /* larLeonardTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = larLeonardTwo.swift; sourceTree = "<group>"; };
 		35538A211C7AB9D100EA6D0F /* IlliniLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IlliniLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35538A241C7AB9D100EA6D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35538A261C7AB9D100EA6D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				2DD492CB1D25C6C00019DCC5 /* isrTownsend.swift */,
 				2DD492CD1D25C7AE0019DCC5 /* isrWardall.swift */,
 				2DD492CF1D25C8840019DCC5 /* larLeonard.swift */,
+				2DDCDB391D319AAF00CF2867 /* larLeonardTwo.swift */,
 				2DD492D11D25C9480019DCC5 /* larShelden.swift */,
 				2DD492D31D25CA3D0019DCC5 /* nugent.swift */,
 				2DD492D51D25CB1F0019DCC5 /* nugentRoom.swift */,
@@ -308,6 +311,7 @@
 				2DDCDB341D3182F300CF2867 /* bartonThree.swift in Sources */,
 				2DD492E21D25E48B0019DCC5 /* weston.swift in Sources */,
 				2DD492C41D25C3A00019DCC5 /* farOglesby.swift in Sources */,
+				2DDCDB3A1D319AAF00CF2867 /* larLeonardTwo.swift in Sources */,
 				2DDCDB2A1D301BF900CF2867 /* danielsSouthTwo.swift in Sources */,
 				2D32706B1D20B46C00B75E56 /* libxmlHTMLNode.swift in Sources */,
 				2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */,

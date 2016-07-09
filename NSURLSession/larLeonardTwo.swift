@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class danielsNorthTwo: UIViewController {
+class larLeonardTwo: UIViewController {
     
     
     
@@ -43,7 +43,7 @@ class danielsNorthTwo: UIViewController {
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name = defaults.stringForKey("dorm") {
-            if name == "danielsNorth"{
+            if name == "larLeonard"{
                 self.myDormButton.setTitle("My Dorm", forState: .Normal)
             }
             else{
@@ -128,7 +128,7 @@ class danielsNorthTwo: UIViewController {
     @IBOutlet weak var myDormButton: UIButton!
     @IBAction func writeButton(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject("danielsNorth", forKey: "dorm")
+        defaults.setObject("larLeonard", forKey: "dorm")
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
     }
@@ -147,7 +147,7 @@ class danielsNorthTwo: UIViewController {
             time = time! * 60
             // time = 5
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Six at Daniels North is ready."
+            notification.alertBody = "Machine Six at LAR Leonard is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -170,7 +170,7 @@ class danielsNorthTwo: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Seven at Daniels North is ready."
+            notification.alertBody = "Machine Seven at LAR Leonard is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -194,7 +194,7 @@ class danielsNorthTwo: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Eight at Daniels North is ready."
+            notification.alertBody = "Machine Eight at LAR Leonard is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -217,7 +217,7 @@ class danielsNorthTwo: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Nine at Daniels North is ready."
+            notification.alertBody = "Machine Nine at LAR Leonard is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -240,7 +240,7 @@ class danielsNorthTwo: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Ten at Daniels North is ready."
+            notification.alertBody = "Machine Ten at LAR Leonard is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -255,7 +255,7 @@ class danielsNorthTwo: UIViewController {
     
     func parse() {
         
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=4&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
