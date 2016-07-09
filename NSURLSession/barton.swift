@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class barton: UIViewController {
     
     
-    @IBOutlet weak var goodwin: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let grayColor = UIColor(red: 222/255.0, green: 222/255.0, blue: 222/255.0, alpha: 1.0)
@@ -30,8 +32,42 @@ class barton: UIViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
         parse()
+        borderLabel.layer.borderColor = UIColor.orangeColor().CGColor
+        borderLabel.layer.borderWidth = 2.0;
+        /*let stringKey = NSUserDefaults.standardUserDefaults()
+         var bookmark = stringKey.stringForKey("bookmark")*/
+        
+        
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey("dorm") {
+            if name == "barton"{
+                self.myDormButton.setTitle("My Dorm", forState: .Normal)
+            }
+            else{
+                self.myDormButton.setTitle("Set As My Dorm", forState: .Normal)
+                
+            }
+        }
+    }
+    
+    /* @IBAction func setDorm(sender: AnyObject) {
+     let defaults = NSUserDefaults.standardUserDefaults()
+     defaults.setObject("parBlaisdell", forKey: "dorm")
+     }*/
+    @IBOutlet weak var machineOneStatusLabel: UILabel!
+    @IBOutlet weak var machineTwoStatusLabel: UILabel!
+    @IBOutlet weak var machineThreeStatusLabel: UILabel!
+    @IBOutlet weak var machineFourStatusLabel: UILabel!
+    @IBOutlet weak var machineFiveStatusLabel: UILabel!
+    @IBOutlet weak var borderLabel: UILabel!
+    @IBOutlet weak var oneTimeRemaining: UILabel!
+    @IBOutlet weak var twoTimeRemaining: UILabel!
+    @IBOutlet weak var threeTimeRemaining: UILabel!
+    @IBOutlet weak var fourTimeRemaining: UILabel!
+    @IBOutlet weak var fiveTimeRemaining: UILabel!
     
     
     
@@ -45,14 +81,6 @@ class barton: UIViewController {
     var machineSeven = "n/a"
     var machineEight = "n/a"
     var machineNine = "n/a"
-    var machineTen = "n/a"
-    var machineEleven = "n/a"
-    var machineTwelve = "n/a"
-    var machineThirteen = "n/a"
-    var machineFourteen = "n/a"
-    var machineFifteen = "n/a"
-
-    
     
     
     var machineOneStatus = ""
@@ -64,13 +92,6 @@ class barton: UIViewController {
     var machineSevenStatus = ""
     var machineEightStatus = ""
     var machineNineStatus = ""
-    var machineTenStatus = ""
-    var machineElevenStatus = ""
-    var machineTwelveStatus = ""
-    var machineThirteenStatus = ""
-    var machineFourteenStatus = ""
-    var machineFifteenStatus = ""
-
     
     
     var washersAvailable = ""
@@ -80,14 +101,143 @@ class barton: UIViewController {
     var array = [String]()
     var elements = [String]()
     
-    @IBOutlet var button: UIButton!
     
+    @IBOutlet weak var washersAvailableLabel: UILabel!
+    @IBOutlet weak var dryersAvailableLabel: UILabel!
+    
+    
+    
+    
+    @IBOutlet weak var myDormButton: UIButton!
+    @IBAction func writeButton(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("barton", forKey: "dorm")
+        self.myDormButton.setTitle("My Dorm", forState: .Normal)
+        
+    }
+    
+    @IBAction func labelOnePress(sender: AnyObject) {
+        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            // time = 5
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine One at Barton-Lundgren is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    @IBAction func labelTwoPress(sender: AnyObject) {
+        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Two at Barton-Lundgren is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
+    @IBAction func labelThreePress(sender: AnyObject) {
+        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Three at Barton-Lundgren is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    @IBAction func labelFourPress(sender: AnyObject) {
+        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Four at Barton-Lundgren is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
+    @IBAction func labelFivePress(sender: AnyObject) {
+        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Five at Barton-Lundgren is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
     
     
     func parse() {
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=1&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        //bousfield let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=2&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
-        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=13&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=1&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
         let URLTask = NSURLSession.sharedSession().dataTaskWithURL(myURL!) {
@@ -127,7 +277,6 @@ class barton: UIViewController {
                     }
                     n = n + 1
                 }
-                
                 self.washersAvailable = self.elements[0]
                 self.dryersAvailable = self.elements[1]
                 self.peopleWaiting = self.elements[2]
@@ -149,54 +298,65 @@ class barton: UIViewController {
                 self.machineEightStatus = self.elements[34]
                 self.machineNine = self.elements[37]
                 self.machineNineStatus = self.elements[38]
-                self.machineTen = self.elements[41]
-                self.machineTenStatus = self.elements[42]
-                self.machineEleven = self.elements[45]
-                self.machineElevenStatus = self.elements[46]
-                self.machineTwelve = self.elements[49]
-                self.machineTwelveStatus = self.elements[50]
-                self.machineThirteen = self.elements[53]
-                self.machineThirteenStatus = self.elements[54]
-                self.machineFourteen = self.elements[57]
-                self.machineFourteenStatus = self.elements[58]
-                self.machineFifteen = self.elements[61]
-                self.machineFifteenStatus = self.elements[62]
-
+                /*print(self.elements)
+                 print(self.machineOneStatus)
+                 print(self.elements[6])
+                 print(self.machineTwo)
+                 print(self.machineTwoStatus)*/
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.washersAvailableLabel.text = self.washersAvailable
+                    self.dryersAvailableLabel.text = self.dryersAvailable
+                    self.machineOneStatusLabel.text = self.machineOne
+                    self.machineTwoStatusLabel.text = self.machineTwo
+                    self.machineThreeStatusLabel.text = self.machineThree
+                    self.machineFourStatusLabel.text = self.machineFour
+                    self.machineFiveStatusLabel.text = self.machineFive
+                    self.oneTimeRemaining.text = self.machineOneStatus
+                    self.twoTimeRemaining.text = self.machineTwoStatus
+                    self.threeTimeRemaining.text = self.machineThreeStatus
+                    self.fourTimeRemaining.text = self.machineFourStatus
+                    self.fiveTimeRemaining.text = self.machineFiveStatus
+                    if self.machineOne == "Available"{
+                        self.machineOneStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineOneStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineTwo == "Available"{
+                        self.machineTwoStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineTwoStatusLabel.textColor = UIColor.redColor()
+                    }
+                    
+                    if self.machineThree == "Available"{
+                        self.machineThreeStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineThreeStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineFour == "Available"{
+                        self.machineFourStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineFourStatusLabel.textColor = UIColor.redColor()
+                    }
+                    
+                    if self.machineFive == "Available"{
+                        self.machineFiveStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineFiveStatusLabel.textColor = UIColor.redColor()
+                    }
+                    
+                    
+                    
+                    
+                }
                 
-                print(self.machineOne)
-                print(self.machineOneStatus)
-                print(self.machineTwo)
-                print(self.machineTwoStatus)
-                print(self.machineThree)
-                print(self.machineThreeStatus)
-                print(self.machineFour)
-                print(self.machineFourStatus)
-                print(self.machineFive)
-                print(self.machineFiveStatus)
-                print(self.machineSix)
-                print(self.machineSixStatus)
-                print(self.machineSeven)
-                print(self.machineSevenStatus)
-                print(self.machineEight)
-                print(self.machineEightStatus)
-                print(self.machineNine)
-                print(self.machineNineStatus)
-                print(self.machineTen)
-                print(self.machineTenStatus)
-                print(self.machineEleven)
-                print(self.machineElevenStatus)
-                print(self.machineTwelve)
-                print(self.machineTwelveStatus)
-                print(self.machineThirteen)
-                print(self.machineThirteenStatus)
-                print(self.machineFourteen)
-                print(self.machineFourteenStatus)
-                print(self.machineFifteen)
-                print(self.machineFifteenStatus)
                 
                 
-                //print(str)
-                //self.button.setTitle(str, forState: .Normal)
+                
                 
             }
             
