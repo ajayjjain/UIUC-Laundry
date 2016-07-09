@@ -147,7 +147,7 @@ class bartonThree: UIViewController {
             time = time! * 60
             // time = 5
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Eleven at PAR Saunders is ready."
+            notification.alertBody = "Machine Eleven at Barton-Lundgren is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -170,7 +170,7 @@ class bartonThree: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Twelve at PAR Saunders is ready."
+            notification.alertBody = "Machine Twelve at Barton-Lundgren is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -194,7 +194,7 @@ class bartonThree: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Thirteen at PAR Saunders is ready."
+            notification.alertBody = "Machine Thirteen at Barton-Lundgren is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -217,7 +217,7 @@ class bartonThree: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Fourteen at PAR Saunders is ready."
+            notification.alertBody = "Machine Fourteen at Barton-Lundgren is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -240,7 +240,7 @@ class bartonThree: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Fifteen at PAR Saunders is ready."
+            notification.alertBody = "Machine Fifteen at Barton-Lundgren is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval

@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class bartonTwo: UIViewController {
+class danielsNorthTwo: UIViewController {
     
     
     
@@ -43,7 +43,7 @@ class bartonTwo: UIViewController {
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name = defaults.stringForKey("dorm") {
-            if name == "barton"{
+            if name == "danielsNorth"{
                 self.myDormButton.setTitle("My Dorm", forState: .Normal)
             }
             else{
@@ -128,7 +128,7 @@ class bartonTwo: UIViewController {
     @IBOutlet weak var myDormButton: UIButton!
     @IBAction func writeButton(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject("barton", forKey: "dorm")
+        defaults.setObject("danielsNorth", forKey: "dorm")
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
     }
@@ -255,7 +255,7 @@ class bartonTwo: UIViewController {
     
     func parse() {
         
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=1&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=4&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         

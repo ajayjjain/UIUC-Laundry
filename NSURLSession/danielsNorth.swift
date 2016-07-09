@@ -287,6 +287,7 @@ class danielsNorth: UIViewController {
                 self.machineThree = self.elements[13]
                 self.machineThreeStatus = self.elements[14]
                 self.machineFour = self.elements[17]
+                print(self.machineFour)
                 self.machineFourStatus = self.elements[18]
                 self.machineFive = self.elements[21]
                 self.machineFiveStatus = self.elements[22]
