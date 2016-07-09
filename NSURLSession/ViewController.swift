@@ -187,7 +187,11 @@ class ViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name = defaults.stringForKey("dorm") {
             print(defaults.stringForKey("dorm"))
-            if name == "Blaisdell"{
+            if name == "barton"{
+                performSegueWithIdentifier("barton", sender: nil)
+                
+            }
+            else if name == "Blaisdell"{
                 performSegueWithIdentifier("parBlaisdell", sender: nil)
 
             }
