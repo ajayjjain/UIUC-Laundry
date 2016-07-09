@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2H-Bq-oAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="-4441"/>
+            <point key="canvasLocation" x="1517" y="-4457"/>
         </scene>
         <!--Sherman Short View Controller-->
         <scene sceneID="sMY-fh-l4p">
@@ -5466,7 +5466,7 @@
                     <navigationItem key="navigationItem" id="ajS-sZ-d1J">
                         <barButtonItem key="rightBarButtonItem" title="More" id="sTY-F2-V26">
                             <connections>
-                                <segue destination="CCE-cp-zat" kind="push" id="nB1-fp-BTw"/>
+                                <segue destination="CCE-cp-zat" kind="push" id="RFc-qn-oxB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -5514,7 +5514,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="695" y="-4457"/>
+            <point key="canvasLocation" x="680" y="-4307"/>
         </scene>
         <!--Bousfield-->
         <scene sceneID="hHw-Tj-amA">
@@ -12918,7 +12918,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e6D-Oh-xol">
-                        <barButtonItem key="rightBarButtonItem" title="More" id="zqc-o7-UMb"/>
+                        <barButtonItem key="rightBarButtonItem" title="More" id="zqc-o7-UMb">
+                            <connections>
+                                <segue destination="5eh-SD-wcI" kind="push" id="THP-S3-UxE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="borderLabel" destination="Phz-8l-YP2" id="t9W-4A-OXC"/>
@@ -12964,7 +12968,305 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1039" y="-4457"/>
+            <point key="canvasLocation" x="695" y="-4457"/>
+        </scene>
+        <!--LAR Shelden Three-->
+        <scene sceneID="lvu-F1-TvH">
+            <objects>
+                <viewController title="LAR Shelden Three" id="5eh-SD-wcI" customClass="larSheldenThree" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teq-pE-gMI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Fe5-e1-mRc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="5dp-QC-tjj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="vQv-Et-h4i">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <navigationBar contentMode="scaleToFill" id="RDM-hj-Uhj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <items>
+                                                            <navigationItem title="Title" id="tf1-a8-YBm"/>
+                                                        </items>
+                                                    </navigationBar>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lar" id="Ugq-He-gTv">
+                                                        <rect key="frame" x="0.0" y="44" width="320" height="171"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAR Shelden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hmZ-Ec-Qkz">
+                                                        <rect key="frame" x="20" y="176" width="119" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q5M-gN-Osi">
+                                                        <rect key="frame" x="0.0" y="207" width="320" height="36"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x4O-H8-1mO">
+                                                        <rect key="frame" x="0.0" y="241" width="320" height="36"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lu2-gP-1bl">
+                                                        <rect key="frame" x="20" y="214" width="105" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q7V-6j-qVo">
+                                                        <rect key="frame" x="195" y="214" width="105" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Zb-Oe-ghs">
+                                                        <rect key="frame" x="10" y="248" width="21" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V6l-Um-ZRr">
+                                                        <rect key="frame" x="39" y="248" width="76" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a56-GH-Vjq">
+                                                        <rect key="frame" x="123" y="248" width="86" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FPm-A2-hpq">
+                                                        <rect key="frame" x="219" y="248" width="92" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4qh-pC-Zfr">
+                                                        <rect key="frame" x="0.0" y="277" width="320" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.12549019610000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="OEG-Dg-xYG" appends="YES" id="Bsc-e5-9fG"/>
+                                                        </connections>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6JH-mH-cSO">
+                                                        <rect key="frame" x="140" y="290" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kUQ-lf-ruZ">
+                                                        <rect key="frame" x="10" y="290" width="21" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Dryer (bottom)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mrd-4W-eZZ">
+                                                        <rect key="frame" x="48" y="282" width="67" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZq-1M-aDh" userLabel="Label Two">
+                                                        <rect key="frame" x="0.0" y="326" width="320" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.12549019610000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="fVh-dz-7Te" appends="YES" id="vI0-P7-Y0o"/>
+                                                        </connections>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M98-U5-YwD">
+                                                        <rect key="frame" x="140" y="339" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Ab-sP-Cwt">
+                                                        <rect key="frame" x="10" y="339" width="21" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qih-3f-094">
+                                                        <rect key="frame" x="10" y="389" width="21" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9F9-U8-nVv">
+                                                        <rect key="frame" x="239" y="291" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lF7-ZP-IUX">
+                                                        <rect key="frame" x="239" y="339" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eY7-6g-aAd">
+                                                        <rect key="frame" x="0.0" y="375" width="320" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.12549019610000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="jPe-QD-zia" appends="YES" id="W3w-ND-gjc"/>
+                                                        </connections>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pJP-HV-t2C">
+                                                        <rect key="frame" x="10" y="388" width="21" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QA6-qe-PT9">
+                                                        <rect key="frame" x="140" y="388" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Dryer (bottom)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QOj-rP-XZ9">
+                                                        <rect key="frame" x="48" y="380" width="67" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tEH-eP-j9Y">
+                                                        <rect key="frame" x="239" y="389" width="52" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pqY-zt-OYJ">
+                                                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <items>
+                                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Aqm-bD-blx"/>
+                                                            <barButtonItem title="My Dorm" width="88" id="wIg-5a-vaX">
+                                                                <connections>
+                                                                    <action selector="myDorm:" destination="BYZ-38-t0r" id="Qw7-DC-wdS"/>
+                                                                </connections>
+                                                            </barButtonItem>
+                                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="BHI-FI-l3V"/>
+                                                        </items>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <color key="barTintColor" red="0.0" green="0.12549019610000001" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </toolbar>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wEN-TZ-Fxa">
+                                                        <rect key="frame" x="195" y="172" width="116" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" red="0.90980392160000001" green="0.46666666670000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="writeButton:" destination="yci-KI-YKA" eventType="touchUpInside" id="CST-GL-OIw"/>
+                                                            <action selector="writeButton:" destination="hYS-7y-eHP" eventType="touchUpInside" id="LMa-Zi-Mug"/>
+                                                            <action selector="writeButton:" destination="swY-Kc-qdc" eventType="touchUpInside" id="Pub-yd-ybF"/>
+                                                            <action selector="writeButton:" destination="xEZ-19-Xex" eventType="touchUpInside" id="YeZ-Ec-jyi"/>
+                                                            <action selector="writeButton:" destination="5eh-SD-wcI" eventType="touchUpInside" id="eng-L4-Wd8"/>
+                                                            <action selector="writeButton:" destination="ebI-ca-wSo" eventType="touchUpInside" id="slK-zI-cjb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack Dryer (top)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ioy-MG-G4h">
+                                                        <rect key="frame" x="48" y="331" width="67" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TW9-hX-c5e">
+                        <barButtonItem key="rightBarButtonItem" title="More" id="A9g-ys-ejE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="borderLabel" destination="x4O-H8-1mO" id="xc1-Tg-2AJ"/>
+                        <outlet property="dryersAvailableLabel" destination="Q7V-6j-qVo" id="I2Z-II-SIM"/>
+                        <outlet property="elevenTimeRemaining" destination="9F9-U8-nVv" id="AWX-AS-MzD"/>
+                        <outlet property="machineElevenStatusLabel" destination="6JH-mH-cSO" id="5SR-j0-uuE"/>
+                        <outlet property="machineThirteenStatusLabel" destination="QA6-qe-PT9" id="pMC-Lo-z2R"/>
+                        <outlet property="machineTwelveStatusLabel" destination="M98-U5-YwD" id="gBE-gA-wFs"/>
+                        <outlet property="myDormButton" destination="wEN-TZ-Fxa" id="5vu-8u-3KT"/>
+                        <outlet property="thirteenTimeRemaining" destination="tEH-eP-j9Y" id="esr-Jl-nX7"/>
+                        <outlet property="twelveTimeRemaining" destination="lF7-ZP-IUX" id="UlJ-5N-eUj"/>
+                        <outlet property="washersAvailableLabel" destination="lu2-gP-1bl" id="KqE-kG-Sn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYK-IS-Cky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OEG-Dg-xYG" userLabel="Label One">
+                    <connections>
+                        <action selector="labelElevenPress:" destination="5eh-SD-wcI" id="nhE-Be-CdQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fVh-dz-7Te" userLabel="Label Two">
+                    <connections>
+                        <action selector="labelTwelvePress:" destination="5eh-SD-wcI" id="t1q-ZS-5zI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jPe-QD-zia" userLabel="Label Three">
+                    <connections>
+                        <action selector="labelThirteenPress:" destination="5eh-SD-wcI" id="2dL-8z-hiX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1046" y="-4457"/>
         </scene>
     </scenes>
     <resources>
