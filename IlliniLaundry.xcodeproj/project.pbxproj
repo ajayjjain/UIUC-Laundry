@@ -23,6 +23,7 @@
 		2D9DFF661D1F8E7500835794 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF651D1F8E7500835794 /* thirdViewController.swift */; };
 		2D9DFF681D2035B900835794 /* green.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DFF671D2035B900835794 /* green.swift */; };
 		2D9DFF741D208F7B00835794 /* Modules in Resources */ = {isa = PBXBuildFile; fileRef = 2D9DFF6E1D208F7A00835794 /* Modules */; };
+		2DB72CF51D341F3E00965857 /* shermanTallTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB72CF41D341F3E00965857 /* shermanTallTwo.swift */; };
 		2DD492B41D25AED90019DCC5 /* taft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B31D25AED90019DCC5 /* taft.swift */; };
 		2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B51D25AF300019DCC5 /* vanDoren.swift */; };
 		2DD492B81D25B2340019DCC5 /* orchardDownsSouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */; };
@@ -85,6 +86,7 @@
 		2D9DFF651D1F8E7500835794 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		2D9DFF671D2035B900835794 /* green.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = green.swift; sourceTree = "<group>"; };
 		2D9DFF6E1D208F7A00835794 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Modules; path = ../../../../Documents/Modules; sourceTree = "<group>"; };
+		2DB72CF41D341F3E00965857 /* shermanTallTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shermanTallTwo.swift; sourceTree = "<group>"; };
 		2DD492B31D25AED90019DCC5 /* taft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taft.swift; sourceTree = "<group>"; };
 		2DD492B51D25AF300019DCC5 /* vanDoren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vanDoren.swift; sourceTree = "<group>"; };
 		2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchardDownsSouth.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				2D3270791D24DF1700B75E56 /* shermanShort.swift */,
 				2DDCDB2B1D304AB500CF2867 /* shermanShortTwo.swift */,
 				2DD492DB1D25DA810019DCC5 /* shermanTall.swift */,
+				2DB72CF41D341F3E00965857 /* shermanTallTwo.swift */,
 				2DD492DD1D25DB780019DCC5 /* snyder.swift */,
 				2DD492B31D25AED90019DCC5 /* taft.swift */,
 				2DDCDB2D1D3054D400CF2867 /* taftTwo.swift */,
@@ -304,6 +307,7 @@
 				2DDCDB301D306AC700CF2867 /* vanDorenTwo.swift in Sources */,
 				2D9DFF681D2035B900835794 /* green.swift in Sources */,
 				2D3270741D24DBD800B75E56 /* parBlaisdell.swift in Sources */,
+				2DB72CF51D341F3E00965857 /* shermanTallTwo.swift in Sources */,
 				2DD492BE1D25C05C0019DCC5 /* bousfield.swift in Sources */,
 				2DD492B81D25B2340019DCC5 /* orchardDownsSouth.swift in Sources */,
 				2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */,
