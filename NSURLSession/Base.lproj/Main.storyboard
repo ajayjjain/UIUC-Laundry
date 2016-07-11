@@ -15039,7 +15039,7 @@
         <!--PAR Babcock Three-->
         <scene sceneID="LEw-bS-ghh">
             <objects>
-                <viewController title="PAR Babcock Three" id="Lig-U3-vZw" customClass="parBabcockTwo" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PAR Babcock Three" id="Lig-U3-vZw" customClass="parBabcockThree" customModule="IlliniLaundry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4Y-ue-enf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -15200,16 +15200,16 @@
                     <connections>
                         <outlet property="borderLabel" destination="g4H-Pv-WlS" id="yx4-D2-Q9b"/>
                         <outlet property="dryersAvailableLabel" destination="oTL-G5-zSA" id="D1w-cO-4EJ"/>
-                        <outlet property="machineSixStatusLabel" destination="P9I-43-aJM" id="arO-1J-A4K"/>
+                        <outlet property="elevenTimeRemaining" destination="lki-pg-prU" id="r3b-SZ-K54"/>
+                        <outlet property="machineElevenStatusLabel" destination="P9I-43-aJM" id="ne6-Gf-1hT"/>
                         <outlet property="myDormButton" destination="sav-Tv-cij" id="5kt-Y2-J4r"/>
-                        <outlet property="sixTimeRemaining" destination="lki-pg-prU" id="yTa-cY-Sxe"/>
                         <outlet property="washersAvailableLabel" destination="bJJ-7g-Vdx" id="xbW-Wb-hKh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cU-DE-yIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="C2X-xW-UEU" userLabel="One">
                     <connections>
-                        <action selector="labelSixPress:" destination="Lig-U3-vZw" id="qDv-Zn-Ks2"/>
+                        <action selector="labelElevenPress:" destination="Lig-U3-vZw" id="z94-gx-WOs"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
