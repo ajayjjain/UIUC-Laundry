@@ -27,6 +27,7 @@
 		2DB72CF71D34219000965857 /* shermanTallThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB72CF61D34219000965857 /* shermanTallThree.swift */; };
 		2DB72CF91D34270400965857 /* parBabcockTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB72CF81D34270400965857 /* parBabcockTwo.swift */; };
 		2DB72CFB1D342A6500965857 /* parBabcockThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB72CFA1D342A6500965857 /* parBabcockThree.swift */; };
+		2DB72CFD1D342E0300965857 /* goodwinTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB72CFC1D342E0300965857 /* goodwinTwo.swift */; };
 		2DD492B41D25AED90019DCC5 /* taft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B31D25AED90019DCC5 /* taft.swift */; };
 		2DD492B61D25AF300019DCC5 /* vanDoren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B51D25AF300019DCC5 /* vanDoren.swift */; };
 		2DD492B81D25B2340019DCC5 /* orchardDownsSouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */; };
@@ -93,6 +94,7 @@
 		2DB72CF61D34219000965857 /* shermanTallThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shermanTallThree.swift; sourceTree = "<group>"; };
 		2DB72CF81D34270400965857 /* parBabcockTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parBabcockTwo.swift; sourceTree = "<group>"; };
 		2DB72CFA1D342A6500965857 /* parBabcockThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parBabcockThree.swift; sourceTree = "<group>"; };
+		2DB72CFC1D342E0300965857 /* goodwinTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goodwinTwo.swift; sourceTree = "<group>"; };
 		2DD492B31D25AED90019DCC5 /* taft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taft.swift; sourceTree = "<group>"; };
 		2DD492B51D25AF300019DCC5 /* vanDoren.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vanDoren.swift; sourceTree = "<group>"; };
 		2DD492B71D25B2340019DCC5 /* orchardDownsSouth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orchardDownsSouth.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				2DD492C31D25C3A00019DCC5 /* farOglesby.swift */,
 				2DD492C51D25C4FE0019DCC5 /* farTrelease.swift */,
 				2D32706D1D24D52300B75E56 /* goodwin.swift */,
+				2DB72CFC1D342E0300965857 /* goodwinTwo.swift */,
 				2D9DFF671D2035B900835794 /* green.swift */,
 				2DD492C71D25C5B40019DCC5 /* hopkins.swift */,
 				2DD492CB1D25C6C00019DCC5 /* isrTownsend.swift */,
@@ -324,6 +327,7 @@
 				2DDCDB2E1D3054D400CF2867 /* taftTwo.swift in Sources */,
 				2DD492DA1D25D90A0019DCC5 /* scott.swift in Sources */,
 				2D3270781D24DE0C00B75E56 /* parSaunders.swift in Sources */,
+				2DB72CFD1D342E0300965857 /* goodwinTwo.swift in Sources */,
 				2DD492C01D25C1750019DCC5 /* buseyEvans.swift in Sources */,
 				2DD492BC1D25BF400019DCC5 /* barton.swift in Sources */,
 				35538A271C7AB9D100EA6D0F /* ViewController.swift in Sources */,
