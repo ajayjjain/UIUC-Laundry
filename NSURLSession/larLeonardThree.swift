@@ -225,7 +225,12 @@ class larLeonardThree: UIViewController {
                 var n = 0
                 while n < self.array.count - 1{
                     if n != 0 && n != 8 && n != 10 && n != 12 && n != 14{
-                        if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
+                        if self.array[n] == "In UseAdditional Time" && self.array[n-1] != "In UseAdditional Time" || self.array[n] == "In Use2nd Add\'l Time" && self.array[n-1] != "In Use2nd Add\'l Time"{
+                            self.elements.append("In Use")
+                            self.elements.append(self.array[n+3])
+                            n = n + 2
+                        }
+                        else if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
                             self.elements.append(self.array[n])
                             self.elements.append(self.array[n+2])
                         }

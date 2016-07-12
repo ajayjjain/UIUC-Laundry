@@ -120,7 +120,12 @@ class isrWardall: UIViewController {
                     if n != 0 && n != 8 && n != 10 && n != 12 && n != 14{
                         if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
                             self.elements.append(self.array[n])
-                            self.elements.append(self.array[n+2])
+                            if self.array[n+2] != "Additional Time"{
+                                self.elements.append(self.array[n+2])
+                            }
+                            else{
+                                self.elements.append(self.array[n+3])
+                            }
                         }
                         else if self.array[n] == "Available" && self.array[n-1] != "Available"{
                             self.elements.append(self.array[n])
@@ -176,7 +181,7 @@ class isrWardall: UIViewController {
                 self.machineEighteen = self.elements[73]
                 self.machineEighteenStatus = self.elements[74]
                 
-                
+                print(self.elements)
                 print(self.machineOne)
                 print(self.machineOneStatus)
                 print(self.machineTwo)
