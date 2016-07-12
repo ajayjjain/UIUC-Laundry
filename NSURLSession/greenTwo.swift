@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class green: UIViewController {
+class greenTwo: UIViewController {
     
     
     
@@ -57,17 +57,19 @@ class green: UIViewController {
      let defaults = NSUserDefaults.standardUserDefaults()
      defaults.setObject("parBlaisdell", forKey: "dorm")
      }*/
-    @IBOutlet weak var machineOneStatusLabel: UILabel!
-    @IBOutlet weak var machineTwoStatusLabel: UILabel!
-    @IBOutlet weak var machineThreeStatusLabel: UILabel!
-    @IBOutlet weak var machineFourStatusLabel: UILabel!
-    @IBOutlet weak var machineFiveStatusLabel: UILabel!
+    
+    
+    @IBOutlet weak var machineSixStatusLabel: UILabel!
+    @IBOutlet weak var machineSevenStatusLabel: UILabel!
+    @IBOutlet weak var machineEightStatusLabel: UILabel!
+    @IBOutlet weak var machineNineStatusLabel: UILabel!
+    @IBOutlet weak var machineTenStatusLabel: UILabel!
     @IBOutlet weak var borderLabel: UILabel!
-    @IBOutlet weak var oneTimeRemaining: UILabel!
-    @IBOutlet weak var twoTimeRemaining: UILabel!
-    @IBOutlet weak var threeTimeRemaining: UILabel!
-    @IBOutlet weak var fourTimeRemaining: UILabel!
-    @IBOutlet weak var fiveTimeRemaining: UILabel!
+    @IBOutlet weak var sixTimeRemaining: UILabel!
+    @IBOutlet weak var sevenTimeRemaining: UILabel!
+    @IBOutlet weak var eightTimeRemaining: UILabel!
+    @IBOutlet weak var nineTimeRemaining: UILabel!
+    @IBOutlet weak var tenTimeRemaining: UILabel!
     
     
     
@@ -81,6 +83,9 @@ class green: UIViewController {
     var machineSeven = "n/a"
     var machineEight = "n/a"
     var machineNine = "n/a"
+    var machineTen = "n/a"
+    var machineTenStatus = ""
+    
     
     
     var machineOneStatus = ""
@@ -107,7 +112,19 @@ class green: UIViewController {
     
     
     
-    
+    /*@IBAction func bookmark(sender: AnyObject) {
+     print(star.currentImage)
+     if star.currentImage == "whiteStar.png"{
+     if let image = UIImage(named: "yellowStar.png") {
+     star.setImage(image, forState: .Normal)
+     }
+     }
+     else{
+     if let image = UIImage(named: "whiteStar.png") {
+     star.setImage(image, forState: .Normal)
+     }
+     }
+     }*/
     @IBOutlet weak var myDormButton: UIButton!
     @IBAction func writeButton(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -116,11 +133,12 @@ class green: UIViewController {
         
     }
     
-    @IBAction func labelOnePress(sender: AnyObject) {
-        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
+    @IBAction func labelSixPress(sender: AnyObject) {
+        
+        if self.machineSix != "Available" && machineSixStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
-            let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
+            let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
                     .invertedSet)
@@ -129,7 +147,7 @@ class green: UIViewController {
             time = time! * 60
             // time = 5
             let notification = UILocalNotification()
-            notification.alertBody = "Machine One at Green is ready."
+            notification.alertBody = "Machine Six at Green is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -139,11 +157,11 @@ class green: UIViewController {
         }
     }
     
-    @IBAction func labelTwoPress(sender: AnyObject) {
-        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
+    @IBAction func labelSevenPress(sender: AnyObject) {
+        if self.machineSeven != "Available" && machineSevenStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
-            let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
+            let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
                     .invertedSet)
@@ -152,7 +170,7 @@ class green: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Two at Green is ready."
+            notification.alertBody = "Machine Seven at Green is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -163,11 +181,11 @@ class green: UIViewController {
     }
     
     
-    @IBAction func labelThreePress(sender: AnyObject) {
-        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
+    @IBAction func labelEightPress(sender: AnyObject) {
+        if self.machineEight != "Available" && machineEightStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
-            let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
+            let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
                     .invertedSet)
@@ -176,7 +194,7 @@ class green: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Three at Green is ready."
+            notification.alertBody = "Machine Eight at Green is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -186,11 +204,11 @@ class green: UIViewController {
         }
     }
     
-    @IBAction func labelFourPress(sender: AnyObject) {
-        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
+    @IBAction func labelNinePress(sender: AnyObject) {
+        if self.machineNine != "Available" && machineNineStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
-            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
+            let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
                     .invertedSet)
@@ -199,7 +217,7 @@ class green: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Four at Goodwin is ready."
+            notification.alertBody = "Machine Nine at Green is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -209,12 +227,11 @@ class green: UIViewController {
         }
     }
     
-    
-    @IBAction func labelFivePress(sender: AnyObject) {
-        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
+    @IBAction func labelTenPress(sender: AnyObject) {
+        if self.machineTen != "Available" && machineTenStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
-            let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
+            let intString = machineTenStatus.componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
                     .invertedSet)
@@ -223,7 +240,7 @@ class green: UIViewController {
             time = time! * 60
             print("ok")
             let notification = UILocalNotification()
-            notification.alertBody = "Machine Five at Goodwin is ready."
+            notification.alertBody = "Machine Ten at Green is ready."
             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
             notification.timeZone = NSTimeZone.localTimeZone()
             // you can simplify setting your fire date using dateByAddingTimeInterval
@@ -232,11 +249,13 @@ class green: UIViewController {
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
     }
+    
+    
     
     
     func parse() {
         
-        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMRoom&Halls=9&RoomPersistence=&MachinePersistenceA=008&MachinePersistenceB=019"
+        let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
         
@@ -280,16 +299,6 @@ class green: UIViewController {
                 self.washersAvailable = self.elements[0]
                 self.dryersAvailable = self.elements[1]
                 self.peopleWaiting = self.elements[2]
-                self.machineOne = self.elements[5]
-                self.machineOneStatus = self.elements[6]
-                self.machineTwo = self.elements[9]
-                self.machineTwoStatus = self.elements[10]
-                self.machineThree = self.elements[13]
-                self.machineThreeStatus = self.elements[14]
-                self.machineFour = self.elements[17]
-                self.machineFourStatus = self.elements[18]
-                self.machineFive = self.elements[21]
-                self.machineFiveStatus = self.elements[22]
                 self.machineSix = self.elements[25]
                 self.machineSixStatus = self.elements[26]
                 self.machineSeven = self.elements[29]
@@ -298,6 +307,8 @@ class green: UIViewController {
                 self.machineEightStatus = self.elements[34]
                 self.machineNine = self.elements[37]
                 self.machineNineStatus = self.elements[38]
+                self.machineTen = self.elements[41]
+                self.machineTenStatus = self.elements[42]
                 /*print(self.elements)
                  print(self.machineOneStatus)
                  print(self.elements[6])
@@ -306,47 +317,46 @@ class green: UIViewController {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.washersAvailableLabel.text = self.washersAvailable
                     self.dryersAvailableLabel.text = self.dryersAvailable
-                    self.machineOneStatusLabel.text = self.machineOne
-                    self.machineTwoStatusLabel.text = self.machineTwo
-                    self.machineThreeStatusLabel.text = self.machineThree
-                    self.machineFourStatusLabel.text = self.machineFour
-                    self.machineFiveStatusLabel.text = self.machineFive
-                    self.oneTimeRemaining.text = self.machineOneStatus
-                    self.twoTimeRemaining.text = self.machineTwoStatus
-                    self.threeTimeRemaining.text = self.machineThreeStatus
-                    self.fourTimeRemaining.text = self.machineFourStatus
-                    self.fiveTimeRemaining.text = self.machineFiveStatus
-                    if self.machineOne == "Available"{
-                        self.machineOneStatusLabel.textColor = UIColor.greenColor()
+                    self.machineSixStatusLabel.text = self.machineSix
+                    self.machineSevenStatusLabel.text = self.machineSeven
+                    self.machineEightStatusLabel.text = self.machineEight
+                    self.machineNineStatusLabel.text = self.machineNine
+                    self.machineTenStatusLabel.text = self.machineTen
+                    self.sixTimeRemaining.text = self.machineSixStatus
+                    self.sevenTimeRemaining.text = self.machineSevenStatus
+                    self.eightTimeRemaining.text = self.machineEightStatus
+                    self.nineTimeRemaining.text = self.machineNineStatus
+                    self.tenTimeRemaining.text = self.machineTenStatus
+                    if self.machineSix == "Available"{
+                        self.machineSixStatusLabel.textColor = UIColor.greenColor()
                     }
                     else{
-                        self.machineOneStatusLabel.textColor = UIColor.redColor()
+                        self.machineSixStatusLabel.textColor = UIColor.redColor()
                     }
-                    if self.machineTwo == "Available"{
-                        self.machineTwoStatusLabel.textColor = UIColor.greenColor()
+                    if self.machineSeven == "Available"{
+                        self.machineSevenStatusLabel.textColor = UIColor.greenColor()
                     }
                     else{
-                        self.machineTwoStatusLabel.textColor = UIColor.redColor()
+                        self.machineSevenStatusLabel.textColor = UIColor.redColor()
                     }
                     
-                    if self.machineThree == "Available"{
-                        self.machineThreeStatusLabel.textColor = UIColor.greenColor()
+                    if self.machineEight == "Available"{
+                        self.machineEightStatusLabel.textColor = UIColor.greenColor()
                     }
                     else{
-                        self.machineThreeStatusLabel.textColor = UIColor.redColor()
+                        self.machineEightStatusLabel.textColor = UIColor.redColor()
                     }
-                    if self.machineFour == "Available"{
-                        self.machineFourStatusLabel.textColor = UIColor.greenColor()
-                    }
-                    else{
-                        self.machineFourStatusLabel.textColor = UIColor.redColor()
-                    }
-                    
-                    if self.machineFive == "Available"{
-                        self.machineFiveStatusLabel.textColor = UIColor.greenColor()
+                    if self.machineNine == "Available"{
+                        self.machineNineStatusLabel.textColor = UIColor.greenColor()
                     }
                     else{
-                        self.machineFiveStatusLabel.textColor = UIColor.redColor()
+                        self.machineNineStatusLabel.textColor = UIColor.redColor()
+                    }
+                    if self.machineTen == "Available"{
+                        self.machineTenStatusLabel.textColor = UIColor.greenColor()
+                    }
+                    else{
+                        self.machineTenStatusLabel.textColor = UIColor.redColor()
                     }
                     
                     

@@ -207,6 +207,10 @@ class ViewController: UIViewController {
                 performSegueWithIdentifier("danielsSouth", sender: nil)
                 
             }
+            else if name == "green"{
+                performSegueWithIdentifier("green", sender: nil)
+                
+            }
             else if name == "goodwin"{
                 performSegueWithIdentifier("goodwin", sender: nil)
                 
