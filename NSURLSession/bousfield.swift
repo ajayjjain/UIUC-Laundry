@@ -157,10 +157,27 @@ class bousfield: UIViewController {
                 var n = 0
                 while n < self.array.count - 1{
                     if n != 0 && n != 8 && n != 10 && n != 12 && n != 14{
-                        if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
-                            self.elements.append(self.array[n])
-                            self.elements.append(self.array[n+2])
+                        if self.array[n] == "In UseAdditional Time" && self.array[n-1] != "In UseAdditional Time" || self.array[n] == "In Use2nd Add\'l Time" && self.array[n-1] != "In Use2nd Add\'l Time" {
+                            self.elements.append("In Use")
+                            self.elements.append(self.array[n+3])
+                            n = n + 2
                         }
+                        else if self.array[n] == "In Use3rd Add\'l Time" && self.array[n-1] != "In Use3rd Add\'l Time"{
+                            self.elements.append("In Use")
+                            self.elements.append(self.array[n+3])
+                            n = n + 2
+                        }
+                        else if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
+                            if self.array[n+2] != "unknown"{
+                                self.elements.append(self.array[n])
+                                self.elements.append(self.array[n+2])
+                            }
+                            else{
+                                self.elements.append(self.array[n])
+                                self.elements.append("unknown")
+                            }
+                        }
+
                         else if self.array[n] == "Available" && self.array[n-1] != "Available"{
                             self.elements.append(self.array[n])
                             self.elements.append("")
@@ -257,7 +274,7 @@ class bousfield: UIViewController {
                 self.machineThirtyNine = self.elements[157]
                 self.machineThirtyNineStatus = self.elements[158]
 
-                print(self.machineOne)
+                /*print(self.machineOne)
                 print(self.machineOneStatus)
                 print(self.machineTwo)
                 print(self.machineTwoStatus)
@@ -334,7 +351,8 @@ class bousfield: UIViewController {
                 print(self.machineThirtyEight)
                 print(self.machineThirtyEightStatus)
                 print(self.machineThirtyNine)
-                print(self.machineThirtyNineStatus)
+                print(self.machineThirtyNineStatus)*/
+                print(self.elements)
 
                 
                 //print(str)

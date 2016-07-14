@@ -290,11 +290,19 @@ class greenTwo: UIViewController {
                             n = n + 2
                         }
                         else if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
-                            self.elements.append(self.array[n])
+                            if self.array[n+2] != "unknown"{
+                                self.elements.append(self.array[n])
+                                self.elements.append(self.array[n+2])
+                            }
+                            else{
+                                self.elements.append(self.array[n])
+                                self.elements.append("unknown")
+                            }
                         }
                         else if self.array[n] == "Available" && self.array[n-1] != "Available"{
                             self.elements.append(self.array[n])
                             self.elements.append("")
+
                         }
                         else if n == 7{
                             self.elements.append(self.array[n])

@@ -118,9 +118,25 @@ class isrTownsend: UIViewController {
                 var n = 0
                 while n < self.array.count - 1{
                     if n != 0 && n != 8 && n != 10 && n != 12 && n != 14{
-                        if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
-                            self.elements.append(self.array[n])
-                            self.elements.append(self.array[n+2])
+                        if self.array[n] == "In UseAdditional Time" && self.array[n-1] != "In UseAdditional Time" || self.array[n] == "In Use2nd Add\'l Time" && self.array[n-1] != "In Use2nd Add\'l Time" {
+                            self.elements.append("In Use")
+                            self.elements.append(self.array[n+3])
+                            n = n + 2
+                        }
+                        else if self.array[n] == "In Use3rd Add\'l Time" && self.array[n-1] != "In Use3rd Add\'l Time"{
+                            self.elements.append("In Use")
+                            self.elements.append(self.array[n+3])
+                            n = n + 2
+                        }
+                        else if self.array[n] == "In Use" && self.array[n-1] != "In Use"{
+                            if self.array[n+2] != "unknown"{
+                                self.elements.append(self.array[n])
+                                self.elements.append(self.array[n+2])
+                            }
+                            else{
+                                self.elements.append(self.array[n])
+                                self.elements.append("unknown")
+                            }
                         }
                         else if self.array[n] == "Available" && self.array[n-1] != "Available"{
                             self.elements.append(self.array[n])
@@ -177,42 +193,8 @@ class isrTownsend: UIViewController {
                 self.machineEighteenStatus = self.elements[74]
                 
                 
-                print(self.machineOne)
-                print(self.machineOneStatus)
-                print(self.machineTwo)
-                print(self.machineTwoStatus)
-                print(self.machineThree)
-                print(self.machineThreeStatus)
-                print(self.machineFour)
-                print(self.machineFourStatus)
-                print(self.machineFive)
-                print(self.machineFiveStatus)
-                print(self.machineSix)
-                print(self.machineSixStatus)
-                print(self.machineSeven)
-                print(self.machineSevenStatus)
-                print(self.machineEight)
-                print(self.machineEightStatus)
-                print(self.machineNine)
-                print(self.machineNineStatus)
-                print(self.machineTen)
-                print(self.machineTenStatus)
-                print(self.machineEleven)
-                print(self.machineElevenStatus)
-                print(self.machineTwelve)
-                print(self.machineTwelveStatus)
-                print(self.machineThirteen)
-                print(self.machineThirteenStatus)
-                print(self.machineFourteen)
-                print(self.machineFourteenStatus)
-                print(self.machineFifteen)
-                print(self.machineFifteenStatus)
-                print(self.machineSixteen)
-                print(self.machineSixteenStatus)
-                print(self.machineSeventeen)
-                print(self.machineSeventeenStatus)
-                print(self.machineEighteen)
-                print(self.machineEighteenStatus)
+                print(self.array)
+                print(self.elements)
                 
                 
                 
