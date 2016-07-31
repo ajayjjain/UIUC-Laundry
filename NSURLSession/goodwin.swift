@@ -380,4 +380,54 @@ class goodwin: UIViewController {
         }
         URLTask.resume()
     }
+    func alarm(){
+        let notification = UILocalNotification()
+        if machineOneAlarm == true{
+            if self.machineOne == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine One at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineOneAlarm = false
+            }
+            
+        }
+        if machineTwoAlarm == true{
+            if self.machineTwo == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Two at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineTwoAlarm = false
+            }
+            
+        }
+        if machineThreeAlarm == true{
+            if self.machineThree == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Three at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineThreeAlarm = false
+            }
+            
+        }
+        if machineFourAlarm == true{
+            if self.machineFour == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Four at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineFourAlarm = false
+            }
+            
+        }
+        if machineFiveAlarm == true{
+            if self.machineFive == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Five at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineFiveAlarm = false
+            }
+            
+        }
+        
+    }
+
 }
