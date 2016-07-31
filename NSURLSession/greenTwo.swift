@@ -107,8 +107,12 @@ class greenTwo: UIViewController {
     var machineEightStatus = ""
     var machineNineStatus = ""
     
+    var machineSixAlarm = false
     var machineSevenAlarm = false
     var machineEightAlarm = false
+    var machineNineAlarm = false
+    var machineTenAlarm = false
+
     
     var washersAvailable = ""
     var dryersAvailable = ""
@@ -149,23 +153,7 @@ class greenTwo: UIViewController {
         
         if self.machineSix != "Available" && machineSixStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineSixStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            // time = 5
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Six at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineSixAlarm = true
         }
     }
     
@@ -187,46 +175,14 @@ class greenTwo: UIViewController {
     @IBAction func labelNinePress(sender: AnyObject) {
         if self.machineNine != "Available" && machineNineStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Nine at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineNineAlarm = true
         }
     }
     
     @IBAction func labelTenPress(sender: AnyObject) {
         if self.machineTen != "Available" && machineTenStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineTenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Ten at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineTenAlarm = true
         }
     }
     
@@ -374,26 +330,53 @@ class greenTwo: UIViewController {
         URLTask.resume()
     }
     func alarm(){
-        print("alarmtest")
         let notification = UILocalNotification()
+        if machineSixAlarm == true{
+            if self.machineSix == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Six at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineSixAlarm = false
+            }
+            
+        }
         if machineSevenAlarm == true{
             if self.machineSeven == "Available"{
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                notification.alertBody = "Machine Seven is ready"
+                notification.alertBody = "Machine Seven at Daniels North is ready"
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
-                
+                machineSevenAlarm = false
             }
             
         }
         if machineEightAlarm == true{
             if self.machineEight == "Available"{
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                notification.alertBody = "Machine Eight is ready"
+                notification.alertBody = "Machine Eight at Daniels North is ready"
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
-                
+                machineEightAlarm = false
+            }
+            
+        }
+        if machineNineAlarm == true{
+            if self.machineNine == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Nine at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineNineAlarm = false
+            }
+            
+        }
+        if machineTenAlarm == true{
+            if self.machineTen == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Ten at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineTenAlarm = false
             }
             
         }
         
     }
+
 }

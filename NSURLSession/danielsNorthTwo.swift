@@ -326,8 +326,6 @@ class danielsNorthTwo: UIViewController {
         URLTask.resume()
     }
     func alarm(){
-        print("alarmtest")
-        print(String(machineNineAlarm))
         let notification = UILocalNotification()
         if machineSixAlarm == true{
             if self.machineSix == "Available"{

@@ -36,7 +36,11 @@ class barton: UIViewController {
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
          var bookmark = stringKey.stringForKey("bookmark")*/
-        
+        let myTimer = NSTimer(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
+        let alarmTimer = NSTimer(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(alarmTimer, forMode: NSDefaultRunLoopMode)
+
         
     }
     
