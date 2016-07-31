@@ -71,6 +71,7 @@ class parCarr: UIViewController {
     
     
     
+    var timer = NSTimer()
     
     var machineOne = "n/a"
     var machineTwo = "n/a"
@@ -114,6 +115,14 @@ class parCarr: UIViewController {
         defaults.setObject("Carr", forKey: "dorm")
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
+    }
+    
+    func time(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
+    }
+    
+    func reload(){
+        parse()
     }
     
     @IBAction func labelOnePress(sender: AnyObject) {

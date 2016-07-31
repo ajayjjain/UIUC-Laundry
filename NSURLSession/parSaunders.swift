@@ -71,7 +71,7 @@ class parSaunders: UIViewController {
     
     
     
-    
+    var timer = NSTimer()
     var machineOne = "n/a"
     var machineTwo = "n/a"
     var machineThree = "n/a"
@@ -114,6 +114,14 @@ class parSaunders: UIViewController {
         defaults.setObject("Saunders", forKey: "dorm")
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
+    }
+    
+    func time(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: #selector(parse), userInfo: nil, repeats: true)
+    }
+    
+    func reload(){
+        parse()
     }
     
     @IBAction func labelOnePress(sender: AnyObject) {

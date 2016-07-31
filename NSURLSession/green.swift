@@ -36,6 +36,9 @@ class green: UIViewController {
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
          var bookmark = stringKey.stringForKey("bookmark")*/
+        let myTimer = NSTimer(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
+
         
         
     }
@@ -71,7 +74,8 @@ class green: UIViewController {
     
     
     
-    
+    var num = 1
+
     var machineOne = "n/a"
     var machineTwo = "n/a"
     var machineThree = "n/a"
@@ -116,126 +120,20 @@ class green: UIViewController {
         
     }
     
-    @IBAction func labelOnePress(sender: AnyObject) {
-        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            // time = 5
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine One at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
-    
-    @IBAction func labelTwoPress(sender: AnyObject) {
-        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Two at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-    }
-    
-    
-    @IBAction func labelThreePress(sender: AnyObject) {
-        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Three at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-    }
-    
-    @IBAction func labelFourPress(sender: AnyObject) {
-        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Four at Goodwin is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-    }
-    
-    
-    @IBAction func labelFivePress(sender: AnyObject) {
-        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Five at Goodwin is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-    }
-    
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
+        print(String(num))
+        num = num + 1
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMRoom&Halls=9&RoomPersistence=&MachinePersistenceA=008&MachinePersistenceB=019"
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
@@ -371,4 +269,162 @@ class green: UIViewController {
         }
         URLTask.resume()
     }
-}
+    
+    
+    
+    @IBAction func labelOnePress(sender: AnyObject) {
+        if self.machineOne != "Available" && machineOneStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineOneStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            // time = 5
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine One at Green is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    @IBAction func labelTwoPress(sender: AnyObject) {
+        if self.machineTwo != "Available" && machineTwoStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineTwoStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Two at Green is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    
+    @IBAction func labelThreePress(sender: AnyObject) {
+        if self.machineThree != "Available" && machineThreeStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineThreeStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Three at Green is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+    
+    @IBAction func labelFourPress(sender: AnyObject) {
+        if self.machineFour != "Available" && machineFourStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Four at Goodwin is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
+        /*if self.machineFour != "Available" && machineFourStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineFourStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            
+            // time = 5
+            let notification = UILocalNotification()
+            notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
+            /*notification.alertBody = "Machine Eleven at Green is ready."
+             // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+             notification.timeZone = NSTimeZone.localTimeZone()
+             // you can simplify setting your fire date using dateByAddingTimeInterval
+             notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+             // set the notification property before scheduleLocalNotification
+             UIApplication.sharedApplication().scheduleLocalNotification(notification)*/
+            repeat {
+                delay(60){
+                    self.parse()
+                    print("test")
+                    notification.alertBody = "hi"
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                    time = time! - 1
+                }
+            } while time > 0
+            notification.alertBody = "aloha"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }*/
+    }
+
+
+    
+    /*@IBAction func labelFivePress(sender: AnyObject) {
+        if self.machineFive != "Available" && machineFiveStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineFiveStatus.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            print("ok")
+            let notification = UILocalNotification()
+            notification.alertBody = "Machine Five at Goodwin is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }*/
+
+
+
+
+

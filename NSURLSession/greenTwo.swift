@@ -31,14 +31,23 @@ class greenTwo: UIViewController {
         imageView.contentMode = .ScaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
+
         parse()
         borderLabel.layer.borderColor = UIColor.orangeColor().CGColor
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
          var bookmark = stringKey.stringForKey("bookmark")*/
+        let myTimer = NSTimer(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
+        let alarmTimer = NSTimer(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(alarmTimer, forMode: NSDefaultRunLoopMode)
+
+
         
         
     }
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -72,7 +81,7 @@ class greenTwo: UIViewController {
     @IBOutlet weak var tenTimeRemaining: UILabel!
     
     
-    
+    var timer = NSTimer()
     
     var machineOne = "n/a"
     var machineTwo = "n/a"
@@ -98,6 +107,8 @@ class greenTwo: UIViewController {
     var machineEightStatus = ""
     var machineNineStatus = ""
     
+    var machineSevenAlarm = false
+    var machineEightAlarm = false
     
     var washersAvailable = ""
     var dryersAvailable = ""
@@ -132,6 +143,7 @@ class greenTwo: UIViewController {
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
     }
+   
     
     @IBAction func labelSixPress(sender: AnyObject) {
         
@@ -160,23 +172,7 @@ class greenTwo: UIViewController {
     @IBAction func labelSevenPress(sender: AnyObject) {
         if self.machineSeven != "Available" && machineSevenStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineSevenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Seven at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineSevenAlarm = true
         }
     }
     
@@ -184,23 +180,7 @@ class greenTwo: UIViewController {
     @IBAction func labelEightPress(sender: AnyObject) {
         if self.machineEight != "Available" && machineEightStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineEightStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Eight at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineEightAlarm = true
         }
     }
     
@@ -254,7 +234,8 @@ class greenTwo: UIViewController {
     
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=9&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
@@ -391,5 +372,28 @@ class greenTwo: UIViewController {
             
         }
         URLTask.resume()
+    }
+    func alarm(){
+        print("alarmtest")
+        let notification = UILocalNotification()
+        if machineSevenAlarm == true{
+            if self.machineSeven == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Seven is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                
+            }
+            
+        }
+        if machineEightAlarm == true{
+            if self.machineEight == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Eight is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                
+            }
+            
+        }
+        
     }
 }

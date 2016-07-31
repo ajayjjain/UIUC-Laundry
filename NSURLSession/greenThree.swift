@@ -116,35 +116,14 @@ class greenThree: UIViewController {
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
     }
-    
-    @IBAction func labelElevenPress(sender: AnyObject) {
-        
-        if self.machineEleven != "Available" && machineElevenStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineElevenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            // time = 5
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Eleven at Green is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
-    
-    
-    
-    
-    
     
     func parse() {
         
@@ -234,4 +213,48 @@ class greenThree: UIViewController {
         }
         URLTask.resume()
     }
+
+    
+    @IBAction func labelElevenPress(sender: AnyObject) {
+        
+        if self.machineEleven != "Available" && machineElevenStatus != "not updating status"{
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let intString = machineElevenStatus.componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            var time = Double(intString)
+            time = time! * 60
+            // time = 5
+            let notification = UILocalNotification()
+            notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+
+            /*notification.alertBody = "Machine Eleven at Green is ready."
+            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
+            notification.timeZone = NSTimeZone.localTimeZone()
+            // you can simplify setting your fire date using dateByAddingTimeInterval
+            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
+            // set the notification property before scheduleLocalNotification
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)*/
+            while self.machineEleven != "Available"{
+                delay(60){
+                    self.parse()
+                    print("test")
+                    notification.alertBody = "hi"
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+
+                }
+            }
+            notification.alertBody = "aloha"
+            notification.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+    }
 }
+
+        

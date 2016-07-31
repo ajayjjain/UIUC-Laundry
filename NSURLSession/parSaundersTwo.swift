@@ -72,7 +72,7 @@ class parSaundersTwo: UIViewController {
     @IBOutlet weak var tenTimeRemaining: UILabel!
     
     
-    
+    var timer = NSTimer()
     
     var machineOne = "n/a"
     var machineTwo = "n/a"
@@ -131,6 +131,14 @@ class parSaundersTwo: UIViewController {
         defaults.setObject("Saunders", forKey: "dorm")
         self.myDormButton.setTitle("My Dorm", forState: .Normal)
         
+    }
+    
+    func time(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
+    }
+    
+    func reload(){
+        parse()
     }
     
     @IBAction func labelSixPress(sender: AnyObject) {

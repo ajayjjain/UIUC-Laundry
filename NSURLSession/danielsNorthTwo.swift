@@ -36,9 +36,16 @@ class danielsNorthTwo: UIViewController {
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
          var bookmark = stringKey.stringForKey("bookmark")*/
+        let myTimer = NSTimer(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
+        let alarmTimer = NSTimer(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(alarmTimer, forMode: NSDefaultRunLoopMode)
+
         
         
     }
+    
+
     
     override func viewWillAppear(animated: Bool) {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -97,6 +104,9 @@ class danielsNorthTwo: UIViewController {
     var machineSevenStatus = ""
     var machineEightStatus = ""
     var machineNineStatus = ""
+    
+    var machineNineAlarm = false
+
     
     
     var washersAvailable = ""
@@ -207,23 +217,8 @@ class danielsNorthTwo: UIViewController {
     @IBAction func labelNinePress(sender: AnyObject) {
         if self.machineNine != "Available" && machineNineStatus != "not updating status"{
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineNineStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Nine at Daniels North is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            machineNineAlarm = true
+            print(String(machineNineAlarm))
         }
     }
     
@@ -254,7 +249,8 @@ class danielsNorthTwo: UIViewController {
     
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=4&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
@@ -388,5 +384,20 @@ class danielsNorthTwo: UIViewController {
             
         }
         URLTask.resume()
+    }
+    func alarm(){
+        print("alarmtest")
+        print(String(machineNineAlarm))
+        let notification = UILocalNotification()
+        if machineNineAlarm == true{
+            if self.machineNine == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Nine at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineNineAlarm = false
+            }
+            
+        }
+        
     }
 }
