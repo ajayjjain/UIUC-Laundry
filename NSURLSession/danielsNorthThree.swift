@@ -36,6 +36,11 @@ class danielsNorthThree: UIViewController {
         borderLabel.layer.borderWidth = 2.0;
         /*let stringKey = NSUserDefaults.standardUserDefaults()
          var bookmark = stringKey.stringForKey("bookmark")*/
+        let myTimer = NSTimer(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
+        let alarmTimer = NSTimer(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(alarmTimer, forMode: NSDefaultRunLoopMode)
+
         
         
     }
@@ -96,6 +101,13 @@ class danielsNorthThree: UIViewController {
     var machineThirteenStatus = ""
     var machineFourteenStatus = ""
     
+    var machineElevenAlarm = false
+    var machineTwelveAlarm = false
+    var machineThirteenAlarm = false
+    var machineFourteenAlarm = false
+    var machineFifteenAlarm = false
+
+    
     
     var washersAvailable = ""
     var dryersAvailable = ""
@@ -134,94 +146,38 @@ class danielsNorthThree: UIViewController {
     @IBAction func labelElevenPress(sender: AnyObject) {
         
         if self.machineEleven != "Available" && machineElevenStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineElevenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            // time = 5
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Eleven at Daniels North is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            if self.machineEleven != "Available" && machineElevenStatus != "not updating status"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                machineElevenAlarm = true
+            }
         }
     }
     
     @IBAction func labelTwelvePress(sender: AnyObject) {
         if self.machineTwelve != "Available" && machineTwelveStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineTwelveStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Twelve at Daniels North is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            if self.machineTwelve != "Available" && machineTwelveStatus != "not updating status"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                machineTwelveAlarm = true
+            }
         }
     }
     
     
     @IBAction func labelThirteenPress(sender: AnyObject) {
         if self.machineThirteen != "Available" && machineThirteenStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineThirteenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Thirteen at Daniels North is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            if self.machineThirteen != "Available" && machineThirteenStatus != "not updating status"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                machineThirteenAlarm = true
+            }
         }
     }
     
     @IBAction func labelFourteenPress(sender: AnyObject) {
         if self.machineFourteen != "Available" && machineFourteenStatus != "not updating status"{
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            
-            let intString = machineFourteenStatus.componentsSeparatedByCharactersInSet(
-                NSCharacterSet
-                    .decimalDigitCharacterSet()
-                    .invertedSet)
-                .joinWithSeparator("")
-            var time = Double(intString)
-            time = time! * 60
-            print("ok")
-            let notification = UILocalNotification()
-            notification.alertBody = "Machine Fourteen at Daniels North is ready."
-            // You should set also the notification time zone otherwise the fire date is interpreted as an absolute GMT time
-            notification.timeZone = NSTimeZone.localTimeZone()
-            // you can simplify setting your fire date using dateByAddingTimeInterval
-            notification.fireDate = NSDate().dateByAddingTimeInterval(time!)
-            // set the notification property before scheduleLocalNotification
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            if self.machineFourteen != "Available" && machineFourteenStatus != "not updating status"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                machineElevenAlarm = true
+            }
         }
     }
     
@@ -356,4 +312,47 @@ class danielsNorthThree: UIViewController {
         }
         URLTask.resume()
     }
+    func alarm(){
+        print("alarmtest")
+        print(String(machineNineAlarm))
+        let notification = UILocalNotification()
+        if machineElevenAlarm == true{
+            if self.machineEleven == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Eleven at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineElevenAlarm = false
+            }
+            
+        }
+        if machineTwelveAlarm == true{
+            if self.machineTwelve == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Twelve at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineTwelveAlarm = false
+            }
+            
+        }
+        if machineThirteenAlarm == true{
+            if self.machineThirteen == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Thirteen at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineThirteenAlarm = false
+            }
+            
+        }
+        if machineFourteenAlarm == true{
+            if self.machineFourteen == "Available"{
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                notification.alertBody = "Machine Fourteen at Daniels North is ready"
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                machineFourteenAlarm = false
+            }
+            
+        }
+        
+    }
+
 }
