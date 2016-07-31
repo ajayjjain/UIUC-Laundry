@@ -86,6 +86,12 @@ class danielsSouth: UIViewController {
     var machineEight = "n/a"
     var machineNine = "n/a"
     
+    var machineOneAlarm = false
+    var machineTwoAlarm = false
+    var machineThreeAlarm = false
+    var machineFourAlarm = false
+    var machineFiveAlarm = false
+    
     
     var machineOneStatus = ""
     var machineTwoStatus = ""

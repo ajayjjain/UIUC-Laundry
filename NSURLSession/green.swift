@@ -99,6 +99,12 @@ class green: UIViewController {
     var machineEightStatus = ""
     var machineNineStatus = ""
     
+    var machineOneAlarm = false
+    var machineTwoAlarm = false
+    var machineThreeAlarm = false
+    var machineFourAlarm = false
+    var machineFiveAlarm = false
+    
     
     var washersAvailable = ""
     var dryersAvailable = ""
