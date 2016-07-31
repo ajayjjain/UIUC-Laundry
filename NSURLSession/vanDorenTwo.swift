@@ -258,7 +258,9 @@ class vanDorenTwo: UIViewController {
     
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
+
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=28&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)

@@ -137,14 +137,7 @@ class parSaundersTwo: UIViewController {
         
     }
     
-    func time(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
-    }
-    
-    func reload(){
-        parse()
-    }
-    
+   
     @IBAction func labelSixPress(sender: AnyObject) {
         
         if self.machineSix != "Available" && machineSixStatus != "not updating status"{
@@ -266,7 +259,9 @@ class parSaundersTwo: UIViewController {
     
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
+
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?XallingPage=LMPage&Halls=22&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)

@@ -121,13 +121,7 @@ class parCarr: UIViewController {
         
     }
     
-    func time(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("updateCounting"), userInfo: nil, repeats: true)
-    }
     
-    func reload(){
-        parse()
-    }
     
     @IBAction func labelOnePress(sender: AnyObject) {
 
@@ -250,7 +244,9 @@ class parCarr: UIViewController {
     
     
     func parse() {
-        
+        array = [String]()
+        elements = [String]()
+
         let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=21&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         //let myURLAdress = "https://www.laundryalert.com/cgi-bin/urba7723/LMRoom?CallingPage=LMPage&Halls=5&PreviousHalls=&RoomPersistence=&MachinePersistenceA=&MachinePersistenceB="
         let myURL = NSURL(string: myURLAdress)
