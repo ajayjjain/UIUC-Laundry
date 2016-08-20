@@ -389,7 +389,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="IPu-Ds-dar" userLabel="Five">
                     <connections>
-                        <action selector="labelFivePress:" destination="iNw-Cf-0ck" id="sL6-vf-UnD"/>
+                        <action selector="labelFivePress:" destination="iNw-Cf-0ck" id="cCs-gH-coM"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

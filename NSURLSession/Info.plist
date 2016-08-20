@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIApplicationExitsOnSuspend
+
+UIApplicationExitsOnSuspend
+
+UIAppl</key>
+	<true/>
 </dict>
 </plist>

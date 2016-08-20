@@ -250,8 +250,6 @@ class greenTwo: UIViewController {
                     }
                     n = n + 1
                 }
-                print(self.array)
-                print(self.elements)
                 self.washersAvailable = self.elements[0]
                 self.dryersAvailable = self.elements[1]
                 self.peopleWaiting = self.elements[2]
