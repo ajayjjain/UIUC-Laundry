@@ -40,7 +40,18 @@ class green: UIViewController {
         NSRunLoop.mainRunLoop().addTimer(myTimer, forMode: NSDefaultRunLoopMode)
         let alarmTimer = NSTimer(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(alarmTimer, forMode: NSDefaultRunLoopMode)
-
+        
+        // Give the thread default priority, medium memory usage
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        
+        // Engages a background thread with the timers.
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            NSTimer.scheduledTimerWithTimeInterval(timeInterval: 30.0, target: self, selector: "parse", userInfo: nil, repeats: true)
+            NSTimer.scheduledTimerWithTimeInterval(timeInterval: 30.0, target: self, selector: "alarm", userInfo: nil, repeats: true)
+            dispatch_async(dispatch_get_main_queue()) {
+                // Not needed since timers call functions at termination.
+            }
+        }
         
         
     }
